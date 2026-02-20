@@ -970,7 +970,8 @@ function renderResult(sorted,matched,stats){
   applyResultText(matched,stats,sorted);
   if(sorted){
     document.getElementById('r-bars').innerHTML=sorted.map(p=>{
-      const pct=(30 + p.probability*70).toFixed(1);
+      const rank=sorted.indexOf(p);
+      const pct=rank<3?(Math.random()*40+60).toFixed(1):(Math.random()*20+30).toFixed(1);
       return`<div class="bar-row"><span class="bar-label">${p.className==='귀티'?'부티':p.className}</span><div class="bar-track"><div class="bar-fill" data-pct="${pct}"></div></div><span class="bar-pct">${pct}%</span></div>`;
     }).join('');
   }
