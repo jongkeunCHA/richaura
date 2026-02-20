@@ -1,199 +1,1212 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="Rich Aura Test — AI가 분석하는 당신의 관상 속 숨겨진 자산가 DNA.">
-    <meta name="keywords" content="관상 테스트,부자 관상,아우라 테스트,재물운,AI 관상,Rich Aura Test">
-    <title>RICH AURA TEST — AI 관상 분석</title>
+<!-- saved from url=(0052)file:///Users/hanwha/Downloads/rich-aura-test_3.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <script async src="assets/js"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-MPENLZ8FCZ');
-    </script>
-    <link href="assets/css2" rel="stylesheet">
-    <script src="assets/tf.min.js"></script>
-    <script src="assets/teachablemachine-image.min.js"></script>
-    <script src="assets/html2canvas.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="Rich Aura Test — AI가 분석하는 당신의 관상 속 숨겨진 자산가 DNA. 셀카 한 장으로 부티, 재물운, 아우라 스펙트럼을 무료로 확인하세요.">
+<meta name="keywords" content="관상 테스트,부자 관상,아우라 테스트,재물운,AI 관상,Rich Aura Test,부티 테스트,귀티,old money,aura analysis">
+<meta name="author" content="Rich Aura Analytics">
+<meta property="og:title" content="Rich Aura Test — AI 관상 분석">
+<meta property="og:description" content="셀카 한 장으로 당신의 자산가 DNA를 분석합니다">
+<meta property="og:type" content="website">
+<title>RICH AURA TEST — AI 관상 분석</title>
 
-    <style>
-        /* ZARA 스타일 & Glossy UI 통합 */
-        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        :root{ --black:#000;--white:#fff;--g100:#f5f5f5;--g200:#e8e8e8;--g400:#999; }
-        body{ font-family:'Pretendard','Inter',sans-serif; background:var(--white); color:var(--black); -webkit-font-smoothing:antialiased; }
-        .wrap{ max-width:480px; margin:0 auto; min-height:100vh; display:flex; flex-direction:column; }
-        
-        /* 헤더 스타일 */
-        .site-header{ display:flex; align-items:center; justify-content:space-between; padding:1.1rem 1.4rem; border-bottom:1px solid var(--black); sticky; top:0; background:var(--white); z-index:200; }
-        .logo{ font-weight:600; letter-spacing:.2em; text-transform:uppercase; font-size:.8rem; }
-        .lang-sw{ display:flex; border:1px solid var(--g200); }
-        .lbtn{ background:none; border:none; font-size:.6rem; padding:.3rem .5rem; cursor:pointer; color:var(--g400); }
-        .lbtn.on{ background:var(--black); color:var(--white); }
+<!-- GA4 -->
+<script async="" src="./RICH AURA TEST — AI 관상 분석_files/js"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-MPENLZ8FCZ');
+</script>
 
-        /* 섹션 제어 */
-        .sec{ display:none; padding:1.4rem; }
-        .sec.on{ display:block; }
+<!-- Structured Data -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Rich Aura Test","url":"https://rich-aura-test.com","description":"AI 기반 관상·아우라 분석 서비스","publisher":{"@type":"Organization","name":"Rich Aura Analytics"}}
+</script>
 
-        /* Glossy Card & Buttons */
-        .photo-frame{ width:100%; aspect-ratio:1/1; background:var(--g100); border:1px solid var(--g200); position:relative; cursor:pointer; overflow:hidden; }
-        #analyze-btn{ width:100%; padding:1.2rem; background:var(--black); color:var(--white); border:none; margin-top:1.5rem; font-weight:600; cursor:pointer; display:none; }
-        
-        /* 블로그 스타일 */
-        .blog-card{ padding:1.5rem 0; border-bottom:1px solid var(--g200); cursor:pointer; }
-        .blog-title{ font-size:1.1rem; font-weight:500; margin-bottom:.5rem; }
-        .blog-desc{ font-size:.85rem; color:var(--g400); line-height:1.6; }
-        
-        /* 결과 페이지용 */
-        #result-overlay{ display:none; position:fixed; inset:0; background:var(--white); z-index:900; overflow-y:auto; padding:2rem 1.4rem; }
-        .result-card{ border:1px solid var(--black); padding:2rem; margin-bottom:2rem; }
-        .sh-text { font-style: italic; color: #555; border-left: 3px solid #000; padding-left: 10px; margin: 15px 0; }
-    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./RICH AURA TEST — AI 관상 분석_files/css2" rel="stylesheet">
+<script src="./RICH AURA TEST — AI 관상 분석_files/tf.min.js"></script>
+<script src="./RICH AURA TEST — AI 관상 분석_files/teachablemachine-image.min.js"></script>
+<script src="./RICH AURA TEST — AI 관상 분석_files/html2canvas.min.js"></script>
+
+<style>
+/* ══════════════════════════════════════
+   ZARA 스타일 — 기존 유지
+══════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --black:#000;--white:#fff;
+  --g100:#f5f5f5;--g200:#e8e8e8;--g300:#d4d4d4;
+  --g400:#999;--g600:#555;--g800:#222;
+}
+body{
+  font-family:'Noto Sans KR','Inter',sans-serif;
+  background:var(--white);color:var(--black);
+  min-height:100vh;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── LAYOUT ── */
+.wrap{max-width:480px;margin:0 auto;padding-bottom:5rem}
+
+/* ── HEADER ── */
+.site-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem 1.4rem;border-bottom:1px solid var(--black);
+  position:sticky;top:0;background:var(--white);z-index:200;
+}
+.logo{font-family:'Inter',sans-serif;font-size:.81rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase}
+.logo-sub{font-size:.69rem;font-weight:300;letter-spacing:.18em;color:var(--g400);text-transform:uppercase}
+
+/* ── 헤더 우측 영역 ── */
+.header-right{display:flex;align-items:center;gap:1rem}
+
+/* ── 네비게이션 ── */
+.nav-links{display:flex;gap:.1rem}
+.nav-btn{
+  background:none;border:none;font-family:'Inter',sans-serif;
+  font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--g400);cursor:pointer;padding:.3rem .6rem;transition:color .15s;
+}
+.nav-btn:hover,.nav-btn.active{color:var(--black)}
+.nav-btn.active{border-bottom:1px solid var(--black)}
+
+/* ── KR/EN 스위치 ── */
+.lang-sw{display:flex;gap:0;border:1px solid var(--g300)}
+.lbtn{
+  background:none;border:none;font-family:'Inter',sans-serif;
+  font-size:.62rem;font-weight:500;letter-spacing:.15em;
+  padding:.3rem .55rem;cursor:pointer;color:var(--g400);transition:all .15s;
+}
+.lbtn.on{background:var(--black);color:var(--white)}
+
+/* ── SECTIONS ── */
+.sec{display:none}.sec.on{display:block}
+
+/* ══════════════════════════════════════
+   HOME
+══════════════════════════════════════ */
+.hero{padding:2.8rem 1.4rem 2rem;border-bottom:1px solid var(--g200)}
+.hero-eyebrow{font-size:.69rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--g400);margin-bottom:.9rem}
+.hero-title{font-family:'Inter',sans-serif;font-size:clamp(2.6rem,9vw,3.4rem);font-weight:200;letter-spacing:-.03em;line-height:1.02;margin-bottom:1.2rem}
+.hero-title em{font-style:normal;font-weight:600}
+.hero-body{font-size:.94rem;font-weight:300;color:var(--g600);line-height:1.85;letter-spacing:.02em}
+
+/* ── UPLOAD ── */
+.upload-section{padding:1.4rem;border-bottom:1px solid var(--g200)}
+.sec-label{font-size:.67rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--g400);margin-bottom:1rem}
+
+.photo-frame{
+  width:100%;aspect-ratio:1/1;background:var(--g100);
+  border:1px solid var(--g200);position:relative;overflow:hidden;
+  cursor:pointer;transition:background .2s;
+}
+.photo-frame:hover{background:var(--g200)}
+#fileInput{display:none}
+
+.upload-idle{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;
+}
+.upload-plus{font-size:2.2rem;font-weight:200;color:var(--g300);line-height:1}
+.upload-label{font-size:.78rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--g400)}
+.upload-hint{font-size:.69rem;color:var(--g400);font-weight:300;text-align:center;line-height:1.7}
+
+#preview-img{width:100%;height:100%;object-fit:cover;display:none}
+.change-mask{
+  position:absolute;inset:0;background:rgba(0,0,0,.42);
+  display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;
+}
+.photo-frame:hover .change-mask{opacity:1}
+.change-mask span{font-size:.75rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#fff}
+
+.photo-ready{display:none;margin-top:.7rem;font-size:.78rem;color:var(--g600);letter-spacing:.06em}
+.model-status-wrap{margin-top:.5rem;font-size:.71rem;color:var(--g400);letter-spacing:.04em;min-height:1.1em;transition:opacity .4s}
+
+/* ── CTA ── */
+.cta-wrap{padding:1.2rem 1.4rem;border-bottom:1px solid var(--g200)}
+#analyze-btn{
+  display:none;width:100%;padding:1.15rem;
+  background:var(--black);color:var(--white);border:none;
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:.92rem;font-weight:500;letter-spacing:.12em;
+  cursor:pointer;transition:background .2s;
+}
+#analyze-btn:hover{background:var(--g800)}
+#analyze-btn:disabled{background:var(--g200);color:var(--g400);cursor:not-allowed}
+
+/* ── LOADING ── */
+#loading-section{
+  display:none;position:fixed;inset:0;
+  background:var(--white);z-index:800;
+  flex-direction:column;align-items:center;justify-content:center;padding:2rem;
+}
+.load-steps{width:100%;max-width:340px;display:flex;flex-direction:column;gap:0;margin-bottom:3rem}
+.load-step{
+  display:flex;align-items:center;gap:1.1rem;
+  padding:1rem 0;border-bottom:1px solid var(--g200);
+  opacity:.25;transition:opacity .4s ease;
+}
+.load-step:first-child{border-top:1px solid var(--g200)}
+.load-step.active{opacity:1}.load-step.done{opacity:.5}
+.step-icon{font-size:1.4rem;width:2rem;text-align:center;flex-shrink:0}
+.step-text{font-size:.88rem;font-weight:300;color:var(--g800);letter-spacing:.02em;line-height:1.5;flex:1}
+.step-check{font-size:.9rem;color:var(--black);opacity:0;transition:opacity .3s;flex-shrink:0}
+.load-step.done .step-check{opacity:1}
+.load-progress-wrap{width:100%;max-width:340px}
+.load-progress-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:.7rem}
+.load-progress-text{font-size:.72rem;font-weight:400;color:var(--g400);letter-spacing:.1em}
+.load-progress-pct{font-family:'Inter',sans-serif;font-size:.72rem;font-weight:500;color:var(--black)}
+.load-bar-track{width:100%;height:1px;background:var(--g200);position:relative}
+.load-bar-fill{height:2px;margin-top:-.5px;background:var(--black);width:0%;transition:width .6s cubic-bezier(.4,0,.2,1)}
+
+/* ── RESULT OVERLAY ── */
+#result-overlay{
+  display:none;position:fixed;inset:0;
+  background:var(--white);z-index:900;
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+  animation:slideUp .38s cubic-bezier(.16,1,.3,1) forwards;
+}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.result-wrap{max-width:480px;margin:0 auto;padding-bottom:4rem}
+
+.result-header{
+  position:sticky;top:0;background:var(--white);border-bottom:1px solid var(--black);
+  padding:.95rem 1.4rem;display:flex;align-items:center;justify-content:space-between;z-index:10;
+}
+.btn-back,.btn-save-top{
+  background:none;border:none;font-size:.82rem;font-weight:500;letter-spacing:.05em;
+  color:var(--black);cursor:pointer;padding:.2rem 0;font-family:'Noto Sans KR',sans-serif;
+}
+.rh-center{font-size:.69rem;font-weight:400;letter-spacing:.25em;text-transform:uppercase;color:var(--g400)}
+
+.type-hero{padding:2.6rem 1.4rem 2rem;border-bottom:1px solid var(--g200)}
+.type-eyebrow{font-size:.67rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--g400);margin-bottom:.7rem;display:block}
+.type-emoji{font-size:2.4rem;display:block;margin-bottom:.8rem}
+.type-name{font-family:'Inter',sans-serif;font-size:clamp(2.2rem,8vw,3rem);font-weight:200;letter-spacing:-.02em;line-height:1.05;margin-bottom:1.3rem}
+.type-desc{font-size:.98rem;font-weight:300;color:var(--g600);line-height:1.95;border-left:2px solid var(--black);padding-left:1rem}
+
+.r-block{padding:1.7rem 1.4rem;border-bottom:1px solid var(--g200)}
+.block-label{font-size:.67rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--g400);margin-bottom:1.1rem}
+.power-list{display:flex;flex-direction:column;gap:.95rem}
+.power-item{display:flex;align-items:flex-start;gap:.9rem}
+.power-n{font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;color:var(--g400);min-width:1.3rem;padding-top:.15rem;letter-spacing:.05em}
+.power-text{font-size:.99rem;font-weight:300;line-height:1.75;color:var(--g800)}
+.r-text{font-size:.99rem;font-weight:300;line-height:1.85;color:var(--g800)}
+
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--g200);border-left:1px solid var(--g200)}
+.stat-item{padding:1.3rem 1.1rem;border-right:1px solid var(--g200);border-bottom:1px solid var(--g200)}
+.stat-icon{font-size:1.15rem;margin-bottom:.55rem}
+.stat-label{font-size:.66rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--g400);margin-bottom:.35rem}
+.stat-value{font-size:1.01rem;font-weight:500;color:var(--black);line-height:1.4}
+
+.bars-block{padding:1.7rem 1.4rem;border-bottom:1px solid var(--g200)}
+.bar-row{display:flex;align-items:center;gap:.9rem;margin-bottom:.95rem}
+.bar-row:last-child{margin-bottom:0}
+.bar-label{font-size:.81rem;font-weight:400;width:52px;text-align:right;color:var(--g600);flex-shrink:0}
+.bar-track{flex:1;height:1px;background:var(--g200);position:relative}
+.bar-fill{height:3px;margin-top:-1px;background:var(--black);width:0;transition:width 1.5s cubic-bezier(.16,1,.3,1)}
+.bar-pct{font-family:'Inter',sans-serif;font-size:.81rem;font-weight:400;width:42px;text-align:right;color:var(--g600);flex-shrink:0}
+
+.ad-block{border-bottom:1px solid var(--g200)}
+.ad-head{padding:1.1rem 1.4rem .8rem;border-bottom:1px solid var(--g200)}
+.ad-title{font-size:.69rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase}
+.ad-sub{font-size:.71rem;color:var(--g400);margin-top:.2rem;font-weight:300}
+.ad-items{display:grid;grid-template-columns:repeat(3,1fr)}
+.ad-item{display:block;padding:1.1rem .7rem;text-decoration:none;color:var(--black);border-right:1px solid var(--g200);text-align:center;transition:background .15s}
+.ad-item:last-child{border-right:none}
+.ad-item:hover{background:var(--g100)}
+.ad-item-icon{font-size:1.3rem;margin-bottom:.45rem}
+.ad-item-name{font-size:.75rem;font-weight:400;color:var(--g800);line-height:1.4;margin-bottom:.25rem}
+.ad-item-price{font-size:.71rem;color:var(--g400);font-weight:300}
+
+.action-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--g200)}
+.btn-act{
+  padding:1.15rem;background:none;border:none;
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:.88rem;font-weight:500;letter-spacing:.05em;
+  cursor:pointer;color:var(--black);transition:background .15s;
+  border-right:1px solid var(--g200);
+}
+.btn-act:last-child{border-right:none}
+.btn-act:hover{background:var(--g100)}
+.btn-act.primary{background:var(--black);color:var(--white)}
+.btn-act.primary:hover{background:var(--g800)}
+
+.result-footer{padding:1.4rem;font-size:.69rem;color:var(--g400);text-align:center;line-height:1.9;font-weight:300;letter-spacing:.05em}
+
+/* ══════════════════════════════════════
+   BLOG
+══════════════════════════════════════ */
+.blog-hero{padding:2.8rem 1.4rem 2rem;border-bottom:1px solid var(--g200)}
+.blog-hero-title{font-family:'Inter',sans-serif;font-size:clamp(2rem,7vw,2.8rem);font-weight:200;letter-spacing:-.03em;line-height:1.05;margin-bottom:.8rem}
+.blog-hero-sub{font-size:.82rem;font-weight:300;color:var(--g600);line-height:1.8}
+
+.blog-list{padding:0}
+.blog-card{
+  padding:1.6rem 1.4rem;border-bottom:1px solid var(--g200);
+  cursor:pointer;transition:background .15s;
+}
+.blog-card:hover{background:var(--g100)}
+.blog-num{font-family:'Inter',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--g400);margin-bottom:.55rem}
+.blog-card-title{font-family:'Inter',sans-serif;font-size:1.02rem;font-weight:400;line-height:1.45;margin-bottom:.5rem;letter-spacing:-.01em}
+.blog-card-desc{font-size:.8rem;font-weight:300;color:var(--g600);line-height:1.7}
+.blog-card-meta{display:flex;align-items:center;gap:.9rem;margin-top:.8rem;font-size:.65rem;color:var(--g400);letter-spacing:.05em}
+.blog-tag{border:1px solid var(--g300);padding:.18rem .6rem;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase}
+
+/* 아티클 뷰 */
+#art-view{display:none}
+.art-back{
+  display:flex;align-items:center;gap:.5rem;padding:1rem 1.4rem;
+  border-bottom:1px solid var(--g200);background:none;border-left:none;border-right:none;border-top:none;
+  font-family:'Inter',sans-serif;font-size:.72rem;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--g600);
+  cursor:pointer;width:100%;text-align:left;transition:background .15s;
+}
+.art-back:hover{background:var(--g100)}
+
+.art-body-wrap{padding:0 1.4rem}
+.art-eyebrow{font-size:.62rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--g400);margin:2rem 0 .8rem;display:block}
+.art-h1{font-family:'Inter',sans-serif;font-size:clamp(1.7rem,5.5vw,2.4rem);font-weight:200;letter-spacing:-.02em;line-height:1.18;margin-bottom:1.4rem}
+.art-meta{display:flex;gap:1rem;font-size:.69rem;color:var(--g400);letter-spacing:.05em;margin-bottom:2rem;padding-bottom:1.2rem;border-bottom:1px solid var(--g200)}
+.art-content h2{font-family:'Inter',sans-serif;font-size:1.1rem;font-weight:500;letter-spacing:-.01em;margin:2.2rem 0 .8rem;color:var(--black)}
+.art-content p{font-size:.94rem;font-weight:300;color:var(--g600);line-height:2;margin-bottom:1.2rem}
+.art-content ul{margin:.4rem 0 1.2rem 1.3rem}
+.art-content ul li{font-size:.92rem;font-weight:300;color:var(--g600);line-height:1.9;margin-bottom:.4rem}
+
+.author-box{
+  display:flex;align-items:center;gap:1rem;
+  padding:1.4rem 0;margin-top:2rem;
+  border-top:1px solid var(--g200);border-bottom:1px solid var(--g200);
+}
+.author-av{
+  width:42px;height:42px;border-radius:50%;flex-shrink:0;
+  background:var(--black);display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;
+}
+.author-name{font-size:.8rem;font-weight:500;letter-spacing:.05em}
+.author-role{font-size:.68rem;color:var(--g400);font-weight:300;margin-top:.18rem;letter-spacing:.04em}
+
+/* ══════════════════════════════════════
+   PRIVACY
+══════════════════════════════════════ */
+.priv-wrap{padding:2.8rem 1.4rem}
+.priv-h1{font-family:'Inter',sans-serif;font-size:clamp(1.8rem,6vw,2.6rem);font-weight:200;letter-spacing:-.02em;margin-bottom:.5rem}
+.priv-date{font-size:.7rem;color:var(--g400);margin-bottom:2.5rem;letter-spacing:.05em}
+.priv-body h2{font-family:'Inter',sans-serif;font-size:1rem;font-weight:500;letter-spacing:.02em;margin:2rem 0 .7rem;border-bottom:1px solid var(--g200);padding-bottom:.5rem}
+.priv-body p{font-size:.88rem;font-weight:300;color:var(--g600);line-height:1.95;margin-bottom:.9rem}
+.priv-body ul{margin:.4rem 0 1rem 1.3rem}
+.priv-body ul li{font-size:.86rem;color:var(--g600);line-height:1.85;margin-bottom:.35rem;font-weight:300}
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+.site-footer{
+  border-top:1px solid var(--black);
+  padding:2rem 1.4rem;
+}
+.footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
+.footer-links{display:flex;gap:1.2rem;flex-wrap:wrap}
+.footer-link{font-size:.69rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--g400);cursor:pointer;transition:color .15s}
+.footer-link:hover{color:var(--black)}
+.footer-biz{font-size:.67rem;color:var(--g400);line-height:2;font-weight:300;letter-spacing:.03em;padding-top:1rem;border-top:1px solid var(--g200)}
+.footer-copy{font-size:.63rem;color:var(--g300);margin-top:.6rem;letter-spacing:.05em}
+
+/* ── TOAST ── */
+.toast{
+  position:fixed;bottom:2rem;left:50%;
+  transform:translateX(-50%) translateY(80px);
+  background:var(--black);color:var(--white);
+  font-size:.7rem;letter-spacing:.1em;
+  padding:.75rem 1.8rem;z-index:9999;
+  transition:transform .35s cubic-bezier(.34,1.2,.64,1);white-space:nowrap;
+}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+/* ── 저장 카드 ── */
+#save-card{
+  position:fixed;left:-9999px;top:0;width:480px;background:#fff;
+  font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;color:#000;
+}
+.sc-inner{padding:3rem 2.5rem 2.5rem}
+.sc-eyebrow{font-size:.58rem;letter-spacing:.32em;text-transform:uppercase;color:#999;margin-bottom:2rem}
+.sc-emoji{font-size:2.4rem;display:block;margin-bottom:.8rem}
+.sc-name{font-family:'Inter',sans-serif;font-size:2.8rem;font-weight:200;letter-spacing:-.02em;line-height:1.05;margin-bottom:1.2rem}
+.sc-desc{font-size:.82rem;font-weight:300;color:#555;line-height:1.9;border-left:2px solid #000;padding-left:1rem;margin-bottom:2rem}
+.sc-power-label{font-size:.56rem;letter-spacing:.3em;text-transform:uppercase;color:#999;margin-bottom:.8rem}
+.sc-power-item{display:flex;gap:.8rem;font-size:.78rem;font-weight:300;line-height:1.7;color:#333;margin-bottom:.5rem}
+.sc-power-n{font-size:.63rem;font-weight:600;color:#999;min-width:1.3rem}
+.sc-stats{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #e8e8e8;border-left:1px solid #e8e8e8;margin:1.5rem 0}
+.sc-stat{padding:1.1rem 1rem;border-right:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8}
+.sc-stat-icon{font-size:1rem;margin-bottom:.4rem}
+.sc-stat-label{font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;color:#999;margin-bottom:.3rem}
+.sc-stat-val{font-size:.8rem;font-weight:500;color:#000}
+.sc-foot{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#ccc;border-top:1px solid #e8e8e8;padding-top:1.3rem}
+</style>
 </head>
 <body>
 
 <div class="wrap">
-    <header class="site-header">
-        <div>
-            <div class="logo">Rich Aura Test</div>
-            <div style="font-size:10px; color:#999">AI ANALYSIS</div>
-        </div>
-        <div style="display:flex; gap:10px; align-items:center;">
-            <nav style="display:flex; gap:10px; font-size:12px;">
-                <span onclick="goSec('home')" style="cursor:pointer">Home</span>
-                <span onclick="goSec('blog')" style="cursor:pointer">Blog</span>
-            </nav>
-            <div class="lang-sw">
-                <button class="lbtn on" id="lkr" onclick="setLang('kr')">KR</button>
-                <button class="lbtn" id="len" onclick="setLang('en')">EN</button>
-            </div>
-        </div>
-    </header>
 
-    <div class="sec on" id="sec-home">
-        <h1 id="h-title" style="font-size:2.5rem; font-weight:200; margin-bottom:2rem;">당신의 <br><b>부티 아우라</b>를 <br>분석합니다</h1>
-        <div class="photo-frame" onclick="document.getElementById('fileInput').click()">
-            <div id="upload-msg" style="text-align:center; padding-top:40%;">+ 사진 업로드</div>
-            <img id="preview-img" style="width:100%; height:100%; object-fit:cover; display:none;">
-        </div>
-        <input type="file" id="fileInput" hidden accept="image/*" onchange="handleFile(this)">
-        <button id="analyze-btn" onclick="startAnalysis()">분석 시작하기 →</button>
+<!-- ══ HEADER ══ -->
+<header class="site-header">
+  <div>
+    <div class="logo">Rich Aura Test</div>
+    <div class="logo-sub" id="hdr-sub">AI Aura Analysis</div>
+  </div>
+  <div class="header-right">
+    <nav class="nav-links">
+      <button class="nav-btn active" data-sec="home" id="np-home" data-kr="홈" data-en="Home">홈</button>
+      <button class="nav-btn" data-sec="blog" id="np-blog" data-kr="블로그" data-en="Blog">블로그</button>
+      <button class="nav-btn" data-sec="privacy" id="np-privacy" data-kr="개인정보" data-en="Privacy">개인정보</button>
+    </nav>
+    <div class="lang-sw">
+      <button class="lbtn on" id="lkr">KR</button>
+      <button class="lbtn" id="len">EN</button>
     </div>
+  </div>
+</header>
 
-    <div class="sec" id="sec-blog">
-        <h2 id="b-title" style="margin-bottom:1.5rem;">Wealth & Aura Insights</h2>
-        <div id="blog-list"></div>
-    </div>
+<!-- ══ HOME ══ -->
+<div class="sec on" id="sec-home">
+  <section class="hero">
+    <p class="hero-eyebrow" data-kr="2026 Edition — DNA Report" data-en="2026 Edition — DNA Report">2026 Edition — DNA Report</p>
+    <h1 class="hero-title">
+      <span data-kr="당신의" data-en="Your">당신의</span><br>
+      <em data-kr="부티" data-en="Aura">부티</em><span data-kr="를" data-en="">를</span><br>
+      <span data-kr="분석합니다" data-en="Analysed">분석합니다</span>
+    </h1>
+    <p class="hero-body" data-kr="셀카 한 장으로 잠든 자산가 DNA를 깨워드립니다" data-en="One selfie unlocks your hidden wealthy DNA">셀카 한 장으로 잠든 자산가 DNA를 깨워드립니다</p>
+  </section>
 
-    <div class="sec" id="sec-privacy">
-        <h2 id="p-title">Privacy Policy</h2>
-        <div id="priv-content" style="font-size:13px; color:#666; line-height:1.8; margin-top:1rem;"></div>
+  <section class="upload-section">
+    <p class="sec-label" data-kr="01 — 사진 업로드" data-en="01 — Portrait Upload">01 — 사진 업로드</p>
+    <input type="file" id="fileInput" accept="image/*">
+    <div class="photo-frame" id="photoFrame">
+      <div class="upload-idle" id="uploadIdle">
+        <span class="upload-plus">+</span>
+        <span class="upload-label" data-kr="사진 업로드" data-en="Upload Photo">사진 업로드</span>
+        <span class="upload-hint" data-kr="정면 셀카 권장 · JPG · PNG · WEBP" data-en="Front-facing selfie · JPG · PNG · WEBP">정면 셀카 권장 · JPG · PNG · WEBP</span>
+      </div>
+      <img id="preview-img" src="file:///Users/hanwha/Downloads/rich-aura-test_3.html" alt="">
+      <div class="change-mask" id="changeMask"><span data-kr="사진 바꾸기" data-en="Change Photo">사진 바꾸기</span></div>
     </div>
+    <p class="photo-ready" id="photoReady" data-kr="✓ 사진 준비 완료" data-en="✓ Photo Ready">✓ 사진 준비 완료</p>
+    <div class="model-status-wrap" style="opacity: 0;"><span id="mst" data-kr="AI 모델 연결 중..." data-en="Connecting AI..." style="color: rgb(0, 153, 0);">✓ AI 준비 완료</span></div>
+  </section>
 
-    <div id="result-overlay">
-        <div class="result-card">
-            <span id="r-eyebrow" style="font-size:12px; color:#999; letter-spacing:2px;">RESULT REPORT</span>
-            <h2 id="r-name" style="font-size:2rem; margin:1rem 0;">타입 명칭</h2>
-            <div id="r-sh-comment" class="sh-text"></div> <p id="r-desc" style="color:#666; line-height:1.6;"></p>
-        </div>
-        <button onclick="location.reload()" style="width:100%; padding:1rem; background:#000; color:#fff; border:none;">다시 하기</button>
+  <div class="cta-wrap">
+    <button id="analyze-btn" data-kr="부티 분석하기 →" data-en="Analyse My Aura →">부티 분석하기 →</button>
+  </div>
+
+  <!-- LOADING -->
+  <div id="loading-section">
+    <div class="load-steps">
+      <div class="load-step" id="step-0"><span class="step-icon">📸</span><span class="step-text" data-kr="사진 스캔 중" data-en="Scanning portrait">사진 스캔 중</span><span class="step-check">✓</span></div>
+      <div class="load-step" id="step-1"><span class="step-icon">🔬</span><span class="step-text" data-kr="관상 데이터베이스 대조 중" data-en="Matching physiognomy DB">관상 데이터베이스 대조 중</span><span class="step-check">✓</span></div>
+      <div class="load-step" id="step-2"><span class="step-icon">🧬</span><span class="step-text" data-kr="자산가 DNA 추출 중" data-en="Extracting wealthy DNA">자산가 DNA 추출 중</span><span class="step-check">✓</span></div>
+      <div class="load-step" id="step-3"><span class="step-icon">💰</span><span class="step-text" data-kr="재물운 지수 계산 중" data-en="Calculating wealth index">재물운 지수 계산 중</span><span class="step-check">✓</span></div>
+      <div class="load-step" id="step-4"><span class="step-icon">✨</span><span class="step-text" data-kr="부티 리포트 작성 중" data-en="Writing aura report">부티 리포트 작성 중</span><span class="step-check">✓</span></div>
     </div>
+    <div class="load-progress-wrap">
+      <div class="load-progress-label">
+        <span class="load-progress-text" data-kr="분석 중" data-en="Analysing">분석 중</span>
+        <span class="load-progress-pct" id="load-pct">0%</span>
+      </div>
+      <div class="load-bar-track"><div class="load-bar-fill" id="load-bar"></div></div>
+    </div>
+  </div>
+
+  <footer class="main-footer" style="padding:2rem 1.4rem;border-top:1px solid var(--g200);font-size:.71rem;color:var(--g400);line-height:1.9;font-weight:300;letter-spacing:.05em">
+    <span data-kr="AI 관상 분석 · Google Teachable Machine 기반 · 이미지는 서버에 저장되지 않습니다" data-en="AI Analysis · Google Teachable Machine · No image stored on server">AI 관상 분석 · Google Teachable Machine 기반 · 이미지는 서버에 저장되지 않습니다</span>
+  </footer>
 </div>
 
+<!-- ══ BLOG ══ -->
+<div class="sec" id="sec-blog">
+  <div class="blog-hero">
+    <p class="hero-eyebrow" data-kr="전문 콘텐츠" data-en="Expert Content">전문 콘텐츠</p>
+    <h2 class="blog-hero-title" data-kr="관상 &amp; 아우라 인사이트" data-en="Physiognomy &amp; Aura Insights">관상 &amp; 아우라 인사이트</h2>
+    <p class="blog-hero-sub" data-kr="부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클 10선" data-en="10 expert articles on wealthy faces, AI analysis &amp; aura science">부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클 10선</p>
+  </div>
+  <div class="blog-list" id="blogList" style="display: block;"><div class="blog-card"><div class="blog-num">01</div>
+      <h2 class="blog-card-title">부자 관상의 특징 — 성공한 사람들의 얼굴에는 무엇이 있나?</h2>
+      <p class="blog-card-desc">눈빛의 깊이, 이마의 형태, 코의 기운까지. 동서양 관상학이 공통으로 지목하는 부자 관상의 핵심 특징을 분석합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">관상학</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">02</div>
+      <h2 class="blog-card-title">올드머니 아우라의 본질 — 진짜 부티는 어디서 오는가?</h2>
+      <p class="blog-card-desc">트렌드를 초월하는 올드머니 미학의 핵심 원칙과, 진정한 귀티가 만들어지는 과정을 심층 분석합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">라이프스타일</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">03</div>
+      <h2 class="blog-card-title">AI 관상학의 과학적 근거 — 인공지능은 얼굴을 어떻게 읽는가?</h2>
+      <p class="blog-card-desc">딥러닝과 컴퓨터 비전이 얼굴 특징을 분석하는 원리와, AI 관상의 과학적 가능성과 한계를 알아봅니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">AI 과학</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">04</div>
+      <h2 class="blog-card-title">현대적 "귀티"의 정의 — 타고나는 것인가, 만들어지는 것인가?</h2>
+      <p class="blog-card-desc">SNS 시대에 새롭게 정의되는 귀티의 개념과, 누구나 갈고닦을 수 있는 귀티의 요소들을 탐구합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">문화</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">05</div>
+      <h2 class="blog-card-title">인상과 운명의 상관관계 — 심리학이 밝히는 첫인상의 과학</h2>
+      <p class="blog-card-desc">첫 0.1초에 결정되는 인상의 심리학적 메커니즘과, 인상이 실제 삶의 기회에 미치는 영향을 분석합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">심리학</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">06</div>
+      <h2 class="blog-card-title">성공한 CEO들의 관상 분석 — 리더의 얼굴에는 무엇이 있나?</h2>
+      <p class="blog-card-desc">세계적인 비즈니스 리더들의 공통적인 외모 특징과, 리더십이 외모에 반영되는 방식을 분석합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">비즈니스</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">07</div>
+      <h2 class="blog-card-title">눈썹으로 보는 재물운 — 관상학이 말하는 눈썹의 비밀</h2>
+      <p class="blog-card-desc">관상에서 재물운의 바로미터로 여겨지는 눈썹의 형태와 관리법을 알아봅니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">관상 팁</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">08</div>
+      <h2 class="blog-card-title">부티 나는 스타일링 가이드 — 지금 당장 실천할 수 있는 아우라 업그레이드</h2>
+      <p class="blog-card-desc">예산과 상관없이 지금 바로 실천할 수 있는 부티 업그레이드 스타일링 팁과 아이템 가이드.</p>
+      <div class="blog-card-meta"><span class="blog-tag">스타일링</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">09</div>
+      <h2 class="blog-card-title">말투와 아우라의 힘 — 당신의 언어가 운명을 만든다</h2>
+      <p class="blog-card-desc">언어 습관과 말투가 개인의 아우라와 삶의 기회에 미치는 심오한 영향을 탐구합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">아우라</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">10</div>
+      <h2 class="blog-card-title">재물운을 높이는 풍수 인테리어 — 공간이 운을 바꾼다</h2>
+      <p class="blog-card-desc">동양 풍수학의 현대적 적용으로 재물운과 아우라를 높이는 인테리어 원칙과 실천법을 소개합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">풍수</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div></div>
+  <div id="art-view" style="display: none;">
+    <button class="art-back" id="artBack">← <span data-kr="목록으로" data-en="Back to List">목록으로</span></button>
+    <div class="art-body-wrap" id="artContent"></div>
+  </div>
+</div>
+
+<!-- ══ PRIVACY ══ -->
+<div class="sec" id="sec-privacy">
+  <div class="priv-wrap" id="privContent">
+    <h1 class="priv-h1">개인정보처리방침</h1>
+    <p class="priv-date">시행일: 2026년 1월 1일 | 최종 수정: 2026년 1월 15일</p>
+    <div class="priv-body">
+    <h2>1. 개인정보 수집 및 이용 목적</h2>
+    <p>Rich Aura Test는 AI 기반 관상 및 아우라 분석 서비스를 제공합니다. 본 서비스는 사용자의 개인정보 보호를 중요하게 생각하며 관련 법령을 준수합니다.</p>
+    <h2>2. 수집하는 개인정보 항목</h2>
+    <p>분석 목적으로 업로드하는 이미지는 브라우저 내 로컬에서만 처리되며 서버에 저장되지 않습니다. 서비스 이용 과정에서 접속 IP 주소, 브라우저 유형, 방문 일시 등의 이용 기록이 자동 수집될 수 있습니다.</p>
+    <h2>3. 제3자 서비스</h2>
+    <ul>
+    <li>Google Analytics 4 (GA4): 서비스 이용 통계 분석 목적</li>
+    <li>Google Teachable Machine: AI 이미지 분석 (이미지는 서버로 전송되지 않음)</li>
+    <li>Google AdSense: 광고 제공 목적</li>
+    </ul>
+    <h2>4. 쿠키 사용</h2>
+    <p>서비스 개선 및 광고 목적으로 쿠키를 사용할 수 있습니다. 사용자는 브라우저 설정을 통해 쿠키 수집을 거부할 수 있습니다.</p>
+    <h2>5. 사용자의 권리</h2>
+    <p>언제든지 개인정보 처리에 대한 동의 철회, 열람, 수정, 삭제를 요청할 수 있습니다. 문의: contact@rich-aura-test.com</p>
+    <h2>6. 아동 개인정보 보호</h2>
+    <p>만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+    <h2>7. 면책 조항</h2>
+    <p>AI 관상 분석 결과는 순수한 오락 목적으로 제공됩니다. 실제 의사 결정의 근거로 사용하지 마세요. Rich Aura Analytics는 분석 결과의 정확성을 보장하지 않습니다.</p>
+    <h2>8. 개인정보 보호책임자</h2>
+    <p>개인정보 보호책임자: 홍길동 | privacy@rich-aura-test.com</p>
+    <h2>9. 방침 변경</h2>
+    <p>본 방침은 법령이나 서비스 변경에 따라 수정될 수 있으며, 변경 시 서비스 내 공지사항을 통해 안내합니다.</p>
+    </div></div>
+</div>
+
+</div><!-- /wrap -->
+
+<!-- ══ RESULT OVERLAY ══ -->
+<div id="result-overlay">
+  <div class="result-wrap">
+    <div class="result-header">
+      <button class="btn-back" id="backBtn" data-kr="← 돌아가기" data-en="← Back">← 돌아가기</button>
+      <span class="rh-center" data-kr="분석 결과" data-en="Analysis Result">분석 결과</span>
+      <button class="btn-save-top" id="saveBtn" data-kr="저장 ↓" data-en="Save ↓">저장 ↓</button>
+    </div>
+    <div class="type-hero">
+      <span class="type-eyebrow" data-kr="당신의 아우라 타입" data-en="Your Aura Type">당신의 아우라 타입</span>
+      <span class="type-emoji" id="r-emoji"></span>
+      <p class="type-name" id="r-name">—</p>
+      <p class="type-desc" id="r-desc">—</p>
+    </div>
+    <div class="r-block"><p class="block-label" data-kr="02 — 당신만의 3대 파워" data-en="02 — Your 3 Core Powers">02 — 당신만의 3대 파워</p><div class="power-list" id="r-powers"></div></div>
+    <div class="r-block"><p class="block-label" data-kr="03 — 재물운 리포트" data-en="03 — Wealth Report">03 — 재물운 리포트</p><p class="r-text" id="r-wealth"></p></div>
+    <div class="r-block"><p class="block-label" data-kr="04 — 닮은 부티 셀럽" data-en="04 — Celebrity Energy">04 — 닮은 부티 셀럽</p><p class="r-text" id="r-celeb"></p></div>
+    <div class="r-block"><p class="block-label" data-kr="05 — 오늘의 행운 액션" data-en="05 — Lucky Action">05 — 오늘의 행운 액션</p><p class="r-text" id="r-tip"></p></div>
+    <div class="stats-grid" id="r-stats"></div>
+    <div class="bars-block"><p class="block-label" style="margin-bottom:1.1rem" data-kr="06 — 아우라 스펙트럼" data-en="06 — Aura Spectrum">06 — 아우라 스펙트럼</p><div id="r-bars"></div></div>
+    <div class="ad-block">
+      <div class="ad-head"><p class="ad-title" data-kr="추천 아이템" data-en="Recommended Items">추천 아이템</p><p class="ad-sub" data-kr="당신의 부티에 맞는 아이템 (파트너스)" data-en="Items matched to your aura (affiliate)">당신의 부티에 맞는 아이템 (파트너스)</p></div>
+      <div class="ad-items" id="r-ads"></div>
+    </div>
+    <div class="action-row">
+      <button class="btn-act primary" id="saveBtn2" data-kr="이미지 저장" data-en="Save Image">이미지 저장</button>
+      <button class="btn-act" id="retryBtn" data-kr="다시 하기" data-en="Try Again">다시 하기</button>
+    </div>
+    <div class="result-footer"><span data-kr="Rich Aura Test · AI 관상 분석 · 재미로 즐기는 부티 테스트" data-en="Rich Aura Test · AI Aura Analysis · For Entertainment">Rich Aura Test · AI 관상 분석 · 재미로 즐기는 부티 테스트</span></div>
+  </div>
+</div>
+
+<!-- SAVE CARD -->
+<div id="save-card"><div class="sc-inner">
+  <p class="sc-eyebrow">Rich Aura Test — AI Aura Analysis 2026</p>
+  <span class="sc-emoji" id="sc-emoji"></span>
+  <p class="sc-name" id="sc-name"></p>
+  <p class="sc-desc" id="sc-desc"></p>
+  <p class="sc-power-label">3 Powers</p>
+  <div id="sc-powers"></div>
+  <div class="sc-stats" id="sc-stats"></div>
+  <p class="sc-foot">Rich Aura Test · rich-aura-test.com · 2026</p>
+</div></div>
+
+<!-- SITE FOOTER (blog/privacy 하단) -->
+<div class="wrap" style="padding-bottom:0">
+<footer class="site-footer">
+  <div class="footer-top">
+    <div>
+      <div class="logo">Rich Aura Test</div>
+      <div class="logo-sub" style="margin-top:.25rem">AI Aura Analysis</div>
+    </div>
+    <div class="footer-links">
+      <span class="footer-link" onclick="goSec(&#39;home&#39;)" data-kr="홈" data-en="Home">홈</span>
+      <span class="footer-link" onclick="goSec(&#39;blog&#39;)" data-kr="블로그" data-en="Blog">블로그</span>
+      <span class="footer-link" onclick="goSec(&#39;privacy&#39;)" data-kr="개인정보처리방침" data-en="Privacy Policy">개인정보처리방침</span>
+    </div>
+  </div>
+  <div class="footer-biz">
+    <span data-kr="상호: Rich Aura Analytics | 사업자등록번호: 000-00-00000 | 대표: 홍길동 | E-mail: contact@rich-aura-test.com" data-en="Company: Rich Aura Analytics | Reg.: 000-00-00000 | CEO: John Doe | E-mail: contact@rich-aura-test.com">상호: Rich Aura Analytics | 사업자등록번호: 000-00-00000 | 대표: 홍길동 | E-mail: contact@rich-aura-test.com</span>
+  </div>
+  <div class="footer-copy">© 2026 Rich Aura Test. All rights reserved. <span data-kr="본 서비스는 오락 목적입니다." data-en="For entertainment purposes only.">본 서비스는 오락 목적입니다.</span></div>
+</footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
 <script>
-    let currentLang = 'kr';
-    const MODEL_URL = "https://teachablemachine.withgoogle.com/models/Adsz2vqeL/";
-    let model;
+// ═══════════════════════════════════════
+// LANGUAGE
+// ═══════════════════════════════════════
+let lang='kr';
+function setLang(l){
+  lang=l;
+  document.querySelectorAll('[data-kr]').forEach(el=>{
+    if(el.tagName==='INPUT'||el.tagName==='BUTTON'&&el.id==='analyze-btn') el.textContent=l==='kr'?el.dataset.kr:el.dataset.en;
+    else el.textContent=l==='kr'?el.dataset.kr:el.dataset.en;
+  });
+  document.getElementById('lkr').classList.toggle('on',l==='kr');
+  document.getElementById('len').classList.toggle('on',l==='en');
+  document.documentElement.lang=l==='kr'?'ko':'en';
+  renderBlog();
+  renderPrivacy();
+  // 현재 보이는 결과도 갱신
+  if(document.getElementById('result-overlay').style.display==='block'&&lastMatched){
+    applyResultText(lastMatched,lastStats,lastSorted);
+  }
+}
+document.getElementById('lkr').addEventListener('click',()=>setLang('kr'));
+document.getElementById('len').addEventListener('click',()=>setLang('en'));
 
-    // 1. 다국어 데이터
-    const i18n = {
-        kr: { title: "당신의 <br><b>부티 아우라</b>를 <br>분석합니다", upload: "+ 사진 업로드", btn: "분석 시작하기 →", blog: "관상 & 아우라 인사이트" },
-        en: { title: "Analyze <br>Your <b>Wealth Aura</b>", upload: "+ Upload Photo", btn: "Start Analysis →", blog: "Wealth & Aura Insights" }
-    };
+// ═══════════════════════════════════════
+// NAV
+// ═══════════════════════════════════════
+function goSec(sec){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.getElementById('sec-'+sec).classList.add('on');
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('np-'+sec)?.classList.add('active');
+  if(sec==='blog'){
+    document.getElementById('art-view').style.display='none';
+    document.getElementById('blogList').style.display='block';
+  }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>goSec(b.dataset.sec)));
 
-    // 2. 충청도 사투리 결과 데이터
-    const resultsData = {
-        '귀티': { 
-            name: "로열 블러드", 
-            sh: "어이구~ 관상이 아주 기가 맥히네. 돈복이 아주 그냥 담벼락을 넘어서 앞마당까지 꽉 찼슈. 그렇게 타고났으면 좀 베풀고 살아야지, 혼자 다 묵을껴? 그까이꺼 대~충 써도 안 없어져유.",
-            desc: "태어날 때부터 남다른 기운을 가진 타입입니다." 
-        },
-        '지적': { 
-            name: "브레인 리더", 
-            sh: "눈매가 아주 야물딱지구먼. 남 밑에서 일하긴 글렀슈. 그냥 네 일 해~ 그까이꺼 대~충 시작해도 나중엔 다 알아서 풀리게 되어 있응게.",
-            desc: "명석한 두뇌와 분석력으로 자수성가할 관상입니다." 
-        }
-        // ... 추가 타입들 동일 구조 적용
-    };
+// ═══════════════════════════════════════
+// MODEL
+// ═══════════════════════════════════════
+const MODEL_URL='https://teachablemachine.withgoogle.com/models/Adsz2vqeL/';
+let model=null,blobUrl=null;
+async function loadModel(){
+  setSt('⏳ AI 모델 연결 중...');
+  try{
+    model=await tmImage.load(MODEL_URL+'model.json',MODEL_URL+'metadata.json');
+    setSt('✓ AI 준비 완료','#090');
+    setTimeout(()=>{document.querySelector('.model-status-wrap').style.opacity='0'},2000);
+  }catch(e){
+    setSt('❌ 연결 실패 — <a href="#" id="rm" style="color:#000;text-decoration:underline">재시도</a>','#c00');
+    setTimeout(()=>{const b=document.getElementById('rm');if(b)b.addEventListener('click',ev=>{ev.preventDefault();loadModel()})},100);
+  }
+}
+function setSt(html,color='#999'){
+  const w=document.querySelector('.model-status-wrap'),t=document.getElementById('mst');
+  if(!w||!t)return;w.style.opacity='1';t.innerHTML=html;t.style.color=color;
+}
+function waitForModel(ms=15000){
+  return new Promise(res=>{
+    if(model){res(true);return}
+    const t=Date.now();
+    const iv=setInterval(()=>{
+      if(model){clearInterval(iv);res(true)}
+      else if(Date.now()-t>ms){clearInterval(iv);res(false)}
+    },300);
+  });
+}
+loadModel();
 
-    // 3. 블로그 포스팅 데이터 (10개)
-    const posts = [
-        { title: "부자 관상의 특징", desc: "성공한 사람들의 얼굴에는 공통적인 재물운의 특징이 있습니다." },
-        { title: "올드머니 아우라의 본질", desc: "진정한 부티는 브랜드 로고가 아닌 태도에서 나옵니다." },
-        { title: "AI 관상학의 과학적 근거", desc: "데이터가 말해주는 인상의 통계적 확률을 분석합니다." }
-        // ... 나머지 7개 포스팅 추가
-    ];
+// ═══════════════════════════════════════
+// RESULTS DATA
+// ═══════════════════════════════════════
+const RESULTS=[
+  {name:'로열 블러드',nameEn:'Royal Blood',emoji:'👑',
+   desc:'편의점 삼각김밥도 스테이크처럼 보일 상! 전생에 최소 성주였을 확률 200%.',
+   descEn:'Even convenience store snacks look fine dining in your hands. At least a feudal lord in a past life.',
+   power:['타고난 존재감으로 방에 들어서는 순간 분위기를 장악해요','말 한마디에 사람들이 자연스럽게 따라오는 리더십','어떤 옷을 입어도 내가 명품이 되는 착장 능력'],
+   powerEn:['Natural presence that commands the room the moment you enter','Leadership that people naturally follow with every word','Whatever you wear, you become the luxury'],
+   wealth:'💰 이번 달 안에 뜻밖의 기회가 노크해요. 거절하지 마세요.',wealthEn:'💰 Unexpected opportunity is knocking this month. Don\'t refuse.',
+   celeb:'정용진 회장, 이부진 대표와 비슷한 오너 에너지',celebEn:'Owner energy similar to top corporate heirs and billionaires',
+   tip:'오늘 어깨를 5cm만 더 펴보세요. 당신의 기운이 주변을 압도해요.',tipEn:'Straighten your shoulders 5cm today. Your energy will overwhelm.'},
+  {name:'대저택의 주인',nameEn:'Manor Lord',emoji:'🏛️',
+   desc:'여유로운 바이브에서 느껴지는 찐부자의 향기! 당신이 머무는 곳은 어디든 갤러리가 돼요.',
+   descEn:'The scent of true wealth radiates from your relaxed vibe. Wherever you stay becomes a gallery.',
+   power:['공간을 세련되게 채우는 인테리어 감각이 DNA에 내장됨','서두르지 않아도 좋은 것들이 자연스럽게 따라오는 여유','비싼 걸 안 사도 비싸 보이는 스텔스 럭셔리 마스터'],
+   powerEn:['Interior design sensibility hardwired into your DNA','Good things follow naturally without rushing','Stealth luxury master — looks expensive without spending much'],
+   wealth:'💰 3개월 내 부동산·투자 관련 좋은 소식이 들려와요.',wealthEn:'💰 Good real estate or investment news within 3 months.',
+   celeb:'나영석 PD, 손예진의 여유로운 럭셔리 에너지',celebEn:'Relaxed luxury energy of top directors and A-list stars',
+   tip:'주변 공간을 정리해보세요. 깔끔한 환경이 당신의 부티를 10배 끌어올려요.',tipEn:'Declutter your space. A clean environment elevates your aura 10x.'},
+  {name:'아트 디렉터',nameEn:'Art Director',emoji:'🎨',
+   desc:'안목이 곧 돈이 되는 심미안 만렙 자산가!',descEn:'Your eye for beauty is literally money — maximum aesthetic level.',
+   power:['남들보다 6개월 먼저 트렌드를 알아채는 미래 시각','뭘 봐도 더 예쁘게 만들고 싶은 미적 본능','취향이 곧 커리어가 되고 돈이 되는 희귀한 관상'],
+   powerEn:['Spot trends 6 months before everyone else','Instinct to make everything more beautiful','Rare gift where taste becomes career and income'],
+   wealth:'💰 창의적인 프로젝트에서 뜻밖의 수익이 생겨요.',wealthEn:'💰 Unexpected income from creative projects.',
+   celeb:'한예슬, 버질 아블로의 심미안 에너지',celebEn:'Aesthetic energy of style icons and fashion directors',
+   tip:'지금 마음에 드는 것들을 사진으로 모아보세요. 당신의 취향이 곧 자산이에요.',tipEn:'Collect photos of things you love. Your taste is your asset.'},
+  {name:'클래식 아이콘',nameEn:'Classic Icon',emoji:'🕰️',
+   desc:'유행은 변해도 당신의 기품은 영원하니까! 시간이 갈수록 가치가 폭등할 빈티지 와인상.',
+   descEn:'Trends change, but your elegance is eternal. Your value compounds like vintage wine.',
+   power:['10년 후에 봐도 촌스럽지 않을 타임리스 스타일','처음엔 조용하지만 알수록 빠져드는 깊이 있는 매력','나이 들수록 더 빛나는 발효형 인간'],
+   powerEn:['Timeless style that won\'t date in 10 years','Quiet at first, irresistible the more you know them','Gets better with age — the fermentation type'],
+   wealth:'💰 꾸준히 쌓아온 것들이 복리로 돌아오는 시기가 왔어요.',wealthEn:'💰 Everything you\'ve steadily built is now compounding back.',
+   celeb:'이영애, 박찬욱 감독의 타임리스 클래식 에너지',celebEn:'Timeless energy of legendary directors and actresses',
+   tip:'지금 하는 일을 묵묵히 계속하세요. 복리 인간이라 나중에 폭발해요.',tipEn:'Keep doing what you\'re doing. The compound interest explodes later.'},
+  {name:'트렌드 세터',nameEn:'Trend Setter',emoji:'⚡',
+   desc:'돈을 부르는 화제성, 폼 미쳐버린 주인공 관상!',descEn:'Magnetic attention that attracts money. You\'re the main character.',
+   power:['내가 쓰면 유행이 되는 패션 선구자 기질','SNS에 올리면 저절로 퍼지는 콘텐츠 감각','어딜 가든 가장 눈에 띄는 주인공 포스'],
+   powerEn:['Fashion pioneer — things become trends when you wear them','Content sense that spreads naturally when posted','Always the most eye-catching person everywhere'],
+   wealth:'💰 SNS나 콘텐츠 관련 수익 기회가 가까이에 있어요.',wealthEn:'💰 SNS and content-related income opportunities are nearby.',
+   celeb:'지드래곤, 제니의 트렌드 리딩 에너지',celebEn:'Trend-leading energy of global K-pop icons',
+   tip:'지금 입고 싶은 옷을 입으세요. 당신의 선택이 트렌드가 됩니다.',tipEn:'Wear what you want to wear. Your choice becomes the trend.'},
+  {name:'유니콘 창업주',nameEn:'Unicorn Founder',emoji:'🦄',
+   desc:'뇌가 섹시해서 통장 잔고가 가만있질 못할 상!',descEn:'Your brain is so attractive the bank account can\'t stay still.',
+   power:['문제를 보면 솔루션이 자동으로 떠오르는 창업가 두뇌','사람을 끌어모으는 비전 제시 능력','실패해도 더 크게 돌아오는 회복탄력성 MAX'],
+   powerEn:['Entrepreneur brain that auto-generates solutions','Vision-casting ability that attracts people','Maximum resilience — comes back bigger after every failure'],
+   wealth:'💰 지금 머릿속 아이디어를 실행하면 대박 날 수 있어요.',wealthEn:'💰 Executing the idea in your head right now could be massive.',
+   celeb:'김범수(카카오), 일론 머스크의 창업가 DNA',celebEn:'Founder DNA of legendary tech entrepreneurs',
+   tip:'오늘 머릿속 아이디어 하나를 종이에 적어보세요. 그게 시작이에요.',tipEn:'Write one idea from your head today. That\'s the beginning.'},
+  {name:'힙한 콜렉터',nameEn:'Hip Collector',emoji:'🔮',
+   desc:'취향으로 세상을 압도하는 플렉스 왕!',descEn:'Flex king who overwhelms the world with impeccable taste.',
+   power:['남들이 모를 때 알아보는 희귀한 안목','수집하는 것마다 나중에 가치가 오르는 황금 손','독특한 취향이 강력한 아이덴티티가 되는 타입'],
+   powerEn:['Rare discernment that sees value before anyone else','Golden hand — everything you collect appreciates','Unique taste that becomes a powerful identity'],
+   wealth:'💰 오래 갖고 있던 무언가의 가치가 폭등할 조짐이 보여요.',wealthEn:'💰 Something you\'ve held long is about to skyrocket in value.',
+   celeb:'박재범의 힙한 컬렉터 에너지',celebEn:'Hip collector energy of leading culture curators',
+   tip:'지금 관심 있는 것에 깊이 파고들어 보세요. 그 집착이 자산이 돼요.',tipEn:'Dive deep into what interests you. That obsession becomes an asset.'},
+  {name:'프라이빗 VIP',nameEn:'Private VIP',emoji:'🎫',
+   desc:'어디서나 프리패스 가능한 귀한 집 포스!',descEn:'VIP pass energy wherever you go — born with nobility.',
+   power:['가만히 있어도 좋은 사람들이 알아서 모여드는 인복','처음 만나는 사람도 오래된 친구처럼 편안하게 만드는 능력','어딜 가도 VIP 대우를 받는 타고난 귀티'],
+   powerEn:['Good people naturally gather around you','Makes first meetings feel like old friendships','Receives VIP treatment naturally everywhere'],
+   wealth:'💰 귀인이 나타나 예상치 못한 기회를 연결해줄 거예요.',wealthEn:'💰 A key person will appear and connect you to an unexpected opportunity.',
+   celeb:'박서준의 자연스러운 VIP 에너지',celebEn:'Natural VIP energy of beloved A-list stars',
+   tip:'오늘 주변 사람에게 먼저 연락해보세요. 황금 인맥이 될 수 있어요.',tipEn:'Reach out to someone first today. That connection could turn golden.'},
+  {name:'엔젤 투자자',nameEn:'Angel Investor',emoji:'😇',
+   desc:'돈과 인복이 쌍으로 터진 상!',descEn:'Wealth and relationship luck exploding simultaneously.',
+   power:['사람의 가능성을 한눈에 알아보는 투자 안목','주변을 성장시키는 에너지가 결국 나에게 돌아오는 순환','믿고 베팅하면 반드시 결과가 나오는 판단력'],
+   powerEn:['Investment insight that sees human potential at a glance','Energy that grows others cycles back to you','Judgment that produces results when you trust and bet'],
+   wealth:'💰 누군가를 도왔던 일이 뜻밖의 방식으로 돌아올 때가 됐어요.',wealthEn:'💰 Something you did to help someone is returning in an unexpected way.',
+   celeb:'워런 버핏, 손정의의 투자자 DNA',celebEn:'Investor DNA of legendary global figures',
+   tip:'오늘 주변의 작은 부탁을 들어주세요. 그 씨앗이 나중에 열매가 돼요.',tipEn:'Grant a small request today. That seed becomes fruit later.'},
+  {name:'선한 영향력',nameEn:'Positive Influence',emoji:'✨',
+   desc:'마음까지 부유한 자산가! 존경과 부를 동시에 거머쥘 육각형 관상!',
+   descEn:'Wealthy in spirit too. A perfect hexagonal face that commands both respect and wealth.',
+   power:['존경받으면서도 친근한 완벽한 밸런스의 소유자','내가 행복하면 주변도 자동으로 행복해지는 전파력','돈도 명예도 인복도 다 잡는 육각형 인간'],
+   powerEn:['Perfect balance of being respected and approachable','When you\'re happy, everyone around you becomes happy automatically','Hexagonal human — wealth, honor, and relationships all captured'],
+   wealth:'💰 진심을 다해 한 일들이 조만간 눈에 보이는 결과로 돌아와요.',wealthEn:'💰 Things done with sincerity will return as visible results soon.',
+   celeb:'유재석의 선한 영향력 에너지',celebEn:'Positive influence energy of beloved national figures',
+   tip:'오늘 한 사람을 진심으로 칭찬해보세요. 그 에너지가 당신께 돌아와요.',tipEn:'Sincerely praise one person today. That energy returns to you.'},
+  {name:'숨은 자산가',nameEn:'Hidden Wealth',emoji:'🌙',
+   desc:'조용히 세상을 움직이는 스텔스 럭셔리!',descEn:'Stealth luxury quietly moving the world. The silent force.',
+   power:['드러내지 않아도 아는 사람은 다 아는 진짜 실력','소란스럽지 않지만 결정적인 순간에 존재감 폭발','조용히 축적하고 한 번에 터트리는 복리형 인간'],
+   powerEn:['Real ability known by those who know — without showing off','Not loud, but explodes with presence at decisive moments','Quietly accumulates, then detonates all at once'],
+   wealth:'💰 숨겨둔 실력이 드디어 빛을 발하는 타이밍이 다가와요.',wealthEn:'💰 The timing for your hidden abilities to shine is approaching.',
+   celeb:'하정우의 조용한 스텔스 럭셔리 에너지',celebEn:'Quiet stealth luxury energy of respected industry figures',
+   tip:'지금 하는 조용한 준비들을 멈추지 마세요. 곧 그 결실이 보여요.',tipEn:'Don\'t stop the quiet preparations. The results will show soon.'},
+  {name:'브레인 리더',nameEn:'Brain Leader',emoji:'🧠',
+   desc:'지적 섹시함의 정점! 그 명석한 두뇌로 자수성가의 역사를 새로 쓰겠군요.',
+   descEn:'Peak intellectual appeal. That brilliant brain will rewrite self-made history.',
+   power:['남들이 한 번 볼 때 세 번 보이는 통찰력','어떤 분야든 빠르게 핵심을 파악하는 학습 능력','머리로 번 돈이 제일 오래 남는다는 걸 아는 사람'],
+   powerEn:['Insight that sees three layers when others see one','Grasps the core of any field rapidly','Knows money earned with the brain lasts the longest'],
+   wealth:'💰 지식과 정보가 직접적인 수익으로 연결되는 시기가 왔어요.',wealthEn:'💰 The time when knowledge connects directly to income has come.',
+   celeb:'안철수의 지적 리더십 에너지',celebEn:'Intellectual leadership energy of pioneering thinkers',
+   tip:'오늘 관심 분야 글 하나를 깊이 읽어보세요. 그 지식이 미래를 바꿔요.',tipEn:'Read one deep piece in your field today. That knowledge changes your future.'},
+  {name:'마이다스의 손',nameEn:'Midas Touch',emoji:'✋',
+   desc:'만지는 것마다 황금으로 변하는 사기캐 관상!',descEn:'Everything you touch turns to gold — a cheat-code character.',
+   power:['투자하면 오르고 시작하면 잘 되는 황금 손','돈 냄새를 먼저 맡는 초감각적 비즈니스 직관','실패해도 그 경험이 다음 성공의 발판이 되는 타입'],
+   powerEn:['Golden hand — investments rise, ventures succeed','Supersensory business intuition that smells money first','Even failures become launching pads for next success'],
+   wealth:'💰 지금 관심 가는 투자나 사업 기회를 좀 더 들여다보세요.',wealthEn:'💰 Look more closely at the investment opportunity catching your interest now.',
+   celeb:'김슬아(마켓컬리)의 황금 비즈니스 감각',celebEn:'Golden business sense of legendary startup founders',
+   tip:'오늘 관심 있는 사업 아이디어를 메모해두세요. 타이밍이 오고 있어요.',tipEn:'Note down your business idea today. The timing is coming.'},
+  {name:'전략적 승부사',nameEn:'Strategic Winner',emoji:'♟️',
+   desc:'실패를 모르는 확신의 승리자 관상!',descEn:'A winner\'s face that knows no failure. Only upward.',
+   power:['3수 앞을 내다보는 장기적 사고','감정 없이 냉철하게 판단하는 전략가 기질','이기는 게임만 골라서 하는 승부사 DNA'],
+   powerEn:['Long-term thinking that sees 3 moves ahead','Strategist temperament that judges coldly without emotion','Competitive DNA that only plays winnable games'],
+   wealth:'💰 신중하게 준비해온 계획이 성과를 낼 시점이 가까워요.',wealthEn:'💰 The plan you\'ve carefully prepared is close to delivering results.',
+   celeb:'손흥민의 전략적 승부사 DNA',celebEn:'Strategic competitive DNA of world-class performers',
+   tip:'지금 가장 중요한 목표 하나에만 집중해보세요. 선택과 집중이 무기예요.',tipEn:'Focus on only the most important goal right now. Selection is your weapon.'},
+  {name:'미래 선구자',nameEn:'Future Pioneer',emoji:'🚀',
+   desc:'시대를 앞서가는 혜안!',descEn:'Vision that precedes the era. A true pioneer.',
+   power:['아직 아무도 모를 때 미래를 먼저 보는 선견지명','AI·기술·변화에 자연스럽게 적응하는 미래형 인간','트렌드를 따라가는 게 아니라 만들어가는 타입'],
+   powerEn:['Foresight that sees the future before anyone knows','Future-type human that naturally adapts to AI and change','Doesn\'t follow trends — creates them'],
+   wealth:'💰 새로운 기술이나 플랫폼에서 기회가 생겨요. 늦지 않았어요.',wealthEn:'💰 Opportunities emerging in new technologies. It\'s not too late.',
+   celeb:'샘 올트만, 김봉진(배민)의 선구자 비전',celebEn:'Pioneer vision of AI and tech visionaries',
+   tip:'오늘 AI 툴 하나를 새로 써보세요. 미래를 먼저 경험하는 사람이 이겨요.',tipEn:'Try one new AI tool today. Those who experience the future first win.'},
+  {name:'독보적 취향가',nameEn:'Unique Taste',emoji:'💫',
+   desc:'뻔한 건 거부하는 예술적 럭셔리!',descEn:'Artistic luxury that refuses the obvious. Original to the core.',
+   power:['비슷한 것 중에서 딱 다른 걸 골라내는 취향 레이더','나만의 색깔이 너무 강해서 오히려 무기가 되는 타입','남들이 이해 못 해도 결국 내가 맞았음이 증명되는 관상'],
+   powerEn:['Taste radar that picks exactly the different one among similars','Own color so strong it becomes a weapon','Proven right even when others don\'t understand at first'],
+   wealth:'💰 독창적인 아이디어가 시장에서 인정받을 타이밍이에요.',wealthEn:'💰 Timing for your original ideas to be recognized by the market.',
+   celeb:'봉준호 감독의 독보적 예술가 에너지',celebEn:'Unmatched artist energy of award-winning visionaries',
+   tip:'오늘 남의 눈치 조금 덜 보세요. 당신만의 길이 정답이에요.',tipEn:'Care a little less about others\' opinions today. Your own path is right.'},
+  {name:'디지털 노마드',nameEn:'Digital Nomad',emoji:'🌍',
+   desc:'지구 반대편에서도 달러 찍어낼 프로 일탈러!',descEn:'Prints dollars from the other side of the globe.',
+   power:['어디서든 일하고 어디서든 버는 장소 초월 능력자','경험 자체가 자산이 되는 삶의 방식 보유','자유와 돈을 동시에 잡는 희귀한 라이프스타일'],
+   powerEn:['Location-transcendent ability — works and earns from anywhere','Lifestyle where experience itself becomes the asset','Rare lifestyle that captures both freedom and money'],
+   wealth:'💰 온라인에서 새로운 수익 경로가 열릴 조짐이 보여요.',wealthEn:'💰 Signs of a new income channel opening online.',
+   celeb:'자유로운 디지털 크리에이터의 노마드 에너지',celebEn:'Nomadic energy of leading digital creators',
+   tip:'오늘 하고 싶었던 여행 계획을 세워보세요. 움직이는 사람에게 기회가 와요.',tipEn:'Plan a trip you\'ve wanted today. Opportunities come to those who move.'},
+  {name:'아틀리에 오너',nameEn:'Atelier Owner',emoji:'🎭',
+   desc:'창조적 에너지가 갓벽한 예술적 부티!',descEn:'Godlike creative energy with an artistic aura.',
+   power:['평범한 일상을 특별한 작품으로 만드는 창조력','만드는 것 자체가 즐겁고 그게 돈이 되는 희귀한 재능','감성과 수익을 동시에 잡는 아티스트 비즈니스 마인드'],
+   powerEn:['Creative power that turns ordinary daily life into special works','Rare talent where creating itself is joyful and profitable','Artist business mind that captures both emotion and revenue'],
+   wealth:'💰 만들어놓은 결과물이 수익으로 연결되는 전환점이에요.',wealthEn:'💰 The turning point where your creations connect to revenue.',
+   celeb:'이하늬의 아티스트 비즈니스 에너지',celebEn:'Artist business energy of multi-talented creative powerhouses',
+   tip:'오늘 뭔가 하나 만들어보세요. 글이든 그림이든 영상이든. 그게 자산이에요.',tipEn:'Make something today — writing, art, or video. That\'s your asset.'},
+  {name:'소신 럭셔리',nameEn:'Conviction Luxury',emoji:'🏆',
+   desc:'중심이 확고한 나만의 제국 건설자!',descEn:'Empire builder with an unshakeable center.',
+   power:['흔들리지 않는 자기 중심이 가장 강력한 무기','남들이 뭐라 해도 내 길을 가는 뚝심','자존감이 높으니까 진짜 좋은 것만 끌어당기는 인력'],
+   powerEn:['Unshakeable self-center is the most powerful weapon','Persistence to walk your path no matter what others say','High self-esteem attracts only genuinely good things'],
+   wealth:'💰 스스로를 믿고 밀어붙이면 지금이 가장 좋은 타이밍이에요.',wealthEn:'💰 If you believe in yourself and push forward, now is the best timing.',
+   celeb:'오프라 윈프리의 소신 있는 제국 건설 에너지',celebEn:'Conviction empire-building energy of legendary self-made icons',
+   tip:'거울 보면서 자신에게 \"나 잘 하고 있어\"라고 말해보세요.',tipEn:'Tell yourself in the mirror: "I\'m doing great."'},
+];
 
-    async function init() {
-        model = await tmImage.load(MODEL_URL + "model.json", MODEL_URL + "metadata.json");
+function matchResult(sorted){
+  const t1=sorted[0].className,t2=sorted[1].className,p1=sorted[0].probability;
+  if(p1>=.70){
+    if(t1==='귀티')return RESULTS[0];if(t1==='우아함')return RESULTS[3];
+    if(t1==='지적')return RESULTS[11];if(t1==='친근함')return RESULTS[9];if(t1==='힙함')return RESULTS[4];
+  }
+  const m={
+    '귀티+우아함':RESULTS[1],'귀티+지적':RESULTS[7],'귀티+힙함':RESULTS[2],'귀티+친근함':RESULTS[8],
+    '우아함+귀티':RESULTS[1],'우아함+지적':RESULTS[10],'우아함+친근함':RESULTS[3],'우아함+힙함':RESULTS[15],
+    '지적+귀티':RESULTS[5],'지적+힙함':RESULTS[14],'지적+친근함':RESULTS[12],'지적+우아함':RESULTS[13],
+    '친근함+귀티':RESULTS[8],'친근함+지적':RESULTS[9],'친근함+힙함':RESULTS[16],'친근함+우아함':RESULTS[9],
+    '힙함+귀티':RESULTS[6],'힙함+지적':RESULTS[17],'힙함+친근함':RESULTS[18],'힙함+우아함':RESULTS[6]
+  };
+  return m[t1+'+'+t2]||RESULTS[Math.floor(Math.random()*RESULTS.length)];
+}
+
+const VL=['약 120억 원','약 340억 원','약 720억 원','약 550억 원','약 980억 원'];
+const RL=['상위 0.1% 레어리티','전설의 황금 관상','상위 0.05% 사기캐','신화 등급 DNA','전설급 부티'];
+const LL=['아아 샷 추가 ☕','실크 넥타이 👔','어깨 펴고 걷기','골드 카드 지갑','향수 한 스프레이'];
+const WL=['폭발 직전 🌋','맑음 뒤 입금 ☀️','흐림 뒤 횡재 🌦️','번개같은 기회 ⚡','무지개 대박 🌈'];
+const VLE=['~$87M','~$240M','~$510M','~$380M','~$720M'];
+const RLE=['Top 0.1% Rarity','Legendary Golden Face','Top 0.05% Cheat Code','Mythic Grade DNA','Legendary Aura'];
+const LLE=['Extra espresso shot ☕','Silk tie 👔','Walk tall & proud','Gold card wallet','One spritz of perfume'];
+const WLE=['About to explode 🌋','Sunny then deposit ☀️','Cloudy then windfall 🌦️','Lightning opportunity ⚡','Rainbow jackpot 🌈'];
+function rnd(a){return a[Math.floor(Math.random()*a.length)]}
+function genStats(){
+  return lang==='kr'
+    ?[{icon:'💰',label:'관상 가치',value:rnd(VL)},{icon:'💎',label:'희귀도',value:rnd(RL)},{icon:'🍀',label:'오늘의 행운템',value:rnd(LL)},{icon:'⛅',label:'재물운 날씨',value:rnd(WL)}]
+    :[{icon:'💰',label:'Aura Value',value:rnd(VLE)},{icon:'💎',label:'Rarity',value:rnd(RLE)},{icon:'🍀',label:'Lucky Item',value:rnd(LLE)},{icon:'⛅',label:'Wealth Weather',value:rnd(WLE)}];
+}
+
+const ADS=[
+  {icon:'👔',nameKr:'실크 셔츠',nameEn:'Silk Shirt',price:'₩89,000',url:'#'},
+  {icon:'💍',nameKr:'골드 주얼리',nameEn:'Gold Jewelry',price:'₩54,000',url:'#'},
+  {icon:'🕶️',nameKr:'선글라스',nameEn:'Sunglasses',price:'₩129,000',url:'#'},
+];
+
+// ═══════════════════════════════════════
+// UPLOAD
+// ═══════════════════════════════════════
+const frame=document.getElementById('photoFrame');
+const fi=document.getElementById('fileInput');
+const pi=document.getElementById('preview-img');
+const idle=document.getElementById('uploadIdle');
+const mask=document.getElementById('changeMask');
+const ready=document.getElementById('photoReady');
+const aBtn=document.getElementById('analyze-btn');
+const loadSec=document.getElementById('loading-section');
+const overlay=document.getElementById('result-overlay');
+
+frame.addEventListener('click',()=>fi.click());
+mask.addEventListener('click',e=>{e.stopPropagation();fi.click()});
+fi.addEventListener('change',e=>{if(e.target.files[0])handleFile(e.target.files[0])});
+frame.addEventListener('dragover',e=>{e.preventDefault();frame.style.background='#e8e8e8'});
+frame.addEventListener('dragleave',()=>frame.style.background='');
+frame.addEventListener('drop',e=>{e.preventDefault();frame.style.background='';if(e.dataTransfer.files[0])handleFile(e.dataTransfer.files[0])});
+
+function handleFile(file){
+  if(!file.type.startsWith('image/')){showToast(lang==='kr'?'이미지 파일만 가능해요':'Image files only');return}
+  if(blobUrl)URL.revokeObjectURL(blobUrl);
+  blobUrl=URL.createObjectURL(file);
+  pi.onload=()=>{
+    idle.style.display='none';pi.style.display='block';mask.style.display='flex';
+    ready.style.display='block';aBtn.style.display='block';
+    setTimeout(()=>aBtn.scrollIntoView({behavior:'smooth',block:'nearest'}),150);
+  };
+  pi.src=blobUrl;
+}
+
+// ═══════════════════════════════════════
+// ANALYSE (8s loading)
+// ═══════════════════════════════════════
+let lastMatched=null,lastStats=null,lastSorted=null;
+
+aBtn.addEventListener('click',async()=>{
+  if(!model){
+    aBtn.disabled=true;aBtn.textContent=lang==='kr'?'AI 로딩 중...':'Loading AI...';
+    const ok=await waitForModel(15000);
+    aBtn.disabled=false;aBtn.textContent=lang==='kr'?'부티 분석하기 →':'Analyse My Aura →';
+    if(!ok){showToast(lang==='kr'?'AI 연결 실패. 다시 시도해주세요.':'AI connection failed. Please retry.');return}
+  }
+  aBtn.disabled=true;aBtn.textContent=lang==='kr'?'분석 중...':'Analysing...';
+  loadSec.style.display='flex';
+  document.body.style.overflow='hidden';
+
+  const steps=[
+    {id:'step-0',delay:0,dur:1400},{id:'step-1',delay:1400,dur:1600},
+    {id:'step-2',delay:3000,dur:1600},{id:'step-3',delay:4600,dur:1500},{id:'step-4',delay:6100,dur:1400},
+  ];
+  const total=8000;
+  const barEl=document.getElementById('load-bar');
+  const pctEl=document.getElementById('load-pct');
+  const t0=Date.now();
+  const barTmr=setInterval(()=>{
+    const p=Math.min(98,Math.round(((Date.now()-t0)/total)*100));
+    barEl.style.width=p+'%';pctEl.textContent=p+'%';
+    if(p>=98)clearInterval(barTmr);
+  },80);
+
+  steps.forEach((s,i)=>{
+    setTimeout(()=>{
+      if(i>0){const prev=document.getElementById(steps[i-1].id);prev.classList.remove('active');prev.classList.add('done');}
+      document.getElementById(s.id).classList.add('active');
+    },s.delay);
+    if(i===steps.length-1){
+      setTimeout(()=>{
+        document.getElementById(s.id).classList.remove('active');
+        document.getElementById(s.id).classList.add('done');
+        barEl.style.width='100%';pctEl.textContent='100%';
+      },total-100);
     }
+  });
 
-    function setLang(lang) {
-        currentLang = lang;
-        document.getElementById('h-title').innerHTML = i18n[lang].title;
-        document.getElementById('upload-msg').innerText = i18n[lang].upload;
-        document.getElementById('analyze-btn').innerText = i18n[lang].btn;
-        document.getElementById('b-title').innerText = i18n[lang].blog;
-        renderBlog();
-    }
+  await new Promise(r=>setTimeout(r,total));
+  clearInterval(barTmr);
 
-    function handleFile(input) {
-        const file = input.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = e => {
-                document.getElementById('preview-img').src = e.target.result;
-                document.getElementById('preview-img').style.display = 'block';
-                document.getElementById('upload-msg').style.display = 'none';
-                document.getElementById('analyze-btn').style.display = 'block';
-            };
-            reader.readAsDataURL(file);
-        }
-    }
+  try{
+    const c=document.createElement('canvas');c.width=c.height=224;
+    c.getContext('2d').drawImage(pi,0,0,224,224);
+    const preds=await model.predict(c);
+    const T=3.5,MIN=.05;
+    const logits=preds.map(p=>Math.log(Math.max(p.probability,1e-7)));
+    const sc=logits.map(l=>l/T);
+    const mx=Math.max(...sc);
+    const exps=sc.map(l=>Math.exp(l-mx));
+    const sum=exps.reduce((a,b)=>a+b,0);
+    let adj=exps.map(e=>e/sum);
+    let def=0;
+    adj=adj.map(p=>{if(p<MIN){def+=MIN-p;return MIN}return p});
+    const ab=adj.reduce((s,p)=>s+(p>MIN?p:0),0);
+    adj=adj.map(p=>p>MIN?p-(p/ab)*def:p);
+    const fs=adj.reduce((a,b)=>a+b,0);
+    const sm=preds.map((p,i)=>({className:p.className,probability:adj[i]/fs}));
+    const sorted=[...sm].sort((a,b)=>b.probability-a.probability);
+    const matched=matchResult(sorted);
+    const stats=genStats();
+    lastMatched=matched;lastStats=stats;lastSorted=sorted;
 
-    async function startAnalysis() {
-        const img = document.getElementById('preview-img');
-        const prediction = await model.predict(img);
-        prediction.sort((a, b) => b.probability - a.probability);
-        
-        const topResult = prediction[0].className;
-        const data = resultsData[topResult] || resultsData['귀티'];
+    loadSec.style.display='none';
+    document.body.style.overflow='';
+    steps.forEach(s=>{const el=document.getElementById(s.id);el.classList.remove('active','done');});
+    barEl.style.width='0%';pctEl.textContent='0%';
 
-        document.getElementById('r-name').innerText = data.name;
-        document.getElementById('r-sh-comment').innerText = data.sh;
-        document.getElementById('r-desc').innerText = data.desc;
-        document.getElementById('result-overlay').style.display = 'block';
-    }
+    renderResult(sorted,matched,stats);
+  }catch(err){
+    loadSec.style.display='none';
+    document.body.style.overflow='';
+    steps.forEach(s=>{const el=document.getElementById(s.id);el.classList.remove('active','done');});
+    console.error(err);
+    showToast(lang==='kr'?'분석 오류. 다시 시도해주세요.':'Analysis error. Please retry.');
+    aBtn.disabled=false;
+    aBtn.textContent=lang==='kr'?'부티 분석하기 →':'Analyse My Aura →';
+  }
+});
 
-    function renderBlog() {
-        const list = document.getElementById('blog-list');
-        list.innerHTML = posts.map(p => `
-            <div class="blog-card">
-                <div class="blog-title">${p.title}</div>
-                <div class="blog-desc">${p.desc}</div>
-            </div>
-        `).join('');
-    }
+// ═══════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════
+function applyResultText(matched,stats,sorted){
+  const kr=lang==='kr';
+  document.getElementById('r-emoji').textContent=matched.emoji;
+  document.getElementById('r-name').textContent=kr?matched.name:matched.nameEn;
+  document.getElementById('r-desc').textContent=kr?matched.desc:matched.descEn;
+  document.getElementById('r-powers').innerHTML=(kr?matched.power:matched.powerEn).map((p,i)=>`
+    <div class="power-item"><span class="power-n">0${i+1}</span><span class="power-text">${p}</span></div>`).join('');
+  document.getElementById('r-wealth').textContent=kr?matched.wealth:matched.wealthEn;
+  document.getElementById('r-celeb').textContent=kr?matched.celeb:matched.celebEn;
+  document.getElementById('r-tip').textContent=kr?matched.tip:matched.tipEn;
+  document.getElementById('r-stats').innerHTML=(stats||genStats()).map(s=>`
+    <div class="stat-item"><div class="stat-icon">${s.icon}</div><div class="stat-label">${s.label}</div><div class="stat-value">${s.value}</div></div>`).join('');
+  document.getElementById('r-ads').innerHTML=ADS.map(a=>`
+    <a href="${a.url}" target="_blank" rel="noopener" class="ad-item"><div class="ad-item-icon">${a.icon}</div><div class="ad-item-name">${kr?a.nameKr:a.nameEn}</div><div class="ad-item-price">${a.price}</div></a>`).join('');
+  document.getElementById('sc-emoji').textContent=matched.emoji;
+  document.getElementById('sc-name').textContent=kr?matched.name:matched.nameEn;
+  document.getElementById('sc-desc').textContent=kr?matched.desc:matched.descEn;
+  document.getElementById('sc-powers').innerHTML=(kr?matched.power:matched.powerEn).map((p,i)=>`
+    <div class="sc-power-item"><span class="sc-power-n">0${i+1}</span><span>${p}</span></div>`).join('');
+  document.getElementById('sc-stats').innerHTML=(stats||genStats()).map(s=>`
+    <div class="sc-stat"><div class="sc-stat-icon">${s.icon}</div><div class="sc-stat-label">${s.label}</div><div class="sc-stat-val">${s.value}</div></div>`).join('');
+}
 
-    function goSec(id) {
-        document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'));
-        document.getElementById('sec-' + id).classList.add('on');
-    }
+function renderResult(sorted,matched,stats){
+  applyResultText(matched,stats,sorted);
+  if(sorted){
+    document.getElementById('r-bars').innerHTML=sorted.map(p=>{
+      const pct=(p.probability*100).toFixed(1);
+      return`<div class="bar-row"><span class="bar-label">${p.className}</span><div class="bar-track"><div class="bar-fill" data-pct="${pct}"></div></div><span class="bar-pct">${pct}%</span></div>`;
+    }).join('');
+  }
+  overlay.style.display='block';
+  document.body.style.overflow='hidden';
+  overlay.scrollTop=0;
+  aBtn.disabled=false;
+  aBtn.textContent=lang==='kr'?'부티 분석하기 →':'Analyse My Aura →';
+  setTimeout(()=>document.querySelectorAll('.bar-fill').forEach(b=>b.style.width=b.dataset.pct+'%'),200);
+}
 
-    init();
-    renderBlog();
+// ═══════════════════════════════════════
+// SAVE
+// ═══════════════════════════════════════
+async function doSave(){
+  showToast(lang==='kr'?'이미지 저장 중...':'Saving image...');
+  const card=document.getElementById('save-card');
+  try{
+    const canvas=await html2canvas(card,{
+      backgroundColor:'#ffffff',scale:2,useCORS:true,logging:false,width:480,windowWidth:480,
+      onclone:(doc)=>{const el=doc.getElementById('save-card');el.style.position='relative';el.style.left='0';el.style.top='0';}
+    });
+    const link=document.createElement('a');
+    link.download=`RichAuraTest_${document.getElementById('r-name').textContent}.png`;
+    link.href=canvas.toDataURL('image/png');link.click();
+    showToast(lang==='kr'?'저장 완료! 인스타에 올려보세요 🖤':'Saved! Share it on Instagram 🖤');
+  }catch(e){console.error(e);showToast(lang==='kr'?'저장 실패. 스크린샷을 이용해주세요.':'Save failed. Please screenshot.');}
+}
+document.getElementById('saveBtn').addEventListener('click',doSave);
+document.getElementById('saveBtn2').addEventListener('click',doSave);
+
+function closeOverlay(){overlay.style.display='none';document.body.style.overflow='';}
+document.getElementById('backBtn').addEventListener('click',closeOverlay);
+document.getElementById('retryBtn').addEventListener('click',()=>{
+  closeOverlay();
+  idle.style.display='flex';pi.style.display='none';mask.style.display='none';
+  ready.style.display='none';aBtn.style.display='none';fi.value='';pi.src='';blobUrl=null;
+  aBtn.disabled=false;aBtn.textContent=lang==='kr'?'부티 분석하기 →':'Analyse My Aura →';
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+
+// ═══════════════════════════════════════
+// BLOG DATA
+// ═══════════════════════════════════════
+const POSTS=[
+{id:1,tagKr:'관상학',tagEn:'Physiognomy',
+ titleKr:'부자 관상의 특징 — 성공한 사람들의 얼굴에는 무엇이 있나?',
+ titleEn:'Characteristics of a Wealthy Face — What Do Successful People\'s Faces Reveal?',
+ descKr:'눈빛의 깊이, 이마의 형태, 코의 기운까지. 동서양 관상학이 공통으로 지목하는 부자 관상의 핵심 특징을 분석합니다.',
+ descEn:'The depth of the gaze, the forehead shape, the energy of the nose. We analyze key wealthy-face features identified by Eastern and Western physiognomy.',
+ bodyKr:`<h2>관상학이란 무엇인가?</h2><p>관상학(觀相學)은 인간의 얼굴 생김새와 성격, 운명, 사회적 성취 사이의 관계를 연구하는 동아시아의 전통 학문입니다. 수천 년의 역사를 지닌 이 학문은 단순한 미신이 아니라, 오랜 관찰과 경험을 바탕으로 체계화된 지식 체계입니다.</p><h2>이마 — 재물이 들어오는 문</h2><p>관상학에서 이마는 '관록궁(官祿宮)'으로 사회적 지위와 초년운을 관장합니다. 재물운이 강한 이마는 넓고 깨끗하며 좌우 대칭이 균형 잡힌 형태입니다. 실제로 많은 성공한 CEO들의 이마를 보면 넓고 반듯한 경우가 많습니다. 이마에 선명한 주름이 없고 생기가 돌수록 현재 운이 좋은 상태로 해석합니다.</p><h2>눈빛 — 내면의 의지와 총명함</h2><p>눈은 관상에서 가장 중요한 부위 중 하나로, '정신이 머무는 곳'이라고 불립니다. 부자 관상의 눈빛 핵심은 '광채(光彩)'입니다. 눈빛이 맑고 생기가 있으며, 보는 사람에게 신뢰감을 주는 눈이 이상적입니다. 특히 눈동자가 또렷하고 눈 아래 와잠(臥蠶)이 있으면 인복과 재복이 강하다고 봅니다.</p><h2>코 — 재물궁의 핵심</h2><p>코는 관상학에서 '재물궁(財物宮)'으로 불리는 가장 직접적인 재물운의 상징입니다. 코끝이 둥글고 풍성한 형태를 이상적으로 보며, 이를 '준두원비(準頭圓肥)'라고 합니다. 콧구멍이 너무 드러나지 않고, 코 날개가 적당히 발달해 있으면 재물을 잘 모으고 지키는 능력이 있다고 해석합니다.</p><h2>귀 — 장기적 재물 축적</h2><p>귀가 크고 두꺼우며 귓불이 두텁고 아래로 늘어진 형태는 가장 복 있는 귀로 꼽힙니다. 불교 미술에서 부처님의 귀가 이 형태인 것도 이 때문입니다.</p><h2>결론 — 관상은 바뀐다</h2><p>"심상이 관상을 만든다"는 관상학의 핵심 가르침처럼, 내면의 생각과 태도가 장기적으로 얼굴을 변화시킵니다. 관상은 운명이 아니라 가능성의 지도입니다.</p>`,
+ bodyEn:`<h2>What Is Physiognomy?</h2><p>Physiognomy is the traditional East Asian discipline studying the relationship between facial features and character, destiny, and social achievement. With thousands of years of history, it is systematized knowledge built on long observation.</p><h2>The Forehead — Gateway to Fortune</h2><p>The forehead governs social status and early-life fortune. An ideal wealthy forehead is broad, smooth, and symmetrically balanced. Many successful CEOs tend to have wide, well-formed foreheads.</p><h2>The Eyes — Inner Resolve</h2><p>The eyes are called "where the spirit dwells." The key is luminosity. Clear, vibrant eyes that inspire trust represent the ideal. A subtle fullness beneath the eye (the "silkworm" area) indicates strong relationship and wealth blessings.</p><h2>The Nose — The Wealth Palace</h2><p>The nose is literally called the "Wealth Palace." An ideal wealthy nose has a round, full tip and nostrils that aren't overly exposed. Well-developed nasal wings suggest the ability to accumulate and preserve wealth.</p><h2>The Ears</h2><p>Large, thick ears with full, pendulous earlobes are the most auspicious — the same shape depicted on Buddha statues, symbolizing wisdom and abundance.</p><h2>Conclusion — Your Face Can Change</h2><p>"The mind creates the face." Our thoughts and attitudes gradually reshape our facial features over time. Physiognomy is not destiny but a map of possibilities.</p>`},
+{id:2,tagKr:'라이프스타일',tagEn:'Lifestyle',
+ titleKr:'올드머니 아우라의 본질 — 진짜 부티는 어디서 오는가?',
+ titleEn:'The Essence of Old Money Aura — Where Does True Luxury Come From?',
+ descKr:'트렌드를 초월하는 올드머니 미학의 핵심 원칙과, 진정한 귀티가 만들어지는 과정을 심층 분석합니다.',
+ descEn:'Deep analysis of Old Money aesthetics that transcend trends, and how genuine nobility of bearing is cultivated.',
+ bodyKr:`<h2>올드머니 트렌드의 부상</h2><p>2020년대 중반 전 세계를 강타한 가장 강력한 문화 트렌드 중 하나는 단연 '올드머니(Old Money)' 미학입니다. 로고로 가득 찬 '뉴머니' 스타일과 대비되는 이 미학은, 조용하고 절제되어 있으며 시간의 검증을 받은 클래식함이 특징입니다.</p><h2>절제의 미학</h2><p>올드머니의 첫 번째 원칙은 "Less is More"입니다. 진정한 부는 과시할 필요가 없습니다. 로고를 드러내지 않는 브랜드, 절제된 색상 팔레트(베이지, 네이비, 카멜, 화이트), 최상급 소재의 단순한 의류가 핵심입니다. 에르메스, 로로피아나, 브루넬로 쿠치넬리가 이 철학을 대표합니다.</p><h2>역사와 서사</h2><p>올드머니 가문은 물건을 '사는' 것이 아니라 '이어받습니다'. 할아버지의 카르티에 시계, 어머니의 에르메스 버킨 — 이 물건들은 가족의 역사를 담은 서사입니다. 신품보다 빈티지를, 대량 생산보다 장인의 작품을 선호하는 이유입니다.</p><h2>차분한 자신감</h2><p>올드머니 사람들은 자신을 증명하려 하지 않습니다. 이 차분한 자신감은 목소리 톤, 몸짓, 눈 맞춤 방식에서 드러납니다. 방에 들어섰을 때 조용히 분위기를 바꾸는 능력 — 이것이 진정한 귀티의 본질입니다.</p><h2>결론</h2><p>올드머니 아우라는 계좌 잔고의 문제가 아닙니다. 오랜 시간에 걸쳐 쌓인 문화적 자본, 절제된 취향, 내면의 안정감에서 나옵니다. 진정한 아우라는 매일의 선택과 습관에서 만들어집니다.</p>`,
+ bodyEn:`<h2>The Rise of Old Money</h2><p>One of the most powerful cultural forces sweeping the mid-2020s is the Old Money aesthetic. In contrast to logo-heavy New Money style, Old Money is characterized by quiet restraint, timeless classicism, and refinement that only decades can build.</p><h2>The Aesthetic of Restraint</h2><p>"Less is More." True wealth has nothing to prove. Non-logo brands, a restrained color palette (beige, navy, camel, white), and supreme material quality — this is the essence. Hermès, Loro Piana, and Brunello Cucinelli embody this philosophy.</p><h2>History and Narrative</h2><p>Old Money families don't "buy" things — they "inherit" them. Grandfather's Cartier watch, mother's Hermès Birkin — these are narratives carrying family history. This explains the preference for vintage over new.</p><h2>Quiet Confidence</h2><p>Old Money individuals don't need to prove themselves. This quiet confidence manifests in voice tone, gestures, and eye contact. The ability to subtly shift the atmosphere upon entering a room — this is the essence of true nobility.</p><h2>Conclusion</h2><p>Old Money aura isn't about bank balance. It emerges from cultural capital accumulated over time, restrained taste, and inner stability. Genuine aura is built through daily choices and habits.</p>`},
+{id:3,tagKr:'AI 과학',tagEn:'AI Science',
+ titleKr:'AI 관상학의 과학적 근거 — 인공지능은 얼굴을 어떻게 읽는가?',
+ titleEn:'The Science Behind AI Physiognomy — How Does AI Read a Face?',
+ descKr:'딥러닝과 컴퓨터 비전이 얼굴 특징을 분석하는 원리와, AI 관상의 과학적 가능성과 한계를 알아봅니다.',
+ descEn:'How deep learning and computer vision analyze facial features, and the scientific potential and limits of AI physiognomy.',
+ bodyKr:`<h2>AI와 관상학의 만남</h2><p>AI가 정말 얼굴을 보고 성격이나 운명을 파악할 수 있을까요? 이 질문에 답하려면 AI가 이미지를 어떻게 처리하는지 이해해야 합니다.</p><h2>컴퓨터 비전의 기초</h2><p>컴퓨터 비전은 컴퓨터가 디지털 이미지에서 의미 있는 정보를 추출하는 AI 분야입니다. 딥러닝의 핵심인 합성곱 신경망(CNN)은 수백만 개의 이미지를 학습하여 패턴을 인식합니다.</p><h2>얼굴 인식 기술의 발전</h2><p>최신 AI 모델들은 수백 개의 얼굴 랜드마크를 실시간으로 추적하고 감정 상태를 추정할 수 있습니다. Google MediaPipe, Apple Face ID 등이 이 기술의 정점입니다. Rich Aura Test의 Google Teachable Machine도 이 생태계의 일부입니다.</p><h2>AI 관상 분석의 원리</h2><p>Rich Aura Test는 업로드된 사진에서 얼굴을 감지하고, 사전 학습된 신경망이 시각적 특징들을 분석하여 귀티·힙함·친근함·우아함·지적임 등 카테고리별 확률값을 출력합니다.</p><h2>과학적 타당성과 한계</h2><p>심리학 연구에 따르면 인간은 첫 인상을 100밀리초 이내에 형성하며, 이는 얼굴의 특정 특징과 연관이 있습니다. AI 관상 분석은 재미와 자기 성찰의 도구로 가치가 있지만, 과학적 진실로 받아들이기보다는 통찰의 계기로 활용하는 것이 현명합니다.</p><h2>윤리적 고려사항</h2><p>편향성 문제, 프라이버시 보호, 차별의 위험성 등 중요한 윤리적 쟁점들이 있습니다. Rich Aura Test는 순수한 오락 목적이며, 업로드된 이미지를 서버에 저장하지 않습니다.</p>`,
+ bodyEn:`<h2>AI Meets Physiognomy</h2><p>Can AI truly read a face to discern character? To answer this, we must first understand how AI processes visual information.</p><h2>Computer Vision Basics</h2><p>Computer Vision enables computers to extract meaningful information from images. Convolutional Neural Networks (CNNs) learn to recognize patterns by training on millions of images.</p><h2>Facial Recognition Technology</h2><p>State-of-the-art AI models track hundreds of facial landmarks in real time and estimate emotional states. Google MediaPipe and Apple Face ID represent the pinnacle. Rich Aura Test's Google Teachable Machine is part of this ecosystem.</p><h2>How AI Physiognomy Works</h2><p>Rich Aura Test detects faces in uploaded images, then has pre-trained neural networks analyze visual features, outputting probability values for categories like nobility, hipness, warmth, elegance, and intellectualism.</p><h2>Scientific Validity and Limits</h2><p>Psychology research shows humans form first impressions within 100 milliseconds. AI physiognomy is best approached as a fun catalyst for self-reflection rather than scientific truth.</p><h2>Ethics</h2><p>AI facial analysis raises ethical questions around bias, privacy, and discrimination risk. Rich Aura Test is explicitly for entertainment only and stores no images on any server.</p>`},
+{id:4,tagKr:'문화',tagEn:'Culture',
+ titleKr:'현대적 "귀티"의 정의 — 타고나는 것인가, 만들어지는 것인가?',
+ titleEn:'Defining Modern Nobility — Is It Innate or Cultivated?',
+ descKr:'SNS 시대에 새롭게 정의되는 귀티의 개념과, 누구나 갈고닦을 수 있는 귀티의 요소들을 탐구합니다.',
+ descEn:'Explore the newly defined concept of noble bearing in the social media age and elements anyone can cultivate.',
+ bodyKr:`<h2>귀티란 무엇인가?</h2><p>'귀티'는 '귀한 티', 즉 품격 있는 배경에서 나오는 인상과 분위기를 뜻합니다. 영어로는 'Noble bearing', 'Refined presence'로 표현됩니다. 이는 부유한 집안 출신임을 의미하는 것이 아니라, 태도·언어·취향·몸가짐의 총합으로 만들어지는 전반적인 인상입니다.</p><h2>귀티의 4가지 핵심 요소</h2><p>자기 표현의 절제미, 공감과 배려, 지적 호기심, 그리고 일관된 자기 자신. 이 네 가지가 현대적 귀티의 핵심입니다.</p><h2>SNS 시대의 귀티 역설</h2><p>누구나 콘텐츠로 귀티 있는 이미지를 연출할 수 있게 되었지만, 진짜와 가짜의 차이가 더욱 명확하게 드러나는 시대가 되었습니다. 알고리즘은 진정성을 구분하고, 팔로워들은 본능적으로 진짜를 알아봅니다.</p><h2>귀티를 키우는 5가지 습관</h2><p>목소리 톤과 속도를 조절하세요. 독서 습관을 들이세요. 자세와 걸음걸이에 신경 쓰세요. 경청하는 능력을 기르세요. 감사와 겸손의 태도를 일상화하세요.</p>`,
+ bodyEn:`<h2>What Is Noble Bearing?</h2><p>"Gwiti" (귀티) means "the impression of being precious" — the aura emanating from refinement. It's the impression created by the totality of attitude, language, taste, and comportment — not simply coming from a wealthy family.</p><h2>4 Core Elements</h2><p>Restrained self-expression, empathy and consideration, intellectual curiosity, and consistent identity — these four elements constitute modern noble bearing.</p><h2>The Social Media Paradox</h2><p>Anyone can cultivate a refined image through content, but the difference between genuine and performed nobility has never been more visible. Algorithms detect authenticity, and followers instinctively recognize the real thing.</p><h2>5 Habits to Cultivate Noble Bearing</h2><p>Regulate your voice tone and pace. Develop a reading habit. Pay attention to posture and gait. Cultivate the ability to truly listen. Make gratitude and humility daily practices.</p>`},
+{id:5,tagKr:'심리학',tagEn:'Psychology',
+ titleKr:'인상과 운명의 상관관계 — 심리학이 밝히는 첫인상의 과학',
+ titleEn:'Impression and Destiny — The Psychology of First Impressions',
+ descKr:'첫 0.1초에 결정되는 인상의 심리학적 메커니즘과, 인상이 실제 삶의 기회에 미치는 영향을 분석합니다.',
+ descEn:'Analyze psychological mechanisms of impressions decided in 0.1 seconds, and their impact on real-life opportunities.',
+ bodyKr:`<h2>첫인상의 신경과학</h2><p>하버드 대학교 연구에 따르면, 인간은 단 30초의 영상만 봐도 상대방의 능력을 놀랍도록 정확하게 평가할 수 있다고 합니다 — '씬 슬라이스(Thin-Slicing)'. 프린스턴 대학교 연구팀은 사람들이 상대방의 얼굴을 단 100밀리초 보는 것만으로 신뢰도, 능력, 친근감에 대한 판단을 내린다는 것을 발견했습니다.</p><h2>인상이 기회에 미치는 실제 영향</h2><p>고용 분야에서 면접관은 첫 10초 이내에 초기 판단을 내립니다. 정치 분야에서 외모가 더 유능해 보이는 후보가 당선될 확률이 높다는 연구가 있습니다. 법률 분야에서 더 신뢰로워 보이는 피고인이 유리한 판결을 받는 경향이 있습니다.</p><h2>인상을 구성하는 요소들</h2><p>비언어적 신호(자세, 걸음걸이, 눈 맞춤, 표정)가 전체 인상의 약 55%, 목소리 톤이 38%, 실제 언어 내용이 7%를 차지합니다(메러비안 법칙). '어떻게 말하고 행동하느냐'가 '무엇을 말하느냐'보다 훨씬 중요합니다.</p>`,
+ bodyEn:`<h2>The Neuroscience of First Impressions</h2><p>Harvard research shows humans can assess competence from just 30 seconds of video — "thin-slicing." Princeton researchers found people make judgments about trustworthiness and likability from just 100 milliseconds of facial exposure.</p><h2>Real Impact on Opportunities</h2><p>In hiring, interviewers form initial judgments within 10 seconds. In politics, more competent-looking candidates win more often statistically. In law, more trustworthy-appearing defendants tend to receive more favorable verdicts.</p><h2>What Constitutes an Impression</h2><p>The Mehrabian Rule: non-verbal cues account for 55% of total impression; vocal tone for 38%; verbal content only 7%. "How we speak and behave" matters far more than "what we say."</p>`},
+{id:6,tagKr:'비즈니스',tagEn:'Business',
+ titleKr:'성공한 CEO들의 관상 분석 — 리더의 얼굴에는 무엇이 있나?',
+ titleEn:'Analyzing Successful CEO Faces — What Do Leaders\' Faces Reveal?',
+ descKr:'세계적인 비즈니스 리더들의 공통적인 외모 특징과, 리더십이 외모에 반영되는 방식을 분석합니다.',
+ descEn:'Analyze common physical characteristics of global business leaders and how leadership is reflected in appearance.',
+ bodyKr:`<h2>리더의 얼굴은 다를까?</h2><p>세계적인 CEO들의 사진을 분석해보면 놀랍도록 공통적인 특징들이 발견됩니다. 성공했기 때문에 갖게 된 특징인지, 아니면 이런 특징을 가진 사람이 성공하기 유리한 것인지는 닭과 달걀의 문제처럼 복잡합니다.</p><h2>세계 CEO들의 공통적 외모 특징</h2><p>강한 눈빛과 명확한 시선 처리, 넓고 반듯한 이마, 자신감 있는 자세와 걸음걸이, 또렷한 목소리와 명확한 발음, 상황에 맞는 깔끔한 외모 관리가 공통점으로 나타납니다.</p><h2>성공이 얼굴을 바꾼다</h2><p>많은 CEO들의 성공 이전과 이후 사진을 비교하면 상당한 변화가 관찰됩니다. 자신감의 증가, 도전을 통해 생겨난 강한 눈빛 — 이런 요소들이 얼굴에 새겨집니다. 이는 "심상이 관상을 만든다"는 원리를 지지합니다.</p><h2>결론</h2><p>CEO 관상 분석은 흥미로운 통찰을 제공하지만, 외모로 사람을 판단하는 근거로 삼아서는 안 됩니다. 진정한 리더십은 비전, 실행력, 인격에서 나옵니다.</p>`,
+ bodyEn:`<h2>Do Leaders Look Different?</h2><p>Analyzing photos of world-class CEOs reveals consistently common characteristics. Whether these traits emerge from success or predispose people to succeed is as complex as the chicken-and-egg problem.</p><h2>Common Characteristics</h2><p>Strong directed eye contact, wide smooth foreheads, confident posture and gait, clear resonant voices, and well-maintained appearance are consistently identified across studies.</p><h2>Success Changes the Face</h2><p>Comparing pre- and post-success photos reveals substantial changes: growing confidence, the steely gaze forged through challenges. This supports physiognomy's core principle: "The mind creates the face."</p><h2>Conclusion</h2><p>This analysis provides fascinating insights but must never serve as grounds for judging people by appearance. True leadership comes from vision, execution, and character.</p>`},
+{id:7,tagKr:'관상 팁',tagEn:'Aura Tips',
+ titleKr:'눈썹으로 보는 재물운 — 관상학이 말하는 눈썹의 비밀',
+ titleEn:'Wealth Luck Through Eyebrows — The Secret of Eyebrows in Physiognomy',
+ descKr:'관상에서 재물운의 바로미터로 여겨지는 눈썹의 형태와 관리법을 알아봅니다.',
+ descEn:'Learn about eyebrow shapes as indicators of wealth luck and what each shape represents.',
+ bodyKr:`<h2>눈썹은 왜 중요한가?</h2><p>관상학에서 눈썹은 '보수궁(保壽宮)'이라 하여 수명과 형제 관계, 중년 이후의 재물운을 관장합니다. 또한 감정 표현에 가장 큰 영향을 미치는 부위로, 첫인상 관리에 결정적 역할을 합니다.</p><h2>재물운을 높이는 눈썹의 형태</h2><p>가장 이상적인 눈썹은 '신월미(新月眉)'로, 초승달처럼 자연스럽게 곡선을 그리는 형태입니다. 짙고 선명하며 가지런하고, 앞머리와 끝머리가 명확한 것이 좋습니다.</p><h2>현대적 눈썹 관리</h2><p>자신의 얼굴 형태에 맞는 자연스러운 눈썹 형태를 찾는 것이 핵심입니다. 인위적으로 너무 가늘게 만든 눈썹보다 자연스러운 두께를 유지하는 것이 인상에도, 관상적으로도 더 유리합니다.</p>`,
+ bodyEn:`<h2>Why Eyebrows Matter</h2><p>In physiognomy, eyebrows govern longevity, relationships, and mid-to-late life wealth luck. They're among the most expressive facial features, playing a decisive role in first impressions.</p><h2>Wealth-Enhancing Eyebrow Shapes</h2><p>The most auspicious is the "New Moon Brow" — a natural crescent curve. Thick, defined eyebrows with clear start and end points are considered most favorable.</p><h2>Modern Eyebrow Care</h2><p>Finding a natural eyebrow shape suited to your face is key. Maintaining natural thickness rather than artificially thinning them is more favorable both for impressions and physiognomically.</p>`},
+{id:8,tagKr:'스타일링',tagEn:'Styling',
+ titleKr:'부티 나는 스타일링 가이드 — 지금 당장 실천할 수 있는 아우라 업그레이드',
+ titleEn:'Styling Guide for a Luxurious Look — Aura Upgrades You Can Do Now',
+ descKr:'예산과 상관없이 지금 바로 실천할 수 있는 부티 업그레이드 스타일링 팁과 아이템 가이드.',
+ descEn:'Styling tips and item guides for aura upgrades you can implement now, regardless of budget.',
+ bodyKr:`<h2>부티는 가격이 아니라 조화에서 나온다</h2><p>부티는 전체적인 조화, 적절한 핏, 그리고 자신감에서 나옵니다. 10만원짜리 옷도 완벽하게 어울리면 고급스럽게 보이고, 100만원짜리 옷도 어울리지 않으면 과해 보일 수 있습니다.</p><h2>캡슐 워드로브의 원칙</h2><p>부티 나는 스타일의 핵심은 '캡슐 워드로브'입니다. 흰 셔츠, 블랙 팬츠, 베이지 트렌치코트, 좋은 소재의 캐시미어 스웨터 — 이 몇 가지만 있어도 대부분의 상황에 품격 있게 대응할 수 있습니다.</p><h2>그루밍과 기본기</h2><p>깔끔하게 정돈된 헤어스타일, 청결한 피부, 잘 관리된 손톱, 향수의 적절한 사용. 이런 기본기가 갖춰진 사람은 가장 단순한 옷을 입어도 품격이 돋보입니다.</p><h2>자세와 걸음걸이</h2><p>스타일링의 완성은 자세입니다. 등을 펴고 어깨를 자연스럽게 뒤로 당기고 시선을 정면으로 향하며 걷는 것만으로 어떤 옷이든 훨씬 세련되어 보입니다.</p>`,
+ bodyEn:`<h2>Luxury Comes from Harmony, Not Price</h2><p>Luxury emanates from overall harmony, appropriate fit, and confidence. A $100 outfit worn with perfect coordination looks more expensive than a $1,000 outfit that doesn't suit you.</p><h2>The Capsule Wardrobe</h2><p>A white shirt, black trousers, beige trench coat, and a quality cashmere sweater provide dignified solutions for virtually any situation.</p><h2>Grooming Fundamentals</h2><p>A neat hairstyle, clean skin, well-maintained nails, and appropriate fragrance. Someone who masters these fundamentals exudes refinement even in the simplest clothes.</p><h2>Posture and Gait</h2><p>The completion of any outfit is posture. Simply walking with a straight back and forward gaze makes any outfit look dramatically more refined.</p>`},
+{id:9,tagKr:'아우라',tagEn:'Aura',
+ titleKr:'말투와 아우라의 힘 — 당신의 언어가 운명을 만든다',
+ titleEn:'The Power of Speech and Aura — Your Language Creates Your Destiny',
+ descKr:'언어 습관과 말투가 개인의 아우라와 삶의 기회에 미치는 심오한 영향을 탐구합니다.',
+ descEn:'Explore the profound impact of language habits and speech patterns on personal aura and opportunities.',
+ bodyKr:`<h2>언어는 현실을 만든다</h2><p>철학자들은 오래전부터 언어가 현실을 구성하는 힘을 가졌다고 주장해왔습니다. '언어 상대성 이론(Sapir-Whorf Hypothesis)'이 이를 뒷받침합니다. 우리가 사용하는 언어와 말투는 사고방식을 형성하고, 나아가 우리가 만들어내는 현실에도 영향을 미칩니다.</p><h2>아우라를 높이는 언어 습관</h2><p>성공적인 사람들은 불평과 험담을 줄이고 긍정적인 언어를 사용합니다. 확신에 찬 표현을 쓰며, '어쩌면', '혹시', '아마도' 같은 표현을 불필요하게 남발하지 않습니다. 자신의 생각을 명확하고 간결하게 표현합니다.</p><h2>목소리 톤과 속도의 중요성</h2><p>낮고 안정된 목소리는 신뢰감과 권위감을 주는 경향이 있습니다. 적당히 느린 속도로 명확하게 말하는 것이 빠르게 중얼거리는 것보다 훨씬 강한 인상을 줍니다.</p>`,
+ bodyEn:`<h2>Language Creates Reality</h2><p>The Sapir-Whorf Hypothesis supports the idea that language constructs reality. The language we use shapes our thinking and influences the reality we create.</p><h2>Language Habits That Elevate Aura</h2><p>Successful people minimize complaints and gossip while using positive language. They speak with conviction, avoiding unnecessary hedging, and express their thoughts clearly and concisely.</p><h2>Voice Tone and Pace</h2><p>Lower, stable voices tend to project trustworthiness and authority. Speaking at a measured pace creates a far stronger impression than rapid mumbling.</p>`},
+{id:10,tagKr:'풍수',tagEn:'Feng Shui',
+ titleKr:'재물운을 높이는 풍수 인테리어 — 공간이 운을 바꾼다',
+ titleEn:'Feng Shui Interior Design for Wealth — Your Space Changes Your Fortune',
+ descKr:'동양 풍수학의 현대적 적용으로 재물운과 아우라를 높이는 인테리어 원칙과 실천법을 소개합니다.',
+ descEn:'Interior design principles and practices that enhance wealth luck through modern Feng Shui.',
+ bodyKr:`<h2>풍수란 무엇인가?</h2><p>풍수(風水)는 '바람과 물'을 의미하는 중국 전통 철학으로, 자연의 에너지 '기(氣)'의 흐름을 활용하여 인간의 삶을 개선하는 것을 목표로 합니다. 현대에 이르러 인테리어 디자인에서 새롭게 주목받고 있습니다.</p><h2>재물운을 높이는 핵심 원칙</h2><p>재물운을 높이는 가장 기본적인 원칙은 '기(氣)의 원활한 흐름'입니다. 불필요한 물건, 사용하지 않는 물건, 부서진 물건은 기의 흐름을 막습니다. 특히 현관은 항상 깨끗하고 밝게 유지해야 합니다.</p><h2>재물 코너 (財位)</h2><p>집의 주 출입구에서 바라봤을 때 대각선 방향의 가장 깊은 코너가 '재물 코너'입니다. 이 공간에 식물(돈나무, 행운목), 수정, 어항이나 분수를 배치하면 재물 에너지를 활성화할 수 있다고 봅니다.</p><h2>현대적 풍수의 실천</h2><p>정돈되고 아름다운 공간에서 생활하는 사람은 자연스럽게 더 높은 자존감과 긍정적인 아우라를 갖게 됩니다. 풍수 인테리어의 핵심은 공간을 통해 자신의 삶을 의도적으로 디자인하는 것입니다.</p>`,
+ bodyEn:`<h2>What Is Feng Shui?</h2><p>Feng Shui (風水) means "wind and water" — a traditional Chinese philosophy harnessing the flow of "Chi" to improve human life. It is gaining renewed attention in modern interior design.</p><h2>Core Principles for Wealth Luck</h2><p>The most fundamental principle is the "smooth flow of Chi." Decluttering is essential — unnecessary and broken objects obstruct Chi. The entrance hall must always be kept clean and bright.</p><h2>The Wealth Corner</h2><p>The deepest corner diagonally opposite the main entrance is the "Wealth Corner." Placing plants (money trees, lucky bamboo), crystals, or water features activates wealth energy.</p><h2>Modern Feng Shui Practice</h2><p>People who live in organized, beautiful spaces naturally develop higher self-esteem and a more positive aura. Feng Shui interior design is about intentionally designing your life through your environment.</p>`},
+];
+
+function renderBlog(){
+  const list=document.getElementById('blogList');
+  const art=document.getElementById('art-view');
+  list.innerHTML='';list.style.display='block';art.style.display='none';
+  POSTS.forEach(p=>{
+    const card=document.createElement('div');
+    card.className='blog-card';
+    const tag=lang==='kr'?p.tagKr:p.tagEn;
+    const title=lang==='kr'?p.titleKr:p.titleEn;
+    const desc=lang==='kr'?p.descKr:p.descEn;
+    card.innerHTML=`<div class="blog-num">${String(p.id).padStart(2,'0')}</div>
+      <h2 class="blog-card-title">${title}</h2>
+      <p class="blog-card-desc">${desc}</p>
+      <div class="blog-card-meta"><span class="blog-tag">${tag}</span><span>Rich Aura Analytics</span><span>2026.01</span></div>`;
+    card.addEventListener('click',()=>openArticle(p.id));
+    list.appendChild(card);
+  });
+}
+
+function openArticle(id){
+  const p=POSTS.find(x=>x.id===id);if(!p)return;
+  document.getElementById('blogList').style.display='none';
+  document.getElementById('art-view').style.display='block';
+  const title=lang==='kr'?p.titleKr:p.titleEn;
+  const body=lang==='kr'?p.bodyKr:p.bodyEn;
+  const tag=lang==='kr'?p.tagKr:p.tagEn;
+  const authorLbl=lang==='kr'?'작성자':'Author';
+  const roleLbl=lang==='kr'?'AI 관상 & 아우라 분석가':'AI Physiognomy & Aura Analyst';
+  document.getElementById('artContent').innerHTML=`
+    <span class="art-eyebrow">${tag} · Rich Aura Analytics</span>
+    <h1 class="art-h1">${title}</h1>
+    <div class="art-meta"><span>${authorLbl}: Rich Aura Analytics</span><span>2026.01.15</span></div>
+    <div class="art-content">${body}</div>
+    <div class="author-box">
+      <div class="author-av">🔮</div>
+      <div><div class="author-name">Rich Aura Analytics</div>
+      <div class="author-role">${roleLbl} · rich-aura-test.com</div></div>
+    </div>`;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+document.getElementById('artBack').addEventListener('click',()=>{
+  document.getElementById('art-view').style.display='none';
+  document.getElementById('blogList').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+
+// ═══════════════════════════════════════
+// PRIVACY
+// ═══════════════════════════════════════
+function renderPrivacy(){
+  document.getElementById('privContent').innerHTML=lang==='kr'?`
+    <h1 class="priv-h1">개인정보처리방침</h1>
+    <p class="priv-date">시행일: 2026년 1월 1일 | 최종 수정: 2026년 1월 15일</p>
+    <div class="priv-body">
+    <h2>1. 개인정보 수집 및 이용 목적</h2>
+    <p>Rich Aura Test는 AI 기반 관상 및 아우라 분석 서비스를 제공합니다. 본 서비스는 사용자의 개인정보 보호를 중요하게 생각하며 관련 법령을 준수합니다.</p>
+    <h2>2. 수집하는 개인정보 항목</h2>
+    <p>분석 목적으로 업로드하는 이미지는 브라우저 내 로컬에서만 처리되며 서버에 저장되지 않습니다. 서비스 이용 과정에서 접속 IP 주소, 브라우저 유형, 방문 일시 등의 이용 기록이 자동 수집될 수 있습니다.</p>
+    <h2>3. 제3자 서비스</h2>
+    <ul>
+    <li>Google Analytics 4 (GA4): 서비스 이용 통계 분석 목적</li>
+    <li>Google Teachable Machine: AI 이미지 분석 (이미지는 서버로 전송되지 않음)</li>
+    <li>Google AdSense: 광고 제공 목적</li>
+    </ul>
+    <h2>4. 쿠키 사용</h2>
+    <p>서비스 개선 및 광고 목적으로 쿠키를 사용할 수 있습니다. 사용자는 브라우저 설정을 통해 쿠키 수집을 거부할 수 있습니다.</p>
+    <h2>5. 사용자의 권리</h2>
+    <p>언제든지 개인정보 처리에 대한 동의 철회, 열람, 수정, 삭제를 요청할 수 있습니다. 문의: contact@rich-aura-test.com</p>
+    <h2>6. 아동 개인정보 보호</h2>
+    <p>만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+    <h2>7. 면책 조항</h2>
+    <p>AI 관상 분석 결과는 순수한 오락 목적으로 제공됩니다. 실제 의사 결정의 근거로 사용하지 마세요. Rich Aura Analytics는 분석 결과의 정확성을 보장하지 않습니다.</p>
+    <h2>8. 개인정보 보호책임자</h2>
+    <p>개인정보 보호책임자: 홍길동 | privacy@rich-aura-test.com</p>
+    <h2>9. 방침 변경</h2>
+    <p>본 방침은 법령이나 서비스 변경에 따라 수정될 수 있으며, 변경 시 서비스 내 공지사항을 통해 안내합니다.</p>
+    </div>`
+  :`<h1 class="priv-h1">Privacy Policy</h1>
+    <p class="priv-date">Effective: January 1, 2026 | Last Updated: January 15, 2026</p>
+    <div class="priv-body">
+    <h2>1. Purpose of Collection and Use</h2>
+    <p>Rich Aura Test provides AI-based physiognomy and aura analysis. We take your privacy seriously and comply with applicable laws.</p>
+    <h2>2. Information We Collect</h2>
+    <p>Images uploaded for analysis are processed locally within your browser only and are never stored on our servers. Service usage data (IP addresses, browser type, visit timestamps) may be automatically collected.</p>
+    <h2>3. Third-Party Services</h2>
+    <ul>
+    <li>Google Analytics 4 (GA4): For usage statistics</li>
+    <li>Google Teachable Machine: For AI image analysis — images processed locally, never transmitted</li>
+    <li>Google AdSense: For advertising</li>
+    </ul>
+    <h2>4. Cookies</h2>
+    <p>This Service may use cookies for improvement and advertising. Users may refuse cookies through browser settings.</p>
+    <h2>5. User Rights</h2>
+    <p>You may withdraw consent or request access, correction, or deletion at any time. Contact: contact@rich-aura-test.com</p>
+    <h2>6. Children's Privacy</h2>
+    <p>This Service does not intentionally collect information from children under the age of 14.</p>
+    <h2>7. Disclaimer</h2>
+    <p>AI analysis results are for entertainment purposes only. Do not use results as the basis for actual decisions. Rich Aura Analytics makes no warranties regarding accuracy.</p>
+    <h2>8. Privacy Officer</h2>
+    <p>Privacy Officer: John Doe | privacy@rich-aura-test.com</p>
+    <h2>9. Policy Updates</h2>
+    <p>This policy may be revised in response to changes in law or service. Updates will be announced via service notices.</p>
+    </div>`;
+}
+
+// ═══════════════════════════════════════
+// TOAST
+// ═══════════════════════════════════════
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2800);
+}
+
+// INIT
+renderBlog();
+renderPrivacy();
 </script>
-</body>
-</html>
+
+
+</body></html>
