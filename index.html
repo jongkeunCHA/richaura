@@ -1,6 +1,7 @@
-
 <!DOCTYPE html>
-<html lang="ko"><head><meta charset="UTF-8">
+<!-- saved from url=(0052)file:///Users/hanwha/Downloads/rich-aura-test_3.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="description" content="부티 테스트 — AI가 분석하는 당신의 관상 속 숨겨진 자산가 DNA. 셀카 한 장으로 부티, 재물운, 아우라 스펙트럼을 무료로 확인하세요.">
 <meta name="keywords" content="관상 테스트,부자 관상,아우라 테스트,재물운,AI 관상,Rich Aura Test,부티 테스트,부티,old money,aura analysis">
@@ -10,6 +11,7 @@
 <meta property="og:type" content="website">
 <title>부티 테스트 — AI 무료 관상 분석</title>
 
+<!-- GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPENLZ8FCZ"></script>
 <script>
 window.dataLayer=window.dataLayer||[];
@@ -18,8 +20,9 @@ gtag('js',new Date());
 gtag('config','G-MPENLZ8FCZ');
 </script>
 
+<!-- Structured Data -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"부티 테스트","url":"https://rich-aura-test.com","description":"AI 기반 관상·아우라 분석 서비스","publisher":{"@type":"Organization","name":"Rich Aura Analytics"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"Rich Aura Test","url":"https://rich-aura-test.com","description":"AI 기반 관상·아우라 분석 서비스","publisher":{"@type":"Organization","name":"Rich Aura Analytics"}}
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -30,6 +33,9 @@ gtag('config','G-MPENLZ8FCZ');
 <script src="./assets/html2canvas.min.js"></script>
 
 <style>
+/* ══════════════════════════════════════
+   ZARA 스타일 — 기존 유지
+══════════════════════════════════════ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 :root{
@@ -44,6 +50,7 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
+/* ── LAYOUT ── */
 .wrap{max-width:480px;margin:0 auto;padding-bottom:5rem}
 
 /* ── HEADER ── */
@@ -52,15 +59,13 @@ body{
   padding:1.1rem 1.4rem;border-bottom:1px solid var(--black);
   position:sticky;top:0;background:var(--white);z-index:200;
 }
-/* 자간 제거 + 클릭 가능 */
-.logo{
-  font-family:'Inter',sans-serif;font-size:.81rem;font-weight:600;
-  letter-spacing:0;text-transform:uppercase;
-  cursor:pointer;text-decoration:none;color:var(--black);
-}
+.logo{font-family:'Inter',sans-serif;font-size:.81rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase}
 .logo-sub{font-size:.69rem;font-weight:300;letter-spacing:.18em;color:var(--g400);text-transform:uppercase}
 
+/* ── 헤더 우측 영역 ── */
 .header-right{display:flex;align-items:center;gap:1rem}
+
+/* ── 네비게이션 ── */
 .nav-links{display:flex;gap:.1rem}
 .nav-btn{
   background:none;border:none;font-family:'Inter',sans-serif;
@@ -70,6 +75,7 @@ body{
 .nav-btn:hover,.nav-btn.active{color:var(--black)}
 .nav-btn.active{border-bottom:1px solid var(--black)}
 
+/* ── KR/EN 스위치 ── */
 .lang-sw{display:flex;gap:0;border:1px solid var(--g300)}
 .lbtn{
   background:none;border:none;font-family:'Inter',sans-serif;
@@ -78,15 +84,19 @@ body{
 }
 .lbtn.on{background:var(--black);color:var(--white)}
 
+/* ── SECTIONS ── */
 .sec{display:none}.sec.on{display:block}
 
-/* ── HOME ── */
+/* ══════════════════════════════════════
+   HOME
+══════════════════════════════════════ */
 .hero{padding:2.8rem 1.4rem 2rem;border-bottom:1px solid var(--g200)}
 .hero-eyebrow{font-size:.69rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--g400);margin-bottom:.9rem}
 .hero-title{font-family:'Inter',sans-serif;font-size:clamp(2.6rem,9vw,3.4rem);font-weight:200;letter-spacing:-.03em;line-height:1.02;margin-bottom:1.2rem}
 .hero-title em{font-style:normal;font-weight:600}
 .hero-body{font-size:.94rem;font-weight:300;color:var(--g600);line-height:1.85;letter-spacing:.02em}
 
+/* ── UPLOAD ── */
 .upload-section{padding:1.4rem;border-bottom:1px solid var(--g200)}
 .sec-label{font-size:.67rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--g400);margin-bottom:1rem}
 
@@ -117,6 +127,7 @@ body{
 .photo-ready{display:none;margin-top:.7rem;font-size:.78rem;color:var(--g600);letter-spacing:.06em}
 .model-status-wrap{margin-top:.5rem;font-size:.71rem;color:var(--g400);letter-spacing:.04em;min-height:1.1em;transition:opacity .4s}
 
+/* ── CTA ── */
 .cta-wrap{padding:1.2rem 1.4rem;border-bottom:1px solid var(--g200)}
 #analyze-btn{
   display:none;width:100%;padding:1.15rem;
@@ -210,9 +221,9 @@ body{
 .ad-item:last-child{border-right:none}
 .ad-item:hover{background:var(--g100)}
 .ad-item-icon{font-size:1.3rem;margin-bottom:.45rem}
-.ad-item-name{font-size:.75rem;font-weight:400;color:var(--g800);line-height:1.4}
+.ad-item-name{font-size:.75rem;font-weight:400;color:var(--g800);line-height:1.4;margin-bottom:.25rem}
+.ad-item-price{font-size:.71rem;color:var(--g400);font-weight:300}
 
-/* 버튼 순서 변경: 다시하기 먼저, 저장 나중 */
 .action-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--g200)}
 .btn-act{
   padding:1.15rem;background:none;border:none;
@@ -228,7 +239,9 @@ body{
 
 .result-footer{padding:1.4rem;font-size:.69rem;color:var(--g400);text-align:center;line-height:1.9;font-weight:300;letter-spacing:.05em}
 
-/* ── BLOG ── */
+/* ══════════════════════════════════════
+   BLOG
+══════════════════════════════════════ */
 .blog-hero{padding:2.8rem 1.4rem 2rem;border-bottom:1px solid var(--g200)}
 .blog-hero-title{font-family:'Inter',sans-serif;font-size:clamp(2rem,7vw,2.8rem);font-weight:200;letter-spacing:-.03em;line-height:1.05;margin-bottom:.8rem}
 .blog-hero-sub{font-size:.82rem;font-weight:300;color:var(--g600);line-height:1.8}
@@ -245,6 +258,7 @@ body{
 .blog-card-meta{display:flex;align-items:center;gap:.9rem;margin-top:.8rem;font-size:.65rem;color:var(--g400);letter-spacing:.05em}
 .blog-tag{border:1px solid var(--g300);padding:.18rem .6rem;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase}
 
+/* 아티클 뷰 */
 #art-view{display:none}
 .art-back{
   display:flex;align-items:center;gap:.5rem;padding:1rem 1.4rem;
@@ -277,7 +291,9 @@ body{
 .author-name{font-size:.8rem;font-weight:500;letter-spacing:.05em}
 .author-role{font-size:.68rem;color:var(--g400);font-weight:300;margin-top:.18rem;letter-spacing:.04em}
 
-/* ── PRIVACY ── */
+/* ══════════════════════════════════════
+   PRIVACY
+══════════════════════════════════════ */
 .priv-wrap{padding:2.8rem 1.4rem}
 .priv-h1{font-family:'Inter',sans-serif;font-size:clamp(1.8rem,6vw,2.6rem);font-weight:200;letter-spacing:-.02em;margin-bottom:.5rem}
 .priv-date{font-size:.7rem;color:var(--g400);margin-bottom:2.5rem;letter-spacing:.05em}
@@ -286,8 +302,13 @@ body{
 .priv-body ul{margin:.4rem 0 1rem 1.3rem}
 .priv-body ul li{font-size:.86rem;color:var(--g600);line-height:1.85;margin-bottom:.35rem;font-weight:300}
 
-/* ── FOOTER ── */
-.site-footer{border-top:1px solid var(--black);padding:2rem 1.4rem;}
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+.site-footer{
+  border-top:1px solid var(--black);
+  padding:2rem 1.4rem;
+}
 .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
 .footer-links{display:flex;gap:1.2rem;flex-wrap:wrap}
 .footer-link{font-size:.69rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--g400);cursor:pointer;transition:color .15s}
@@ -306,7 +327,7 @@ body{
 }
 .toast.show{transform:translateX(-50%) translateY(0)}
 
-/* ── SAVE CARD ── */
+/* ── 저장 카드 ── */
 #save-card{
   position:fixed;left:-9999px;top:0;width:480px;background:#fff;
   font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;color:#000;
@@ -334,8 +355,7 @@ body{
 <!-- ══ HEADER ══ -->
 <header class="site-header">
   <div>
-    <!-- 자간 제거 + 클릭시 홈으로 -->
-    <div class="logo" onclick="goSec('home')">부티 테스트</div>
+    <div class="logo">부티 테스트</div>
   </div>
   <div class="header-right">
     <nav class="nav-links">
@@ -371,17 +391,18 @@ body{
         <span class="upload-label" data-kr="사진 업로드" data-en="Upload Photo">사진 업로드</span>
         <span class="upload-hint" data-kr="정면 셀카 권장 · JPG · PNG · WEBP" data-en="Front-facing selfie · JPG · PNG · WEBP">정면 셀카 권장 · JPG · PNG · WEBP</span>
       </div>
-      <img id="preview-img" src="" alt="">
+      <img id="preview-img" src="file:///Users/hanwha/Downloads/rich-aura-test_3.html" alt="">
       <div class="change-mask" id="changeMask"><span data-kr="사진 바꾸기" data-en="Change Photo">사진 바꾸기</span></div>
     </div>
     <p class="photo-ready" id="photoReady" data-kr="✓ 사진 준비 완료" data-en="✓ Photo Ready">✓ 사진 준비 완료</p>
-    <div class="model-status-wrap"><span id="mst" data-kr="AI 모델 연결 중..." data-en="Connecting AI...">AI 모델 연결 중...</span></div>
+    <div class="model-status-wrap" style="opacity: 0;"><span id="mst" data-kr="AI 모델 연결 중..." data-en="Connecting AI..." style="color: rgb(0, 153, 0);">✓ AI 준비 완료</span></div>
   </section>
 
   <div class="cta-wrap">
     <button id="analyze-btn" data-kr="부티 분석하기 →" data-en="Analyse My Aura →">부티 분석하기 →</button>
   </div>
 
+  <!-- LOADING -->
   <div id="loading-section">
     <div class="load-steps">
       <div class="load-step" id="step-0"><span class="step-icon">📸</span><span class="step-text" data-kr="사진 스캔 중" data-en="Scanning portrait">사진 스캔 중</span><span class="step-check">✓</span></div>
@@ -411,8 +432,38 @@ body{
     <h2 class="blog-hero-title" data-kr="관상 &amp; 아우라 인사이트" data-en="Physiognomy &amp; Aura Insights">관상 &amp; 아우라 인사이트</h2>
     <p class="blog-hero-sub" data-kr="부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클 10선" data-en="10 expert articles on wealthy faces, AI analysis &amp; aura science">부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클 10선</p>
   </div>
-  <div class="blog-list" id="blogList"></div>
-  <div id="art-view">
+  <div class="blog-list" id="blogList" style="display: block;"><div class="blog-card"><div class="blog-num">01</div>
+      <h2 class="blog-card-title">부자 관상의 특징 — 성공한 사람들의 얼굴에는 무엇이 있나?</h2>
+      <p class="blog-card-desc">눈빛의 깊이, 이마의 형태, 코의 기운까지. 동서양 관상학이 공통으로 지목하는 부자 관상의 핵심 특징을 분석합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">관상학</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">02</div>
+      <h2 class="blog-card-title">올드머니 아우라의 본질 — 진짜 부티는 어디서 오는가?</h2>
+      <p class="blog-card-desc">트렌드를 초월하는 올드머니 미학의 핵심 원칙과, 진정한 부티가 만들어지는 과정을 심층 분석합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">라이프스타일</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">03</div>
+      <h2 class="blog-card-title">AI 관상학의 과학적 근거 — 인공지능은 얼굴을 어떻게 읽는가?</h2>
+      <p class="blog-card-desc">딥러닝과 컴퓨터 비전이 얼굴 특징을 분석하는 원리와, AI 관상의 과학적 가능성과 한계를 알아봅니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">AI 과학</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">04</div>
+      <h2 class="blog-card-title">현대적 "부티"의 정의 — 타고나는 것인가, 만들어지는 것인가?</h2>
+      <p class="blog-card-desc">SNS 시대에 새롭게 정의되는 부티의 개념과, 누구나 갈고닦을 수 있는 부티의 요소들을 탐구합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">문화</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">05</div>
+      <h2 class="blog-card-title">인상과 운명의 상관관계 — 심리학이 밝히는 첫인상의 과학</h2>
+      <p class="blog-card-desc">첫 0.1초에 결정되는 인상의 심리학적 메커니즘과, 인상이 실제 삶의 기회에 미치는 영향을 분석합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">심리학</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">06</div>
+      <h2 class="blog-card-title">성공한 CEO들의 관상 분석 — 리더의 얼굴에는 무엇이 있나?</h2>
+      <p class="blog-card-desc">세계적인 비즈니스 리더들의 공통적인 외모 특징과, 리더십이 외모에 반영되는 방식을 분석합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">비즈니스</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">07</div>
+      <h2 class="blog-card-title">눈썹으로 보는 재물운 — 관상학이 말하는 눈썹의 비밀</h2>
+      <p class="blog-card-desc">관상에서 재물운의 바로미터로 여겨지는 눈썹의 형태와 관리법을 알아봅니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">관상 팁</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">08</div>
+      <h2 class="blog-card-title">부티 나는 스타일링 가이드 — 지금 당장 실천할 수 있는 아우라 업그레이드</h2>
+      <p class="blog-card-desc">예산과 상관없이 지금 바로 실천할 수 있는 부티 업그레이드 스타일링 팁과 아이템 가이드.</p>
+      <div class="blog-card-meta"><span class="blog-tag">스타일링</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">09</div>
+      <h2 class="blog-card-title">말투와 아우라의 힘 — 당신의 언어가 운명을 만든다</h2>
+      <p class="blog-card-desc">언어 습관과 말투가 개인의 아우라와 삶의 기회에 미치는 심오한 영향을 탐구합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">아우라</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div><div class="blog-card"><div class="blog-num">10</div>
+      <h2 class="blog-card-title">재물운을 높이는 풍수 인테리어 — 공간이 운을 바꾼다</h2>
+      <p class="blog-card-desc">동양 풍수학의 현대적 적용으로 재물운과 아우라를 높이는 인테리어 원칙과 실천법을 소개합니다.</p>
+      <div class="blog-card-meta"><span class="blog-tag">풍수</span><span>Rich Aura Analytics</span><span>2026.01</span></div></div></div>
+  <div id="art-view" style="display: none;">
     <button class="art-back" id="artBack">← <span data-kr="목록으로" data-en="Back to List">목록으로</span></button>
     <div class="art-body-wrap" id="artContent"></div>
   </div>
@@ -420,7 +471,33 @@ body{
 
 <!-- ══ PRIVACY ══ -->
 <div class="sec" id="sec-privacy">
-  <div class="priv-wrap" id="privContent"></div>
+  <div class="priv-wrap" id="privContent">
+    <h1 class="priv-h1">개인정보처리방침</h1>
+    <p class="priv-date">시행일: 2026년 1월 1일 | 최종 수정: 2026년 1월 15일</p>
+    <div class="priv-body">
+    <h2>1. 개인정보 수집 및 이용 목적</h2>
+    <p>부티 테스트는 AI 기반 관상 및 아우라 분석 서비스를 제공합니다. 본 서비스는 사용자의 개인정보 보호를 중요하게 생각하며 관련 법령을 준수합니다.</p>
+    <h2>2. 수집하는 개인정보 항목</h2>
+    <p>분석 목적으로 업로드하는 이미지는 브라우저 내 로컬에서만 처리되며 서버에 저장되지 않습니다. 서비스 이용 과정에서 접속 IP 주소, 브라우저 유형, 방문 일시 등의 이용 기록이 자동 수집될 수 있습니다.</p>
+    <h2>3. 제3자 서비스</h2>
+    <ul>
+    <li>Google Analytics 4 (GA4): 서비스 이용 통계 분석 목적</li>
+    <li>Google Teachable Machine: AI 이미지 분석 (이미지는 서버로 전송되지 않음)</li>
+    <li>Google AdSense: 광고 제공 목적</li>
+    </ul>
+    <h2>4. 쿠키 사용</h2>
+    <p>서비스 개선 및 광고 목적으로 쿠키를 사용할 수 있습니다. 사용자는 브라우저 설정을 통해 쿠키 수집을 거부할 수 있습니다.</p>
+    <h2>5. 사용자의 권리</h2>
+    <p>언제든지 개인정보 처리에 대한 동의 철회, 열람, 수정, 삭제를 요청할 수 있습니다. 문의: contact@rich-aura-test.com</p>
+    <h2>6. 아동 개인정보 보호</h2>
+    <p>만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+    <h2>7. 면책 조항</h2>
+    <p>AI 관상 분석 결과는 순수한 오락 목적으로 제공됩니다. 실제 의사 결정의 근거로 사용하지 마세요. Rich Aura Analytics는 분석 결과의 정확성을 보장하지 않습니다.</p>
+    <h2>8. 개인정보 보호책임자</h2>
+    <p>개인정보 보호책임자: carvis | jongkeuncom@gmail.com</p>
+    <h2>9. 방침 변경</h2>
+    <p>본 방침은 법령이나 서비스 변경에 따라 수정될 수 있으며, 변경 시 서비스 내 공지사항을 통해 안내합니다.</p>
+    </div></div>
 </div>
 
 </div><!-- /wrap -->
@@ -449,12 +526,11 @@ body{
       <div class="ad-head"><p class="ad-title" data-kr="추천 아이템" data-en="Recommended Items">추천 아이템</p><p class="ad-sub" data-kr="당신의 부티에 맞는 아이템 (파트너스)" data-en="Items matched to your aura (affiliate)">당신의 부티에 맞는 아이템 (파트너스)</p></div>
       <div class="ad-items" id="r-ads"></div>
     </div>
-    <!-- 버튼 순서 변경: 다시하기 먼저 / 저장 나중 + 아이콘 추가 -->
     <div class="action-row">
-      <button class="btn-act" id="retryBtn" data-kr="🔄 다시 하기" data-en="🔄 Try Again">🔄 다시 하기</button>
-      <button class="btn-act primary" id="saveBtn2" data-kr="📥 이미지 저장" data-en="📥 Save Image">📥 이미지 저장</button>
+      <button class="btn-act primary" id="saveBtn2" data-kr="이미지 저장" data-en="Save Image">이미지 저장</button>
+      <button class="btn-act" id="retryBtn" data-kr="다시 하기" data-en="Try Again">다시 하기</button>
     </div>
-    <div class="result-footer"><span data-kr="부티 테스트 · AI 관상 분석 · 재미로 즐기는 부티 테스트" data-en="Rich Aura Test · AI Aura Analysis · For Entertainment">부티 테스트 · AI 관상 분석 · 재미로 즐기는 부티 테스트</span></div>
+    <div class="result-footer"><span data-kr="Rich Aura Test · AI 관상 분석 · 재미로 즐기는 부티 테스트" data-en="Rich Aura Test · AI Aura Analysis · For Entertainment">Rich Aura Test · AI 관상 분석 · 재미로 즐기는 부티 테스트</span></div>
   </div>
 </div>
 
@@ -470,22 +546,22 @@ body{
   <p class="sc-foot">부티 테스트 · rich-aura-test.com · 2026</p>
 </div></div>
 
-<!-- SITE FOOTER -->
+<!-- SITE FOOTER (blog/privacy 하단) -->
 <div class="wrap" style="padding-bottom:0">
 <footer class="site-footer">
   <div class="footer-top">
     <div>
-      <div class="logo" onclick="goSec('home')" style="letter-spacing:0">부티 테스트</div>
+      <div class="logo">부티 테스트</div>
       <div class="logo-sub" style="margin-top:.25rem">AI Aura Analysis</div>
     </div>
     <div class="footer-links">
-      <span class="footer-link" onclick="goSec('home')" data-kr="홈" data-en="Home">홈</span>
-      <span class="footer-link" onclick="goSec('blog')" data-kr="블로그" data-en="Blog">블로그</span>
-      <span class="footer-link" onclick="goSec('privacy')" data-kr="개인정보처리방침" data-en="Privacy Policy">개인정보처리방침</span>
+      <span class="footer-link" onclick="goSec(&#39;home&#39;)" data-kr="홈" data-en="Home">홈</span>
+      <span class="footer-link" onclick="goSec(&#39;blog&#39;)" data-kr="블로그" data-en="Blog">블로그</span>
+      <span class="footer-link" onclick="goSec(&#39;privacy&#39;)" data-kr="개인정보처리방침" data-en="Privacy Policy">개인정보처리방침</span>
     </div>
   </div>
   <div class="footer-biz">
-    <span data-kr="상호: Carvis Company | E-mail: jongkeuncom@gmail.com" data-en="Company: Carvis Company | CEO: Carvis | E-mail: jongkeuncom@gmail.com">상호: Carvis Company | E-mail: jongkeuncom@gmail.com</span>
+    <span data-kr="상호: Carvis Company | E-mail: contact@rich-aura-test.com" data-en="Company: Carvis Company | CEO: Carvis | E-mail: jongkeuncom@gmail.com">상호: Carvis Company | E-mail: jongkeuncom@gmail.com</span>
   </div>
   <div class="footer-copy">© 2026 Carvis. All rights reserved. <span data-kr="본 서비스는 오락 목적입니다." data-en="For entertainment purposes only.">본 서비스는 오락 목적입니다.</span></div>
 </footer>
@@ -501,13 +577,15 @@ let lang='kr';
 function setLang(l){
   lang=l;
   document.querySelectorAll('[data-kr]').forEach(el=>{
-    el.textContent=l==='kr'?el.dataset.kr:el.dataset.en;
+    if(el.tagName==='INPUT'||el.tagName==='BUTTON'&&el.id==='analyze-btn') el.textContent=l==='kr'?el.dataset.kr:el.dataset.en;
+    else el.textContent=l==='kr'?el.dataset.kr:el.dataset.en;
   });
   document.getElementById('lkr').classList.toggle('on',l==='kr');
   document.getElementById('len').classList.toggle('on',l==='en');
   document.documentElement.lang=l==='kr'?'ko':'en';
   renderBlog();
   renderPrivacy();
+  // 현재 보이는 결과도 갱신
   if(document.getElementById('result-overlay').style.display==='block'&&lastMatched){
     applyResultText(lastMatched,lastStats,lastSorted);
   }
@@ -534,7 +612,7 @@ document.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>
 // ═══════════════════════════════════════
 // MODEL
 // ═══════════════════════════════════════
-const MODEL_URL='./assets/model/';
+const MODEL_URL='https://teachablemachine.withgoogle.com/models/Adsz2vqeL/';
 let model=null,blobUrl=null;
 async function loadModel(){
   setSt('⏳ AI 모델 연결 중...');
@@ -620,7 +698,7 @@ const RESULTS=[
    celeb:'박재범의 힙한 컬렉터 에너지',celebEn:'Hip collector energy of leading culture curators',
    tip:'지금 관심 있는 것에 깊이 파고들어 보세요. 그 집착이 자산이 돼요.',tipEn:'Dive deep into what interests you. That obsession becomes an asset.'},
   {name:'프라이빗 VIP',nameEn:'Private VIP',emoji:'🎫',
-   desc:'어디서나 프리패스 가능한 부티 있는 집 포스!',descEn:'VIP pass energy wherever you go — born with nobility.',
+   desc:'어디서나 프리패스 가능한 귀한 집 포스!',descEn:'VIP pass energy wherever you go — born with nobility.',
    power:['가만히 있어도 좋은 사람들이 알아서 모여드는 인복','처음 만나는 사람도 오래된 친구처럼 편안하게 만드는 능력','어딜 가도 VIP 대우를 받는 타고난 부티'],
    powerEn:['Good people naturally gather around you','Makes first meetings feel like old friendships','Receives VIP treatment naturally everywhere'],
    wealth:'💰 귀인이 나타나 예상치 못한 기회를 연결해줄 거예요.',wealthEn:'💰 A key person will appear and connect you to an unexpected opportunity.',
@@ -704,7 +782,7 @@ const RESULTS=[
    powerEn:['Unshakeable self-center is the most powerful weapon','Persistence to walk your path no matter what others say','High self-esteem attracts only genuinely good things'],
    wealth:'💰 스스로를 믿고 밀어붙이면 지금이 가장 좋은 타이밍이에요.',wealthEn:'💰 If you believe in yourself and push forward, now is the best timing.',
    celeb:'오프라 윈프리의 소신 있는 제국 건설 에너지',celebEn:'Conviction empire-building energy of legendary self-made icons',
-   tip:'거울 보면서 자신에게 "나 잘 하고 있어"라고 말해보세요.',tipEn:'Tell yourself in the mirror: "I\'m doing great."'},
+   tip:'거울 보면서 자신에게 \"나 잘 하고 있어\"라고 말해보세요.',tipEn:'Tell yourself in the mirror: "I\'m doing great."'},
 ];
 
 function matchResult(sorted){
@@ -738,11 +816,10 @@ function genStats(){
     :[{icon:'💰',label:'Aura Value',value:rnd(VLE)},{icon:'💎',label:'Rarity',value:rnd(RLE)},{icon:'🍀',label:'Lucky Item',value:rnd(LLE)},{icon:'⛅',label:'Wealth Weather',value:rnd(WLE)}];
 }
 
-// 추천 아이템 — 가격 제거, 아이템 변경
 const ADS=[
-  {icon:'🌸',nameKr:'부티나는 향수',nameEn:'Luxury Perfume',url:'#'},
-  {icon:'🕯️',nameKr:'부티나는 디퓨저',nameEn:'Luxury Diffuser',url:'#'},
-  {icon:'🚿',nameKr:'부티나는 바디워시',nameEn:'Luxury Body Wash',url:'#'},
+  {icon:'👔',nameKr:'실크 셔츠',nameEn:'Silk Shirt',price:'₩89,000',url:'#'},
+  {icon:'💍',nameKr:'골드 주얼리',nameEn:'Gold Jewelry',price:'₩54,000',url:'#'},
+  {icon:'🕶️',nameKr:'선글라스',nameEn:'Sunglasses',price:'₩129,000',url:'#'},
 ];
 
 // ═══════════════════════════════════════
@@ -828,34 +905,19 @@ aBtn.addEventListener('click',async()=>{
     const c=document.createElement('canvas');c.width=c.height=224;
     c.getContext('2d').drawImage(pi,0,0,224,224);
     const preds=await model.predict(c);
-
-    // ── 아우라 스펙트럼 3배 향상 알고리즘 ──
-    // 1) 소프트맥스 온도(T) 낮춰서 분포를 날카롭게 → 최고값이 크게 나옴
-    // 2) 최솟값 하한(MIN)을 높여 하위 항목도 의미 있는 값을 유지
-    // 3) 전체 합산 후 스케일 × 3 (100% 넘으면 클리핑) → 표시값이 3배
-    const T=1.2, MIN=0.10;
+    const T=3.5,MIN=.05;
     const logits=preds.map(p=>Math.log(Math.max(p.probability,1e-7)));
     const sc=logits.map(l=>l/T);
     const mx=Math.max(...sc);
     const exps=sc.map(l=>Math.exp(l-mx));
     const sum=exps.reduce((a,b)=>a+b,0);
     let adj=exps.map(e=>e/sum);
-
-    // 하한 보정
-    let deficit=0;
-    adj=adj.map(p=>{if(p<MIN){deficit+=MIN-p;return MIN}return p});
-    const above=adj.reduce((s,p)=>s+(p>MIN?p:0),0);
-    if(above>0) adj=adj.map(p=>p>MIN?p-(p/above)*deficit:p);
-
-    // 정규화
+    let def=0;
+    adj=adj.map(p=>{if(p<MIN){def+=MIN-p;return MIN}return p});
+    const ab=adj.reduce((s,p)=>s+(p>MIN?p:0),0);
+    adj=adj.map(p=>p>MIN?p-(p/ab)*def:p);
     const fs=adj.reduce((a,b)=>a+b,0);
-    let normalized=adj.map(p=>p/fs);
-
-    // ★ 3배 증폭 후 100% 클리핑
-    const BOOST=3.0;
-    normalized=normalized.map(p=>Math.min(p*BOOST,1.0));
-
-    const sm=preds.map((p,i)=>({className:p.className,probability:normalized[i]}));
+    const sm=preds.map((p,i)=>({className:p.className,probability:adj[i]/fs}));
     const sorted=[...sm].sort((a,b)=>b.probability-a.probability);
     const matched=matchResult(sorted);
     const stats=genStats();
@@ -893,12 +955,8 @@ function applyResultText(matched,stats,sorted){
   document.getElementById('r-tip').textContent=kr?matched.tip:matched.tipEn;
   document.getElementById('r-stats').innerHTML=(stats||genStats()).map(s=>`
     <div class="stat-item"><div class="stat-icon">${s.icon}</div><div class="stat-label">${s.label}</div><div class="stat-value">${s.value}</div></div>`).join('');
-  // 추천 아이템 — 가격 없음
   document.getElementById('r-ads').innerHTML=ADS.map(a=>`
-    <a href="${a.url}" target="_blank" rel="noopener" class="ad-item">
-      <div class="ad-item-icon">${a.icon}</div>
-      <div class="ad-item-name">${kr?a.nameKr:a.nameEn}</div>
-    </a>`).join('');
+    <a href="${a.url}" target="_blank" rel="noopener" class="ad-item"><div class="ad-item-icon">${a.icon}</div><div class="ad-item-name">${kr?a.nameKr:a.nameEn}</div><div class="ad-item-price">${a.price}</div></a>`).join('');
   document.getElementById('sc-emoji').textContent=matched.emoji;
   document.getElementById('sc-name').textContent=kr?matched.name:matched.nameEn;
   document.getElementById('sc-desc').textContent=kr?matched.desc:matched.descEn;
@@ -936,7 +994,7 @@ async function doSave(){
       onclone:(doc)=>{const el=doc.getElementById('save-card');el.style.position='relative';el.style.left='0';el.style.top='0';}
     });
     const link=document.createElement('a');
-    link.download=`부티테스트_${document.getElementById('r-name').textContent}.png`;
+    link.download=`RichAuraTest_${document.getElementById('r-name').textContent}.png`;
     link.href=canvas.toDataURL('image/png');link.click();
     showToast(lang==='kr'?'저장 완료! 인스타에 올려보세요 🖤':'Saved! Share it on Instagram 🖤');
   }catch(e){console.error(e);showToast(lang==='kr'?'저장 실패. 스크린샷을 이용해주세요.':'Save failed. Please screenshot.');}
@@ -962,72 +1020,72 @@ const POSTS=[
  titleKr:'부자 관상의 특징 — 성공한 사람들의 얼굴에는 무엇이 있나?',
  titleEn:'Characteristics of a Wealthy Face — What Do Successful People\'s Faces Reveal?',
  descKr:'눈빛의 깊이, 이마의 형태, 코의 기운까지. 동서양 관상학이 공통으로 지목하는 부자 관상의 핵심 특징을 분석합니다.',
- descEn:'The depth of the gaze, the forehead shape, the energy of the nose. We analyze key wealthy-face features.',
- bodyKr:`<h2>관상학이란 무엇인가?</h2><p>관상학은 인간의 얼굴 생김새와 성격, 운명, 사회적 성취 사이의 관계를 연구하는 동아시아의 전통 학문입니다.</p><h2>이마 — 재물이 들어오는 문</h2><p>넓고 깨끗하며 좌우 대칭이 균형 잡힌 이마는 재물운이 강한 형태입니다. 많은 성공한 CEO들이 넓고 반듯한 이마를 갖고 있습니다.</p><h2>눈빛 — 내면의 의지와 총명함</h2><p>눈빛이 맑고 생기가 있으며 신뢰감을 주는 눈이 이상적입니다. 눈 아래 와잠이 있으면 인복과 재복이 강하다고 봅니다.</p><h2>코 — 재물궁의 핵심</h2><p>코끝이 둥글고 풍성한 형태인 '준두원비'가 이상적입니다. 콧구멍이 너무 드러나지 않고 코 날개가 적당히 발달하면 재물을 잘 모읍니다.</p><h2>결론 — 관상은 바뀐다</h2><p>심상이 관상을 만든다는 가르침처럼, 내면의 생각과 태도가 장기적으로 얼굴을 변화시킵니다.</p>`,
- bodyEn:`<h2>What Is Physiognomy?</h2><p>Physiognomy is the traditional East Asian discipline studying the relationship between facial features and destiny.</p><h2>The Forehead</h2><p>A broad, smooth, symmetrically balanced forehead is ideal. Many successful CEOs tend to have wide, well-formed foreheads.</p><h2>The Eyes</h2><p>Clear, vibrant eyes that inspire trust represent the ideal. A fullness beneath the eye indicates strong relationship and wealth blessings.</p><h2>The Nose</h2><p>A round, full nose tip with nostrils that aren't overly exposed suggests ability to accumulate wealth.</p><h2>Conclusion</h2><p>The mind creates the face. Our thoughts and attitudes gradually reshape our facial features over time.</p>`},
+ descEn:'The depth of the gaze, the forehead shape, the energy of the nose. We analyze key wealthy-face features identified by Eastern and Western physiognomy.',
+ bodyKr:`<h2>관상학이란 무엇인가?</h2><p>관상학(觀相學)은 인간의 얼굴 생김새와 성격, 운명, 사회적 성취 사이의 관계를 연구하는 동아시아의 전통 학문입니다. 수천 년의 역사를 지닌 이 학문은 단순한 미신이 아니라, 오랜 관찰과 경험을 바탕으로 체계화된 지식 체계입니다.</p><h2>이마 — 재물이 들어오는 문</h2><p>관상학에서 이마는 '관록궁(官祿宮)'으로 사회적 지위와 초년운을 관장합니다. 재물운이 강한 이마는 넓고 깨끗하며 좌우 대칭이 균형 잡힌 형태입니다. 실제로 많은 성공한 CEO들의 이마를 보면 넓고 반듯한 경우가 많습니다. 이마에 선명한 주름이 없고 생기가 돌수록 현재 운이 좋은 상태로 해석합니다.</p><h2>눈빛 — 내면의 의지와 총명함</h2><p>눈은 관상에서 가장 중요한 부위 중 하나로, '정신이 머무는 곳'이라고 불립니다. 부자 관상의 눈빛 핵심은 '광채(光彩)'입니다. 눈빛이 맑고 생기가 있으며, 보는 사람에게 신뢰감을 주는 눈이 이상적입니다. 특히 눈동자가 또렷하고 눈 아래 와잠(臥蠶)이 있으면 인복과 재복이 강하다고 봅니다.</p><h2>코 — 재물궁의 핵심</h2><p>코는 관상학에서 '재물궁(財物宮)'으로 불리는 가장 직접적인 재물운의 상징입니다. 코끝이 둥글고 풍성한 형태를 이상적으로 보며, 이를 '준두원비(準頭圓肥)'라고 합니다. 콧구멍이 너무 드러나지 않고, 코 날개가 적당히 발달해 있으면 재물을 잘 모으고 지키는 능력이 있다고 해석합니다.</p><h2>귀 — 장기적 재물 축적</h2><p>귀가 크고 두꺼우며 귓불이 두텁고 아래로 늘어진 형태는 가장 복 있는 귀로 꼽힙니다. 불교 미술에서 부처님의 귀가 이 형태인 것도 이 때문입니다.</p><h2>결론 — 관상은 바뀐다</h2><p>"심상이 관상을 만든다"는 관상학의 핵심 가르침처럼, 내면의 생각과 태도가 장기적으로 얼굴을 변화시킵니다. 관상은 운명이 아니라 가능성의 지도입니다.</p>`,
+ bodyEn:`<h2>What Is Physiognomy?</h2><p>Physiognomy is the traditional East Asian discipline studying the relationship between facial features and character, destiny, and social achievement. With thousands of years of history, it is systematized knowledge built on long observation.</p><h2>The Forehead — Gateway to Fortune</h2><p>The forehead governs social status and early-life fortune. An ideal wealthy forehead is broad, smooth, and symmetrically balanced. Many successful CEOs tend to have wide, well-formed foreheads.</p><h2>The Eyes — Inner Resolve</h2><p>The eyes are called "where the spirit dwells." The key is luminosity. Clear, vibrant eyes that inspire trust represent the ideal. A subtle fullness beneath the eye (the "silkworm" area) indicates strong relationship and wealth blessings.</p><h2>The Nose — The Wealth Palace</h2><p>The nose is literally called the "Wealth Palace." An ideal wealthy nose has a round, full tip and nostrils that aren't overly exposed. Well-developed nasal wings suggest the ability to accumulate and preserve wealth.</p><h2>The Ears</h2><p>Large, thick ears with full, pendulous earlobes are the most auspicious — the same shape depicted on Buddha statues, symbolizing wisdom and abundance.</p><h2>Conclusion — Your Face Can Change</h2><p>"The mind creates the face." Our thoughts and attitudes gradually reshape our facial features over time. Physiognomy is not destiny but a map of possibilities.</p>`},
 {id:2,tagKr:'라이프스타일',tagEn:'Lifestyle',
  titleKr:'올드머니 아우라의 본질 — 진짜 부티는 어디서 오는가?',
  titleEn:'The Essence of Old Money Aura — Where Does True Luxury Come From?',
  descKr:'트렌드를 초월하는 올드머니 미학의 핵심 원칙과, 진정한 부티가 만들어지는 과정을 심층 분석합니다.',
- descEn:'Deep analysis of Old Money aesthetics that transcend trends, and how genuine nobility is cultivated.',
- bodyKr:`<h2>올드머니 트렌드의 부상</h2><p>2020년대 중반 전 세계를 강타한 가장 강력한 문화 트렌드 중 하나는 '올드머니' 미학입니다. 조용하고 절제되어 있으며 시간의 검증을 받은 클래식함이 특징입니다.</p><h2>절제의 미학</h2><p>"Less is More." 진정한 부는 과시할 필요가 없습니다. 로고를 드러내지 않는 브랜드, 절제된 색상 팔레트, 최상급 소재의 단순한 의류가 핵심입니다.</p><h2>역사와 서사</h2><p>올드머니 가문은 물건을 '사는' 것이 아니라 '이어받습니다'. 가족의 역사를 담은 서사가 있는 물건을 소중히 여깁니다.</p><h2>차분한 자신감</h2><p>방에 들어섰을 때 조용히 분위기를 바꾸는 능력 — 이것이 진정한 부티의 본질입니다.</p>`,
- bodyEn:`<h2>The Rise of Old Money</h2><p>One of the most powerful cultural forces of the mid-2020s is the Old Money aesthetic — characterized by quiet restraint and timeless classicism.</p><h2>The Aesthetic of Restraint</h2><p>"Less is More." True wealth has nothing to prove. Non-logo brands, a restrained color palette, and supreme material quality.</p><h2>History and Narrative</h2><p>Old Money families don't "buy" things — they "inherit" them. Objects carry family narrative and history.</p><h2>Quiet Confidence</h2><p>The ability to subtly shift the atmosphere upon entering a room — this is the essence of true nobility.</p>`},
+ descEn:'Deep analysis of Old Money aesthetics that transcend trends, and how genuine nobility of bearing is cultivated.',
+ bodyKr:`<h2>올드머니 트렌드의 부상</h2><p>2020년대 중반 전 세계를 강타한 가장 강력한 문화 트렌드 중 하나는 단연 '올드머니(Old Money)' 미학입니다. 로고로 가득 찬 '뉴머니' 스타일과 대비되는 이 미학은, 조용하고 절제되어 있으며 시간의 검증을 받은 클래식함이 특징입니다.</p><h2>절제의 미학</h2><p>올드머니의 첫 번째 원칙은 "Less is More"입니다. 진정한 부는 과시할 필요가 없습니다. 로고를 드러내지 않는 브랜드, 절제된 색상 팔레트(베이지, 네이비, 카멜, 화이트), 최상급 소재의 단순한 의류가 핵심입니다. 에르메스, 로로피아나, 브루넬로 쿠치넬리가 이 철학을 대표합니다.</p><h2>역사와 서사</h2><p>올드머니 가문은 물건을 '사는' 것이 아니라 '이어받습니다'. 할아버지의 카르티에 시계, 어머니의 에르메스 버킨 — 이 물건들은 가족의 역사를 담은 서사입니다. 신품보다 빈티지를, 대량 생산보다 장인의 작품을 선호하는 이유입니다.</p><h2>차분한 자신감</h2><p>올드머니 사람들은 자신을 증명하려 하지 않습니다. 이 차분한 자신감은 목소리 톤, 몸짓, 눈 맞춤 방식에서 드러납니다. 방에 들어섰을 때 조용히 분위기를 바꾸는 능력 — 이것이 진정한 부티의 본질입니다.</p><h2>결론</h2><p>올드머니 아우라는 계좌 잔고의 문제가 아닙니다. 오랜 시간에 걸쳐 쌓인 문화적 자본, 절제된 취향, 내면의 안정감에서 나옵니다. 진정한 아우라는 매일의 선택과 습관에서 만들어집니다.</p>`,
+ bodyEn:`<h2>The Rise of Old Money</h2><p>One of the most powerful cultural forces sweeping the mid-2020s is the Old Money aesthetic. In contrast to logo-heavy New Money style, Old Money is characterized by quiet restraint, timeless classicism, and refinement that only decades can build.</p><h2>The Aesthetic of Restraint</h2><p>"Less is More." True wealth has nothing to prove. Non-logo brands, a restrained color palette (beige, navy, camel, white), and supreme material quality — this is the essence. Hermès, Loro Piana, and Brunello Cucinelli embody this philosophy.</p><h2>History and Narrative</h2><p>Old Money families don't "buy" things — they "inherit" them. Grandfather's Cartier watch, mother's Hermès Birkin — these are narratives carrying family history. This explains the preference for vintage over new.</p><h2>Quiet Confidence</h2><p>Old Money individuals don't need to prove themselves. This quiet confidence manifests in voice tone, gestures, and eye contact. The ability to subtly shift the atmosphere upon entering a room — this is the essence of true nobility.</p><h2>Conclusion</h2><p>Old Money aura isn't about bank balance. It emerges from cultural capital accumulated over time, restrained taste, and inner stability. Genuine aura is built through daily choices and habits.</p>`},
 {id:3,tagKr:'AI 과학',tagEn:'AI Science',
  titleKr:'AI 관상학의 과학적 근거 — 인공지능은 얼굴을 어떻게 읽는가?',
  titleEn:'The Science Behind AI Physiognomy — How Does AI Read a Face?',
  descKr:'딥러닝과 컴퓨터 비전이 얼굴 특징을 분석하는 원리와, AI 관상의 과학적 가능성과 한계를 알아봅니다.',
- descEn:'How deep learning and computer vision analyze facial features, and the limits of AI physiognomy.',
- bodyKr:`<h2>AI와 관상학의 만남</h2><p>AI가 정말 얼굴을 보고 성격이나 운명을 파악할 수 있을까요? 이 질문에 답하려면 AI가 이미지를 어떻게 처리하는지 이해해야 합니다.</p><h2>컴퓨터 비전의 기초</h2><p>합성곱 신경망(CNN)은 수백만 개의 이미지를 학습하여 패턴을 인식합니다. 최신 AI 모델들은 수백 개의 얼굴 랜드마크를 실시간으로 추적합니다.</p><h2>과학적 타당성과 한계</h2><p>AI 관상 분석은 재미와 자기 성찰의 도구로 가치가 있지만, 과학적 진실로 받아들이기보다는 통찰의 계기로 활용하는 것이 현명합니다.</p><h2>윤리적 고려사항</h2><p>부티 테스트는 순수한 오락 목적이며, 업로드된 이미지를 서버에 저장하지 않습니다.</p>`,
- bodyEn:`<h2>AI Meets Physiognomy</h2><p>To answer whether AI can read faces, we must understand how AI processes visual information.</p><h2>Computer Vision Basics</h2><p>CNNs learn to recognize patterns by training on millions of images. State-of-the-art models track hundreds of facial landmarks in real time.</p><h2>Scientific Validity and Limits</h2><p>AI physiognomy is best approached as a fun catalyst for self-reflection rather than scientific truth.</p><h2>Ethics</h2><p>Rich Aura Test is explicitly for entertainment only and stores no images on any server.</p>`},
+ descEn:'How deep learning and computer vision analyze facial features, and the scientific potential and limits of AI physiognomy.',
+ bodyKr:`<h2>AI와 관상학의 만남</h2><p>AI가 정말 얼굴을 보고 성격이나 운명을 파악할 수 있을까요? 이 질문에 답하려면 AI가 이미지를 어떻게 처리하는지 이해해야 합니다.</p><h2>컴퓨터 비전의 기초</h2><p>컴퓨터 비전은 컴퓨터가 디지털 이미지에서 의미 있는 정보를 추출하는 AI 분야입니다. 딥러닝의 핵심인 합성곱 신경망(CNN)은 수백만 개의 이미지를 학습하여 패턴을 인식합니다.</p><h2>얼굴 인식 기술의 발전</h2><p>최신 AI 모델들은 수백 개의 얼굴 랜드마크를 실시간으로 추적하고 감정 상태를 추정할 수 있습니다. Google MediaPipe, Apple Face ID 등이 이 기술의 정점입니다. Rich Aura Test의 Google Teachable Machine도 이 생태계의 일부입니다.</p><h2>AI 관상 분석의 원리</h2><p>Rich Aura Test는 업로드된 사진에서 얼굴을 감지하고, 사전 학습된 신경망이 시각적 특징들을 분석하여 부티·힙함·친근함·우아함·지적임 등 카테고리별 확률값을 출력합니다.</p><h2>과학적 타당성과 한계</h2><p>심리학 연구에 따르면 인간은 첫 인상을 100밀리초 이내에 형성하며, 이는 얼굴의 특정 특징과 연관이 있습니다. AI 관상 분석은 재미와 자기 성찰의 도구로 가치가 있지만, 과학적 진실로 받아들이기보다는 통찰의 계기로 활용하는 것이 현명합니다.</p><h2>윤리적 고려사항</h2><p>편향성 문제, 프라이버시 보호, 차별의 위험성 등 중요한 윤리적 쟁점들이 있습니다. Rich Aura Test는 순수한 오락 목적이며, 업로드된 이미지를 서버에 저장하지 않습니다.</p>`,
+ bodyEn:`<h2>AI Meets Physiognomy</h2><p>Can AI truly read a face to discern character? To answer this, we must first understand how AI processes visual information.</p><h2>Computer Vision Basics</h2><p>Computer Vision enables computers to extract meaningful information from images. Convolutional Neural Networks (CNNs) learn to recognize patterns by training on millions of images.</p><h2>Facial Recognition Technology</h2><p>State-of-the-art AI models track hundreds of facial landmarks in real time and estimate emotional states. Google MediaPipe and Apple Face ID represent the pinnacle. Rich Aura Test's Google Teachable Machine is part of this ecosystem.</p><h2>How AI Physiognomy Works</h2><p>Rich Aura Test detects faces in uploaded images, then has pre-trained neural networks analyze visual features, outputting probability values for categories like nobility, hipness, warmth, elegance, and intellectualism.</p><h2>Scientific Validity and Limits</h2><p>Psychology research shows humans form first impressions within 100 milliseconds. AI physiognomy is best approached as a fun catalyst for self-reflection rather than scientific truth.</p><h2>Ethics</h2><p>AI facial analysis raises ethical questions around bias, privacy, and discrimination risk. Rich Aura Test is explicitly for entertainment only and stores no images on any server.</p>`},
 {id:4,tagKr:'문화',tagEn:'Culture',
  titleKr:'현대적 "부티"의 정의 — 타고나는 것인가, 만들어지는 것인가?',
  titleEn:'Defining Modern Nobility — Is It Innate or Cultivated?',
  descKr:'SNS 시대에 새롭게 정의되는 부티의 개념과, 누구나 갈고닦을 수 있는 부티의 요소들을 탐구합니다.',
- descEn:'Explore the newly defined concept of noble bearing in the social media age.',
- bodyKr:`<h2>부티란 무엇인가?</h2><p>'부티'는 품격 있는 배경에서 나오는 인상과 분위기를 뜻합니다. 태도·언어·취향·몸가짐의 총합으로 만들어지는 전반적인 인상입니다.</p><h2>부티의 4가지 핵심 요소</h2><p>자기 표현의 절제미, 공감과 배려, 지적 호기심, 그리고 일관된 자기 자신. 이 네 가지가 현대적 부티의 핵심입니다.</p><h2>부티를 키우는 5가지 습관</h2><p>목소리 톤과 속도를 조절하세요. 독서 습관을 들이세요. 자세와 걸음걸이에 신경 쓰세요. 경청하는 능력을 기르세요. 감사와 겸손의 태도를 일상화하세요.</p>`,
- bodyEn:`<h2>What Is Noble Bearing?</h2><p>It's the impression created by the totality of attitude, language, taste, and comportment.</p><h2>4 Core Elements</h2><p>Restrained self-expression, empathy, intellectual curiosity, and consistent identity.</p><h2>5 Habits to Cultivate Noble Bearing</h2><p>Regulate your voice tone. Develop a reading habit. Pay attention to posture. Cultivate active listening. Make gratitude a daily practice.</p>`},
+ descEn:'Explore the newly defined concept of noble bearing in the social media age and elements anyone can cultivate.',
+ bodyKr:`<h2>부티란 무엇인가?</h2><p>'부티'는 '귀한 티', 즉 품격 있는 배경에서 나오는 인상과 분위기를 뜻합니다. 영어로는 'Noble bearing', 'Refined presence'로 표현됩니다. 이는 부유한 집안 출신임을 의미하는 것이 아니라, 태도·언어·취향·몸가짐의 총합으로 만들어지는 전반적인 인상입니다.</p><h2>부티의 4가지 핵심 요소</h2><p>자기 표현의 절제미, 공감과 배려, 지적 호기심, 그리고 일관된 자기 자신. 이 네 가지가 현대적 부티의 핵심입니다.</p><h2>SNS 시대의 부티 역설</h2><p>누구나 콘텐츠로 부티 있는 이미지를 연출할 수 있게 되었지만, 진짜와 가짜의 차이가 더욱 명확하게 드러나는 시대가 되었습니다. 알고리즘은 진정성을 구분하고, 팔로워들은 본능적으로 진짜를 알아봅니다.</p><h2>부티를 키우는 5가지 습관</h2><p>목소리 톤과 속도를 조절하세요. 독서 습관을 들이세요. 자세와 걸음걸이에 신경 쓰세요. 경청하는 능력을 기르세요. 감사와 겸손의 태도를 일상화하세요.</p>`,
+ bodyEn:`<h2>What Is Noble Bearing?</h2><p>"Gwiti" (부티) means "the impression of being precious" — the aura emanating from refinement. It's the impression created by the totality of attitude, language, taste, and comportment — not simply coming from a wealthy family.</p><h2>4 Core Elements</h2><p>Restrained self-expression, empathy and consideration, intellectual curiosity, and consistent identity — these four elements constitute modern noble bearing.</p><h2>The Social Media Paradox</h2><p>Anyone can cultivate a refined image through content, but the difference between genuine and performed nobility has never been more visible. Algorithms detect authenticity, and followers instinctively recognize the real thing.</p><h2>5 Habits to Cultivate Noble Bearing</h2><p>Regulate your voice tone and pace. Develop a reading habit. Pay attention to posture and gait. Cultivate the ability to truly listen. Make gratitude and humility daily practices.</p>`},
 {id:5,tagKr:'심리학',tagEn:'Psychology',
  titleKr:'인상과 운명의 상관관계 — 심리학이 밝히는 첫인상의 과학',
  titleEn:'Impression and Destiny — The Psychology of First Impressions',
  descKr:'첫 0.1초에 결정되는 인상의 심리학적 메커니즘과, 인상이 실제 삶의 기회에 미치는 영향을 분석합니다.',
- descEn:'Psychological mechanisms of impressions decided in 0.1 seconds, and their impact on real-life opportunities.',
- bodyKr:`<h2>첫인상의 신경과학</h2><p>프린스턴 대학교 연구팀은 단 100밀리초만으로 신뢰도, 능력, 친근감에 대한 판단이 이루어진다는 것을 발견했습니다.</p><h2>인상이 기회에 미치는 실제 영향</h2><p>고용에서 면접관은 첫 10초 이내에 초기 판단을 내립니다. 비언어적 신호가 전체 인상의 약 55%, 목소리 톤이 38%, 실제 언어 내용이 7%를 차지합니다(메러비안 법칙).</p>`,
- bodyEn:`<h2>The Neuroscience of First Impressions</h2><p>Princeton researchers found people make judgments from just 100 milliseconds of facial exposure.</p><h2>Real Impact on Opportunities</h2><p>The Mehrabian Rule: non-verbal cues account for 55% of impression; vocal tone 38%; verbal content only 7%.</p>`},
+ descEn:'Analyze psychological mechanisms of impressions decided in 0.1 seconds, and their impact on real-life opportunities.',
+ bodyKr:`<h2>첫인상의 신경과학</h2><p>하버드 대학교 연구에 따르면, 인간은 단 30초의 영상만 봐도 상대방의 능력을 놀랍도록 정확하게 평가할 수 있다고 합니다 — '씬 슬라이스(Thin-Slicing)'. 프린스턴 대학교 연구팀은 사람들이 상대방의 얼굴을 단 100밀리초 보는 것만으로 신뢰도, 능력, 친근감에 대한 판단을 내린다는 것을 발견했습니다.</p><h2>인상이 기회에 미치는 실제 영향</h2><p>고용 분야에서 면접관은 첫 10초 이내에 초기 판단을 내립니다. 정치 분야에서 외모가 더 유능해 보이는 후보가 당선될 확률이 높다는 연구가 있습니다. 법률 분야에서 더 신뢰로워 보이는 피고인이 유리한 판결을 받는 경향이 있습니다.</p><h2>인상을 구성하는 요소들</h2><p>비언어적 신호(자세, 걸음걸이, 눈 맞춤, 표정)가 전체 인상의 약 55%, 목소리 톤이 38%, 실제 언어 내용이 7%를 차지합니다(메러비안 법칙). '어떻게 말하고 행동하느냐'가 '무엇을 말하느냐'보다 훨씬 중요합니다.</p>`,
+ bodyEn:`<h2>The Neuroscience of First Impressions</h2><p>Harvard research shows humans can assess competence from just 30 seconds of video — "thin-slicing." Princeton researchers found people make judgments about trustworthiness and likability from just 100 milliseconds of facial exposure.</p><h2>Real Impact on Opportunities</h2><p>In hiring, interviewers form initial judgments within 10 seconds. In politics, more competent-looking candidates win more often statistically. In law, more trustworthy-appearing defendants tend to receive more favorable verdicts.</p><h2>What Constitutes an Impression</h2><p>The Mehrabian Rule: non-verbal cues account for 55% of total impression; vocal tone for 38%; verbal content only 7%. "How we speak and behave" matters far more than "what we say."</p>`},
 {id:6,tagKr:'비즈니스',tagEn:'Business',
  titleKr:'성공한 CEO들의 관상 분석 — 리더의 얼굴에는 무엇이 있나?',
  titleEn:'Analyzing Successful CEO Faces — What Do Leaders\' Faces Reveal?',
  descKr:'세계적인 비즈니스 리더들의 공통적인 외모 특징과, 리더십이 외모에 반영되는 방식을 분석합니다.',
- descEn:'Common physical characteristics of global business leaders and how leadership shows in appearance.',
- bodyKr:`<h2>리더의 얼굴은 다를까?</h2><p>세계적인 CEO들의 사진을 분석해보면 공통적인 특징들이 발견됩니다. 강한 눈빛, 넓고 반듯한 이마, 자신감 있는 자세, 또렷한 목소리가 공통점입니다.</p><h2>성공이 얼굴을 바꾼다</h2><p>자신감의 증가, 도전을 통해 생겨난 강한 눈빛 — 이런 요소들이 얼굴에 새겨집니다. "심상이 관상을 만든다"는 원리를 지지합니다.</p>`,
- bodyEn:`<h2>Do Leaders Look Different?</h2><p>Common traits: strong directed eye contact, wide foreheads, confident posture, and clear resonant voices.</p><h2>Success Changes the Face</h2><p>Growing confidence and the steely gaze forged through challenges support physiognomy's core principle: "The mind creates the face."</p>`},
+ descEn:'Analyze common physical characteristics of global business leaders and how leadership is reflected in appearance.',
+ bodyKr:`<h2>리더의 얼굴은 다를까?</h2><p>세계적인 CEO들의 사진을 분석해보면 놀랍도록 공통적인 특징들이 발견됩니다. 성공했기 때문에 갖게 된 특징인지, 아니면 이런 특징을 가진 사람이 성공하기 유리한 것인지는 닭과 달걀의 문제처럼 복잡합니다.</p><h2>세계 CEO들의 공통적 외모 특징</h2><p>강한 눈빛과 명확한 시선 처리, 넓고 반듯한 이마, 자신감 있는 자세와 걸음걸이, 또렷한 목소리와 명확한 발음, 상황에 맞는 깔끔한 외모 관리가 공통점으로 나타납니다.</p><h2>성공이 얼굴을 바꾼다</h2><p>많은 CEO들의 성공 이전과 이후 사진을 비교하면 상당한 변화가 관찰됩니다. 자신감의 증가, 도전을 통해 생겨난 강한 눈빛 — 이런 요소들이 얼굴에 새겨집니다. 이는 "심상이 관상을 만든다"는 원리를 지지합니다.</p><h2>결론</h2><p>CEO 관상 분석은 흥미로운 통찰을 제공하지만, 외모로 사람을 판단하는 근거로 삼아서는 안 됩니다. 진정한 리더십은 비전, 실행력, 인격에서 나옵니다.</p>`,
+ bodyEn:`<h2>Do Leaders Look Different?</h2><p>Analyzing photos of world-class CEOs reveals consistently common characteristics. Whether these traits emerge from success or predispose people to succeed is as complex as the chicken-and-egg problem.</p><h2>Common Characteristics</h2><p>Strong directed eye contact, wide smooth foreheads, confident posture and gait, clear resonant voices, and well-maintained appearance are consistently identified across studies.</p><h2>Success Changes the Face</h2><p>Comparing pre- and post-success photos reveals substantial changes: growing confidence, the steely gaze forged through challenges. This supports physiognomy's core principle: "The mind creates the face."</p><h2>Conclusion</h2><p>This analysis provides fascinating insights but must never serve as grounds for judging people by appearance. True leadership comes from vision, execution, and character.</p>`},
 {id:7,tagKr:'관상 팁',tagEn:'Aura Tips',
  titleKr:'눈썹으로 보는 재물운 — 관상학이 말하는 눈썹의 비밀',
  titleEn:'Wealth Luck Through Eyebrows — The Secret of Eyebrows in Physiognomy',
  descKr:'관상에서 재물운의 바로미터로 여겨지는 눈썹의 형태와 관리법을 알아봅니다.',
- descEn:'Learn about eyebrow shapes as indicators of wealth luck in physiognomy.',
- bodyKr:`<h2>눈썹은 왜 중요한가?</h2><p>관상학에서 눈썹은 수명과 형제 관계, 중년 이후의 재물운을 관장합니다. 가장 이상적인 눈썹은 '신월미'로, 초승달처럼 자연스럽게 곡선을 그리는 형태입니다.</p><h2>현대적 눈썹 관리</h2><p>자신의 얼굴 형태에 맞는 자연스러운 눈썹 형태를 찾는 것이 핵심입니다. 인위적으로 너무 가늘게 만든 눈썹보다 자연스러운 두께가 유리합니다.</p>`,
- bodyEn:`<h2>Why Eyebrows Matter</h2><p>In physiognomy, eyebrows govern wealth and relationship luck. The most auspicious is the "New Moon Brow" — a natural crescent curve.</p><h2>Modern Eyebrow Care</h2><p>Finding a natural eyebrow shape suited to your face is key. Natural thickness outperforms artificially thin eyebrows.</p>`},
+ descEn:'Learn about eyebrow shapes as indicators of wealth luck and what each shape represents.',
+ bodyKr:`<h2>눈썹은 왜 중요한가?</h2><p>관상학에서 눈썹은 '보수궁(保壽宮)'이라 하여 수명과 형제 관계, 중년 이후의 재물운을 관장합니다. 또한 감정 표현에 가장 큰 영향을 미치는 부위로, 첫인상 관리에 결정적 역할을 합니다.</p><h2>재물운을 높이는 눈썹의 형태</h2><p>가장 이상적인 눈썹은 '신월미(新月眉)'로, 초승달처럼 자연스럽게 곡선을 그리는 형태입니다. 짙고 선명하며 가지런하고, 앞머리와 끝머리가 명확한 것이 좋습니다.</p><h2>현대적 눈썹 관리</h2><p>자신의 얼굴 형태에 맞는 자연스러운 눈썹 형태를 찾는 것이 핵심입니다. 인위적으로 너무 가늘게 만든 눈썹보다 자연스러운 두께를 유지하는 것이 인상에도, 관상적으로도 더 유리합니다.</p>`,
+ bodyEn:`<h2>Why Eyebrows Matter</h2><p>In physiognomy, eyebrows govern longevity, relationships, and mid-to-late life wealth luck. They're among the most expressive facial features, playing a decisive role in first impressions.</p><h2>Wealth-Enhancing Eyebrow Shapes</h2><p>The most auspicious is the "New Moon Brow" — a natural crescent curve. Thick, defined eyebrows with clear start and end points are considered most favorable.</p><h2>Modern Eyebrow Care</h2><p>Finding a natural eyebrow shape suited to your face is key. Maintaining natural thickness rather than artificially thinning them is more favorable both for impressions and physiognomically.</p>`},
 {id:8,tagKr:'스타일링',tagEn:'Styling',
  titleKr:'부티 나는 스타일링 가이드 — 지금 당장 실천할 수 있는 아우라 업그레이드',
  titleEn:'Styling Guide for a Luxurious Look — Aura Upgrades You Can Do Now',
  descKr:'예산과 상관없이 지금 바로 실천할 수 있는 부티 업그레이드 스타일링 팁과 아이템 가이드.',
- descEn:'Styling tips for aura upgrades you can implement now, regardless of budget.',
- bodyKr:`<h2>부티는 가격이 아니라 조화에서 나온다</h2><p>전체적인 조화, 적절한 핏, 그리고 자신감에서 부티가 나옵니다.</p><h2>캡슐 워드로브의 원칙</h2><p>흰 셔츠, 블랙 팬츠, 베이지 트렌치코트, 캐시미어 스웨터 — 이 몇 가지만 있어도 대부분의 상황에 품격 있게 대응할 수 있습니다.</p><h2>자세와 걸음걸이</h2><p>등을 펴고 어깨를 자연스럽게 뒤로 당기고 시선을 정면으로 향하며 걷는 것만으로 어떤 옷이든 훨씬 세련되어 보입니다.</p>`,
- bodyEn:`<h2>Luxury Comes from Harmony, Not Price</h2><p>A $100 outfit worn with perfect coordination looks more expensive than a $1,000 outfit that doesn't suit you.</p><h2>The Capsule Wardrobe</h2><p>A white shirt, black trousers, beige trench coat, and quality cashmere provide dignified solutions for virtually any situation.</p><h2>Posture and Gait</h2><p>Simply walking with a straight back and forward gaze makes any outfit look dramatically more refined.</p>`},
+ descEn:'Styling tips and item guides for aura upgrades you can implement now, regardless of budget.',
+ bodyKr:`<h2>부티는 가격이 아니라 조화에서 나온다</h2><p>부티는 전체적인 조화, 적절한 핏, 그리고 자신감에서 나옵니다. 10만원짜리 옷도 완벽하게 어울리면 고급스럽게 보이고, 100만원짜리 옷도 어울리지 않으면 과해 보일 수 있습니다.</p><h2>캡슐 워드로브의 원칙</h2><p>부티 나는 스타일의 핵심은 '캡슐 워드로브'입니다. 흰 셔츠, 블랙 팬츠, 베이지 트렌치코트, 좋은 소재의 캐시미어 스웨터 — 이 몇 가지만 있어도 대부분의 상황에 품격 있게 대응할 수 있습니다.</p><h2>그루밍과 기본기</h2><p>깔끔하게 정돈된 헤어스타일, 청결한 피부, 잘 관리된 손톱, 향수의 적절한 사용. 이런 기본기가 갖춰진 사람은 가장 단순한 옷을 입어도 품격이 돋보입니다.</p><h2>자세와 걸음걸이</h2><p>스타일링의 완성은 자세입니다. 등을 펴고 어깨를 자연스럽게 뒤로 당기고 시선을 정면으로 향하며 걷는 것만으로 어떤 옷이든 훨씬 세련되어 보입니다.</p>`,
+ bodyEn:`<h2>Luxury Comes from Harmony, Not Price</h2><p>Luxury emanates from overall harmony, appropriate fit, and confidence. A $100 outfit worn with perfect coordination looks more expensive than a $1,000 outfit that doesn't suit you.</p><h2>The Capsule Wardrobe</h2><p>A white shirt, black trousers, beige trench coat, and a quality cashmere sweater provide dignified solutions for virtually any situation.</p><h2>Grooming Fundamentals</h2><p>A neat hairstyle, clean skin, well-maintained nails, and appropriate fragrance. Someone who masters these fundamentals exudes refinement even in the simplest clothes.</p><h2>Posture and Gait</h2><p>The completion of any outfit is posture. Simply walking with a straight back and forward gaze makes any outfit look dramatically more refined.</p>`},
 {id:9,tagKr:'아우라',tagEn:'Aura',
  titleKr:'말투와 아우라의 힘 — 당신의 언어가 운명을 만든다',
  titleEn:'The Power of Speech and Aura — Your Language Creates Your Destiny',
  descKr:'언어 습관과 말투가 개인의 아우라와 삶의 기회에 미치는 심오한 영향을 탐구합니다.',
- descEn:'Explore the profound impact of language habits and speech patterns on personal aura.',
- bodyKr:`<h2>언어는 현실을 만든다</h2><p>우리가 사용하는 언어와 말투는 사고방식을 형성하고, 나아가 우리가 만들어내는 현실에도 영향을 미칩니다.</p><h2>아우라를 높이는 언어 습관</h2><p>불평과 험담을 줄이고 긍정적인 언어를 사용하세요. 확신에 찬 표현을 쓰며 자신의 생각을 명확하고 간결하게 표현하세요.</p><h2>목소리 톤과 속도의 중요성</h2><p>낮고 안정된 목소리는 신뢰감과 권위감을 줍니다. 적당히 느린 속도로 명확하게 말하는 것이 훨씬 강한 인상을 줍니다.</p>`,
- bodyEn:`<h2>Language Creates Reality</h2><p>The language we use shapes our thinking and influences the reality we create.</p><h2>Language Habits That Elevate Aura</h2><p>Minimize complaints, use positive language, speak with conviction, and express thoughts clearly.</p><h2>Voice Tone and Pace</h2><p>Lower, stable voices project trustworthiness. Speaking at a measured pace creates a far stronger impression.</p>`},
+ descEn:'Explore the profound impact of language habits and speech patterns on personal aura and opportunities.',
+ bodyKr:`<h2>언어는 현실을 만든다</h2><p>철학자들은 오래전부터 언어가 현실을 구성하는 힘을 가졌다고 주장해왔습니다. '언어 상대성 이론(Sapir-Whorf Hypothesis)'이 이를 뒷받침합니다. 우리가 사용하는 언어와 말투는 사고방식을 형성하고, 나아가 우리가 만들어내는 현실에도 영향을 미칩니다.</p><h2>아우라를 높이는 언어 습관</h2><p>성공적인 사람들은 불평과 험담을 줄이고 긍정적인 언어를 사용합니다. 확신에 찬 표현을 쓰며, '어쩌면', '혹시', '아마도' 같은 표현을 불필요하게 남발하지 않습니다. 자신의 생각을 명확하고 간결하게 표현합니다.</p><h2>목소리 톤과 속도의 중요성</h2><p>낮고 안정된 목소리는 신뢰감과 권위감을 주는 경향이 있습니다. 적당히 느린 속도로 명확하게 말하는 것이 빠르게 중얼거리는 것보다 훨씬 강한 인상을 줍니다.</p>`,
+ bodyEn:`<h2>Language Creates Reality</h2><p>The Sapir-Whorf Hypothesis supports the idea that language constructs reality. The language we use shapes our thinking and influences the reality we create.</p><h2>Language Habits That Elevate Aura</h2><p>Successful people minimize complaints and gossip while using positive language. They speak with conviction, avoiding unnecessary hedging, and express their thoughts clearly and concisely.</p><h2>Voice Tone and Pace</h2><p>Lower, stable voices tend to project trustworthiness and authority. Speaking at a measured pace creates a far stronger impression than rapid mumbling.</p>`},
 {id:10,tagKr:'풍수',tagEn:'Feng Shui',
  titleKr:'재물운을 높이는 풍수 인테리어 — 공간이 운을 바꾼다',
  titleEn:'Feng Shui Interior Design for Wealth — Your Space Changes Your Fortune',
  descKr:'동양 풍수학의 현대적 적용으로 재물운과 아우라를 높이는 인테리어 원칙과 실천법을 소개합니다.',
- descEn:'Interior design principles that enhance wealth luck through modern Feng Shui.',
- bodyKr:`<h2>풍수란 무엇인가?</h2><p>풍수는 자연의 에너지 '기(氣)'의 흐름을 활용하여 인간의 삶을 개선하는 것을 목표로 합니다.</p><h2>재물운을 높이는 핵심 원칙</h2><p>불필요한 물건, 사용하지 않는 물건은 기의 흐름을 막습니다. 현관은 항상 깨끗하고 밝게 유지해야 합니다.</p><h2>재물 코너 (財位)</h2><p>집의 주 출입구에서 대각선 방향의 가장 깊은 코너가 재물 코너입니다. 식물, 수정, 분수를 배치하면 재물 에너지를 활성화할 수 있습니다.</p>`,
- bodyEn:`<h2>What Is Feng Shui?</h2><p>Feng Shui harnesses the flow of "Chi" to improve human life and is gaining renewed attention in modern interior design.</p><h2>Core Principles</h2><p>Decluttering is essential — objects obstruct Chi. The entrance hall must be kept clean and bright.</p><h2>The Wealth Corner</h2><p>The deepest corner diagonally opposite the main entrance. Placing plants, crystals, or water features activates wealth energy.</p>`},
+ descEn:'Interior design principles and practices that enhance wealth luck through modern Feng Shui.',
+ bodyKr:`<h2>풍수란 무엇인가?</h2><p>풍수(風水)는 '바람과 물'을 의미하는 중국 전통 철학으로, 자연의 에너지 '기(氣)'의 흐름을 활용하여 인간의 삶을 개선하는 것을 목표로 합니다. 현대에 이르러 인테리어 디자인에서 새롭게 주목받고 있습니다.</p><h2>재물운을 높이는 핵심 원칙</h2><p>재물운을 높이는 가장 기본적인 원칙은 '기(氣)의 원활한 흐름'입니다. 불필요한 물건, 사용하지 않는 물건, 부서진 물건은 기의 흐름을 막습니다. 특히 현관은 항상 깨끗하고 밝게 유지해야 합니다.</p><h2>재물 코너 (財位)</h2><p>집의 주 출입구에서 바라봤을 때 대각선 방향의 가장 깊은 코너가 '재물 코너'입니다. 이 공간에 식물(돈나무, 행운목), 수정, 어항이나 분수를 배치하면 재물 에너지를 활성화할 수 있다고 봅니다.</p><h2>현대적 풍수의 실천</h2><p>정돈되고 아름다운 공간에서 생활하는 사람은 자연스럽게 더 높은 자존감과 긍정적인 아우라를 갖게 됩니다. 풍수 인테리어의 핵심은 공간을 통해 자신의 삶을 의도적으로 디자인하는 것입니다.</p>`,
+ bodyEn:`<h2>What Is Feng Shui?</h2><p>Feng Shui (風水) means "wind and water" — a traditional Chinese philosophy harnessing the flow of "Chi" to improve human life. It is gaining renewed attention in modern interior design.</p><h2>Core Principles for Wealth Luck</h2><p>The most fundamental principle is the "smooth flow of Chi." Decluttering is essential — unnecessary and broken objects obstruct Chi. The entrance hall must always be kept clean and bright.</p><h2>The Wealth Corner</h2><p>The deepest corner diagonally opposite the main entrance is the "Wealth Corner." Placing plants (money trees, lucky bamboo), crystals, or water features activates wealth energy.</p><h2>Modern Feng Shui Practice</h2><p>People who live in organized, beautiful spaces naturally develop higher self-esteem and a more positive aura. Feng Shui interior design is about intentionally designing your life through your environment.</p>`},
 ];
 
 function renderBlog(){
@@ -1043,7 +1101,7 @@ function renderBlog(){
     card.innerHTML=`<div class="blog-num">${String(p.id).padStart(2,'0')}</div>
       <h2 class="blog-card-title">${title}</h2>
       <p class="blog-card-desc">${desc}</p>
-      <div class="blog-card-meta"><span class="blog-tag">${tag}</span><span>부티 테스트</span><span>2026.01</span></div>`;
+      <div class="blog-card-meta"><span class="blog-tag">${tag}</span><span>Rich Aura Analytics</span><span>2026.01</span></div>`;
     card.addEventListener('click',()=>openArticle(p.id));
     list.appendChild(card);
   });
@@ -1059,13 +1117,13 @@ function openArticle(id){
   const authorLbl=lang==='kr'?'작성자':'Author';
   const roleLbl=lang==='kr'?'AI 관상 & 아우라 분석가':'AI Physiognomy & Aura Analyst';
   document.getElementById('artContent').innerHTML=`
-    <span class="art-eyebrow">${tag} · 부티 테스트</span>
+    <span class="art-eyebrow">${tag} · Rich Aura Analytics</span>
     <h1 class="art-h1">${title}</h1>
-    <div class="art-meta"><span>${authorLbl}: 부티 테스트</span><span>2026.01.15</span></div>
+    <div class="art-meta"><span>${authorLbl}: Rich Aura Analytics</span><span>2026.01.15</span></div>
     <div class="art-content">${body}</div>
     <div class="author-box">
       <div class="author-av">🔮</div>
-      <div><div class="author-name">부티 테스트</div>
+      <div><div class="author-name">Rich Aura Analytics</div>
       <div class="author-role">${roleLbl} · rich-aura-test.com</div></div>
     </div>`;
   window.scrollTo({top:0,behavior:'smooth'});
@@ -1088,7 +1146,7 @@ function renderPrivacy(){
     <h2>1. 개인정보 수집 및 이용 목적</h2>
     <p>부티 테스트는 AI 기반 관상 및 아우라 분석 서비스를 제공합니다. 본 서비스는 사용자의 개인정보 보호를 중요하게 생각하며 관련 법령을 준수합니다.</p>
     <h2>2. 수집하는 개인정보 항목</h2>
-    <p>분석 목적으로 업로드하는 이미지는 브라우저 내 로컬에서만 처리되며 서버에 저장되지 않습니다.</p>
+    <p>분석 목적으로 업로드하는 이미지는 브라우저 내 로컬에서만 처리되며 서버에 저장되지 않습니다. 서비스 이용 과정에서 접속 IP 주소, 브라우저 유형, 방문 일시 등의 이용 기록이 자동 수집될 수 있습니다.</p>
     <h2>3. 제3자 서비스</h2>
     <ul>
     <li>Google Analytics 4 (GA4): 서비스 이용 통계 분석 목적</li>
@@ -1096,13 +1154,13 @@ function renderPrivacy(){
     <li>Google AdSense: 광고 제공 목적</li>
     </ul>
     <h2>4. 쿠키 사용</h2>
-    <p>서비스 개선 및 광고 목적으로 쿠키를 사용할 수 있습니다.</p>
+    <p>서비스 개선 및 광고 목적으로 쿠키를 사용할 수 있습니다. 사용자는 브라우저 설정을 통해 쿠키 수집을 거부할 수 있습니다.</p>
     <h2>5. 사용자의 권리</h2>
     <p>언제든지 개인정보 처리에 대한 동의 철회, 열람, 수정, 삭제를 요청할 수 있습니다. 문의: jongkeuncom@gmail.com</p>
     <h2>6. 아동 개인정보 보호</h2>
     <p>만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
     <h2>7. 면책 조항</h2>
-    <p>AI 관상 분석 결과는 순수한 오락 목적으로 제공됩니다. 부티 테스트는 분석 결과의 정확성을 보장하지 않습니다.</p>
+    <p>AI 관상 분석 결과는 순수한 오락 목적으로 제공됩니다. 실제 의사 결정의 근거로 사용하지 마세요. 부티 테스트는 분석 결과의 정확성을 보장하지 않습니다.</p>
     <h2>8. 개인정보 보호책임자</h2>
     <p>개인정보 보호책임자: Carvis | jongkeuncom@gmail.com</p>
     <h2>9. 방침 변경</h2>
@@ -1111,28 +1169,28 @@ function renderPrivacy(){
   :`<h1 class="priv-h1">Privacy Policy</h1>
     <p class="priv-date">Effective: January 1, 2026 | Last Updated: January 15, 2026</p>
     <div class="priv-body">
-    <h2>1. Purpose</h2>
-    <p>Rich Aura Test provides AI-based physiognomy and aura analysis and complies with applicable laws.</p>
+    <h2>1. Purpose of Collection and Use</h2>
+    <p>Rich Aura Test provides AI-based physiognomy and aura analysis. We take your privacy seriously and comply with applicable laws.</p>
     <h2>2. Information We Collect</h2>
-    <p>Images are processed locally within your browser and are never stored on servers.</p>
+    <p>Images uploaded for analysis are processed locally within your browser only and are never stored on our servers. Service usage data (IP addresses, browser type, visit timestamps) may be automatically collected.</p>
     <h2>3. Third-Party Services</h2>
     <ul>
     <li>Google Analytics 4 (GA4): For usage statistics</li>
-    <li>Google Teachable Machine: For AI image analysis — images never transmitted</li>
+    <li>Google Teachable Machine: For AI image analysis — images processed locally, never transmitted</li>
     <li>Google AdSense: For advertising</li>
     </ul>
     <h2>4. Cookies</h2>
-    <p>This Service may use cookies for improvement and advertising purposes.</p>
+    <p>This Service may use cookies for improvement and advertising. Users may refuse cookies through browser settings.</p>
     <h2>5. User Rights</h2>
-    <p>Contact: jongkeuncom@gmail.com</p>
+    <p>You may withdraw consent or request access, correction, or deletion at any time. Contact: jongkeuncom@gmail.com</p>
     <h2>6. Children's Privacy</h2>
-    <p>This Service does not intentionally collect information from children under 14.</p>
+    <p>This Service does not intentionally collect information from children under the age of 14.</p>
     <h2>7. Disclaimer</h2>
-    <p>AI analysis results are for entertainment purposes only.</p>
+    <p>AI analysis results are for entertainment purposes only. Do not use results as the basis for actual decisions. Rich Aura Analytics makes no warranties regarding accuracy.</p>
     <h2>8. Privacy Officer</h2>
     <p>Privacy Officer: Carvis | jongkeuncom@gmail.com</p>
     <h2>9. Policy Updates</h2>
-    <p>Updates will be announced via service notices.</p>
+    <p>This policy may be revised in response to changes in law or service. Updates will be announced via service notices.</p>
     </div>`;
 }
 
@@ -1149,4 +1207,6 @@ function showToast(msg){
 renderBlog();
 renderPrivacy();
 </script>
+
+
 </body></html>
