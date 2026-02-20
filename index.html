@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///Users/hanwha/Downloads/booty-test_4.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💎 부티 테스트 | 내 관상 속 숨겨진 자산가 DNA 분석</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./💎 부티 테스트 _ 내 관상 속 숨겨진 자산가 DNA 분석_files/css2" rel="stylesheet">
+<script src="./💎 부티 테스트 _ 내 관상 속 숨겨진 자산가 DNA 분석_files/tf.min.js"></script>
+<script src="./💎 부티 테스트 _ 내 관상 속 숨겨진 자산가 DNA 분석_files/teachablemachine-image.min.js"></script>
+<script src="./💎 부티 테스트 _ 내 관상 속 숨겨진 자산가 DNA 분석_files/html2canvas.min.js"></script>
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --aurora1: #ffd6e7;
+  --aurora2: #c8e6ff;
+  --aurora3: #d4f1d4;
+  --aurora4: #fff3cd;
+  --aurora5: #e8d5ff;
+  --glass-bg: rgba(255,255,255,0.45);
+  --glass-border: rgba(255,255,255,0.75);
+  --glass-shadow: rgba(200,180,255,0.25);
+  --text-dark: #2d1f4e;
+  --text-mid: #5a4a7a;
+  --text-soft: #8a7aaa;
+  --gold: #f5c842;
+  --gold2: #ffaa00;
+  --pink: #ff6eb4;
+  --mint: #00d4aa;
+  --purple: #9b59ff;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Gowun Dodum', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #f0e8ff;
+  color: var(--text-dark);
+  cursor: default;
+}
+
+/* ===== AURORA BACKGROUND ===== */
+.aurora-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.aurora-bg::before,
+.aurora-bg::after,
+.aurora-orb-1,
+.aurora-orb-2,
+.aurora-orb-3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: floatOrb linear infinite;
+}
+
+.aurora-bg::before {
+  content: '';
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, var(--aurora1) 0%, transparent 70%);
+  top: -200px; left: -100px;
+  opacity: 0.7;
+  animation-duration: 18s;
+}
+.aurora-bg::after {
+  content: '';
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, var(--aurora2) 0%, transparent 70%);
+  bottom: -150px; right: -100px;
+  opacity: 0.6;
+  animation-duration: 22s;
+  animation-direction: reverse;
+}
+.aurora-orb-1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, var(--aurora5) 0%, transparent 70%);
+  top: 30%; left: 40%;
+  opacity: 0.5;
+  animation-duration: 15s;
+}
+.aurora-orb-2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, var(--aurora3) 0%, transparent 70%);
+  top: 60%; left: 10%;
+  opacity: 0.5;
+  animation-duration: 19s;
+  animation-direction: reverse;
+}
+.aurora-orb-3 {
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, var(--aurora4) 0%, transparent 70%);
+  top: 10%; right: 20%;
+  opacity: 0.45;
+  animation-duration: 25s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0,0) scale(1); }
+  25% { transform: translate(40px,-30px) scale(1.05); }
+  50% { transform: translate(-20px,50px) scale(0.95); }
+  75% { transform: translate(-50px,-20px) scale(1.03); }
+  100% { transform: translate(0,0) scale(1); }
+}
+
+/* ===== LAYOUT ===== */
+.page-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 2rem 1.2rem 4rem;
+}
+
+/* ===== GLASS CARD ===== */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 28px;
+  box-shadow:
+    0 8px 32px var(--glass-shadow),
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    inset 0 -1px 0 rgba(255,255,255,0.3);
+  padding: 2rem;
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 16px 48px var(--glass-shadow),
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    inset 0 -1px 0 rgba(255,255,255,0.3);
+}
+
+/* ===== HEADER ===== */
+.header-card {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  padding: 1.2rem 1.5rem 1rem;
+}
+
+.badge-top {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 0.3rem 0.9rem;
+  border-radius: 100px;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 4px 15px rgba(245,200,66,0.4);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 4px 15px rgba(245,200,66,0.4); }
+  50% { box-shadow: 0 4px 30px rgba(245,200,66,0.7), 0 0 0 6px rgba(245,200,66,0.1); }
+}
+
+.main-title {
+  font-family: 'Hahmlet', serif;
+  font-size: clamp(1.7rem, 6vw, 2.3rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #7b2fff 0%, #ff6eb4 50%, #ffaa00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.3rem;
+}
+
+.sub-title {
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.emoji-float {
+  display: inline-block;
+  font-size: 1.3rem;
+  animation: emojiFloat 3s ease-in-out infinite;
+  margin: 0.3rem 0.2rem 0;
+}
+.emoji-float:nth-child(2) { animation-delay: 0.5s; }
+.emoji-float:nth-child(3) { animation-delay: 1s; }
+
+@keyframes emojiFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+/* ===== UPLOAD ZONE ===== */
+.upload-card { margin-bottom: 1.2rem; padding: 0 !important; overflow: hidden; }
+
+/* 정사각형 고정 프레임 — 업로드/프리뷰 공통 래퍼 */
+.square-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.upload-zone {
+  border: 2.5px dashed rgba(155,89,255,0.35);
+  border-radius: 20px;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  background: rgba(255,255,255,0.3);
+  transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-zone::before {
+  content: '✨';
+  position: absolute;
+  font-size: 6rem;
+  opacity: 0.04;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+}
+
+.upload-zone:hover, .upload-zone.drag-over {
+  border-color: var(--purple);
+  background: rgba(155,89,255,0.08);
+  transform: scale(1.01);
+  box-shadow: 0 0 0 4px rgba(155,89,255,0.1);
+}
+
+.upload-zone:active { transform: scale(0.98); }
+
+.upload-icon-wrap {
+  width: 70px; height: 70px;
+  background: linear-gradient(135deg, rgba(155,89,255,0.15), rgba(255,110,180,0.15));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.8rem;
+  border: 1.5px solid rgba(255,255,255,0.8);
+  box-shadow: 0 4px 15px rgba(155,89,255,0.2),
+              inset 0 1px 0 rgba(255,255,255,0.9);
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+.upload-zone:hover .upload-icon-wrap {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.upload-title {
+  font-family: 'Hahmlet', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.4rem;
+}
+
+.upload-hint {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+}
+
+#fileInput { display: none; }
+
+/* ===== PREVIEW ===== */
+#preview-section { display: none; }
+
+/* 사진이 정사각형 프레임을 꽉 채우는 래퍼 */
+.preview-photo-wrap {
+  width: 100%; height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+#preview-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.preview-photo-wrap:hover #preview-img {
+  transform: scale(1.03);
+  filter: brightness(0.75);
+}
+
+/* 호버 시 나타나는 "바꾸기" 오버레이 */
+.preview-overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: rgba(123,47,255,0.25);
+  backdrop-filter: blur(2px);
+}
+.preview-photo-wrap:hover .preview-overlay { opacity: 1; }
+.preview-overlay span {
+  background: rgba(255,255,255,0.9);
+  color: var(--purple);
+  font-family: 'Hahmlet', serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.6rem 1.4rem;
+  border-radius: 100px;
+  box-shadow: 0 4px 16px rgba(123,47,255,0.25);
+}
+
+.preview-bottom {
+  padding: 1rem 1rem 0.2rem;
+  text-align: center;
+}
+.preview-ready {
+  font-family: 'Hahmlet', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+.preview-sub { font-size: 0.8rem; color: var(--text-soft); }
+
+
+
+/* ===== ANALYZE BUTTON ===== */
+#analyze-btn {
+  display: none;
+  width: 100%;
+  padding: 1.1rem;
+  background: linear-gradient(135deg, #7b2fff 0%, #ff6eb4 60%, #ffaa00 100%);
+  background-size: 200% 200%;
+  border: none;
+  border-radius: 18px;
+  color: white;
+  font-family: 'Hahmlet', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(123,47,255,0.4),
+              inset 0 1px 0 rgba(255,255,255,0.3);
+  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  animation: gradShift 4s ease infinite;
+  margin-bottom: 1.2rem;
+}
+
+@keyframes gradShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+#analyze-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(123,47,255,0.5),
+              inset 0 1px 0 rgba(255,255,255,0.3);
+}
+
+#analyze-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 4px 15px rgba(123,47,255,0.3);
+}
+
+#analyze-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ===== LOADING ===== */
+#loading-section {
+  display: none;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.loader-ring {
+  width: 72px; height: 72px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+
+.loader-ring::before, .loader-ring::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  animation: spin 1.2s linear infinite;
+}
+
+.loader-ring::before {
+  border-top-color: var(--purple);
+  border-right-color: var(--pink);
+}
+
+.loader-ring::after {
+  border-bottom-color: var(--gold);
+  border-left-color: var(--mint);
+  animation-direction: reverse;
+  animation-duration: 0.8s;
+  inset: 8px;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.loader-emoji {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.5rem;
+}
+
+.load-text {
+  font-family: 'Hahmlet', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.load-sub {
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+
+/* ===== RESULTS ===== */
+/* Result Card (for screenshot) */
+#result-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(255,230,255,0.6) 50%, rgba(230,240,255,0.7) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(255,255,255,0.85);
+  border-radius: 28px;
+  padding: 2rem;
+  margin-bottom: 1.2rem;
+  box-shadow:
+    0 12px 40px rgba(155,89,255,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.95);
+  animation: resultPop 0.6s cubic-bezier(0.34,1.56,0.64,1) forwards;
+  transform-origin: center;
+}
+
+@keyframes resultPop {
+  0% { opacity:0; transform: scale(0.85) translateY(20px); }
+  100% { opacity:1; transform: scale(1) translateY(0); }
+}
+
+.result-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(123,47,255,0.35);
+}
+
+.result-type-name {
+  font-family: 'Hahmlet', serif;
+  font-size: clamp(2rem, 8vw, 2.8rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #5a0aff 0%, #ff3d9a 50%, #ff8c00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.15;
+  margin-bottom: 0.8rem;
+}
+
+.result-desc {
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.5);
+  border-radius: 14px;
+  border-left: 3px solid var(--pink);
+}
+
+/* Fun Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-item {
+  background: rgba(255,255,255,0.6);
+  border: 1.5px solid rgba(255,255,255,0.85);
+  border-radius: 16px;
+  padding: 0.9rem 0.8rem;
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 4px 12px rgba(155,89,255,0.08);
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+.stat-item:hover { transform: scale(1.03) translateY(-2px); }
+
+.stat-icon { font-size: 1.4rem; margin-bottom: 0.3rem; }
+.stat-label { font-size: 0.67rem; color: var(--text-soft); letter-spacing: 0.05em; margin-bottom: 0.2rem; }
+.stat-value {
+  font-family: 'Hahmlet', serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+/* Probability Bars */
+.bars-wrap {
+  margin-bottom: 0;
+}
+
+.bars-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-soft);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.65rem;
+}
+
+.bar-label {
+  width: 54px;
+  font-size: 0.8rem;
+  color: var(--text-mid);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.bar-track {
+  flex: 1;
+  height: 8px;
+  background: rgba(155,89,255,0.1);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 100px;
+  width: 0%;
+  transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.bar-pct {
+  width: 38px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.bar-fill-0 { background: linear-gradient(90deg, #b44fff, #7b2fff); }
+.bar-fill-1 { background: linear-gradient(90deg, #ff8cc4, #ff3d9a); }
+.bar-fill-2 { background: linear-gradient(90deg, #ffe066, #ffaa00); }
+.bar-fill-3 { background: linear-gradient(90deg, #72f5c8, #00b894); }
+.bar-fill-4 { background: linear-gradient(90deg, #74c0fc, #339af0); }
+.bar-pct-0 { color: #7b2fff; }
+.bar-pct-1 { color: #ff3d9a; }
+.bar-pct-2 { color: #e08c00; }
+.bar-pct-3 { color: #00b894; }
+.bar-pct-4 { color: #339af0; }
+
+/* ===== MONETIZATION CARD ===== */
+.ad-card {
+  margin-bottom: 1.2rem;
+}
+
+.ad-inner {
+  background: linear-gradient(135deg, rgba(255,240,255,0.7), rgba(240,248,255,0.7));
+}
+
+.ad-title {
+  font-family: 'Hahmlet', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.3rem;
+}
+
+.ad-sub {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  margin-bottom: 1rem;
+}
+
+.ad-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+}
+
+.ad-item {
+  background: rgba(255,255,255,0.7);
+  border: 1.5px solid rgba(255,255,255,0.9);
+  border-radius: 14px;
+  padding: 0.85rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  box-shadow: 0 4px 12px rgba(155,89,255,0.08),
+              inset 0 1px 0 rgba(255,255,255,0.9);
+  text-decoration: none;
+  display: block;
+}
+
+.ad-item:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 10px 24px rgba(155,89,255,0.18),
+              inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+.ad-item-icon { font-size: 1.6rem; margin-bottom: 0.35rem; }
+.ad-item-name {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.2rem;
+}
+.ad-item-price {
+  font-size: 0.65rem;
+  color: var(--pink);
+  font-weight: 700;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.action-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.btn-save {
+  padding: 1rem;
+  background: linear-gradient(135deg, #7b2fff, #ff6eb4);
+  border: none;
+  border-radius: 16px;
+  color: white;
+  font-family: 'Hahmlet', serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(123,47,255,0.35),
+              inset 0 1px 0 rgba(255,255,255,0.3);
+  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.btn-save:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(123,47,255,0.45); }
+.btn-save:active { transform: scale(0.95); }
+
+.btn-retry {
+  padding: 1rem;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255,255,255,0.85);
+  border-radius: 16px;
+  color: var(--text-mid);
+  font-family: 'Hahmlet', serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(155,89,255,0.1),
+              inset 0 1px 0 rgba(255,255,255,0.9);
+  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.btn-retry:hover { transform: translateY(-3px); background: rgba(255,255,255,0.8); }
+.btn-retry:active { transform: scale(0.95); }
+
+/* ===== FOOTER ===== */
+.footer-card {
+  text-align: center;
+  padding: 1.2rem;
+}
+.footer-card p {
+  font-size: 0.72rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255,255,255,0.9);
+  border-radius: 100px;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  box-shadow: 0 8px 30px rgba(155,89,255,0.25);
+  z-index: 9999;
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+}
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* ===== RESULT OVERLAY ===== */
+#result-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: var(--glass-bg);
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  animation: overlayIn 0.45s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+
+@keyframes overlayIn {
+  from { opacity:0; transform: translateY(40px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+
+#result-overlay-inner {
+  max-width: 540px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  flex-shrink: 0;
+}
+
+.overlay-title {
+  font-family: 'Hahmlet', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--purple);
+  letter-spacing: 0.1em;
+}
+
+.back-btn {
+  background: none;
+  border: 1.5px solid rgba(155,89,255,0.3);
+  border-radius: 100px;
+  color: var(--purple);
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 0.78rem;
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.back-btn:hover { background: rgba(155,89,255,0.1); }
+
+.overlay-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.2rem 1.2rem 3rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.overlay-footer {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--text-soft);
+  margin-top: 1.5rem;
+  line-height: 1.8;
+}
+
+/* ===== JELLY ANIMATION ===== */
+@keyframes jelly {
+  0%,100% { transform: scale(1); }
+  20% { transform: scale(1.08,0.92); }
+  40% { transform: scale(0.94,1.06); }
+  60% { transform: scale(1.04,0.96); }
+  80% { transform: scale(0.98,1.02); }
+}
+.jelly { animation: jelly 0.6s ease forwards; }
+</style>
+</head>
+<body>
+
+<div class="aurora-bg">
+  <div class="aurora-orb-1"></div>
+  <div class="aurora-orb-2"></div>
+  <div class="aurora-orb-3"></div>
+</div>
+
+<div class="page-wrap">
+
+  <!-- HEADER -->
+  <div class="glass-card header-card">
+    <span class="badge-top">✦ AI 관상 분석 · 2026 EDITION ✦</span>
+    <h1 class="main-title">부티 테스트</h1>
+    <p class="sub-title">
+      셀카 한 장으로 내 안에 잠든<br>
+      자산가 DNA를 깨워드립니다 💸
+    </p>
+    <div style="margin-top:0.8rem">
+      <span class="emoji-float">💎</span>
+      <span class="emoji-float">✨</span>
+      <span class="emoji-float">🌟</span>
+    </div>
+  </div>
+
+  <!-- UPLOAD + PREVIEW (통합) -->
+  <div class="glass-card upload-card">
+    <input type="file" id="fileInput" accept="image/*">
+
+    <!-- 정사각형 고정 프레임 -->
+    <div class="square-frame">
+
+      <!-- 업로드 전 기본 상태 -->
+      <div class="upload-zone" id="uploadZone">
+        <div class="upload-icon-wrap">📸</div>
+        <p class="upload-title">얼굴 사진을 올려주세요</p>
+        <p class="upload-hint">클릭하거나 드래그 · 정면 사진이 가장 정확해요<br>JPG · PNG · WEBP · 안심! 서버에 저장 안 됩니다 🔒</p>
+      </div>
+
+      <!-- 업로드 후 사진 미리보기 -->
+      <div id="preview-section" style="display:none; width:100%; height:100%;">
+        <div class="preview-photo-wrap">
+          <img id="preview-img" src="file:///Users/hanwha/Downloads/booty-test_4.html" alt="preview">
+          <div class="preview-overlay" id="uploadZoneOverlay">
+            <span>🔄 사진 바꾸기</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /square-frame -->
+
+    <!-- 사진 준비 안내 (프레임 바깥) -->
+    <div class="preview-bottom" id="preview-bottom" style="display:none;">
+      <p class="preview-ready">✅ 사진 준비 완료!</p>
+      <p class="preview-sub">AI가 관상 분석을 시작할 준비가 됐어요 👇</p>
+    </div>
+  </div>
+
+  <!-- ANALYZE BUTTON -->
+  <button id="analyze-btn">💎 내 부티 분석하기</button>
+
+  <!-- LOADING -->
+  <div id="loading-section" class="glass-card">
+    <div class="loader-ring">
+      <div class="loader-emoji">🔮</div>
+    </div>
+    <p class="load-text">부티 DNA 분석 중...</p>
+    <p class="load-sub" id="loadingMsg">관상 데이터베이스와 대조 중</p>
+  </div>
+
+  <!-- RESULTS (풀스크린 오버레이) -->
+  <div id="result-overlay">
+    <div id="result-overlay-inner">
+
+      <!-- 상단 헤더 -->
+      <div class="overlay-header">
+        <button id="backBtn" class="back-btn">← 돌아가기</button>
+        <span class="overlay-title">✦ 분석 완료</span>
+        <button class="btn-save" id="saveBtn">📸 저장</button>
+      </div>
+
+      <!-- 스크롤 영역 -->
+      <div class="overlay-body">
+
+        <!-- Result Card -->
+        <div id="result-card">
+          <div><span class="result-type-badge">✦ 당신의 관상 타입</span></div>
+          <p class="result-type-name" id="result-name">—</p>
+          <p class="result-desc" id="result-desc">—</p>
+          <div class="stats-grid" id="stats-grid"></div>
+          <div class="bars-wrap">
+            <p class="bars-title">🔬 아우라 스펙트럼 분석</p>
+            <div id="bars-container"></div>
+          </div>
+        </div>
+
+        <!-- Ad Card -->
+        <div class="glass-card ad-card">
+          <div class="ad-inner" style="padding:0">
+            <div style="padding:1.2rem 1.5rem 0">
+              <p class="ad-title">🛍️ 부티 상승 레벨업 아이템</p>
+              <p class="ad-sub">당신의 관상에 딱 맞는 아이템 Pick! (파트너스 링크)</p>
+            </div>
+            <div class="ad-items" style="padding:0 1rem 1.2rem" id="ad-items"></div>
+          </div>
+        </div>
+
+        <!-- 다시하기 버튼 -->
+        <button class="btn-retry" id="retryBtn" style="width:100%">🔄 다시 테스트하기</button>
+
+        <div class="overlay-footer">
+          이 결과는 재미로 보는 AI 관상 테스트예요 😄<br>
+          부티는 마음가짐에서 나옵니다 💜
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="glass-card footer-card">
+    <p>이 결과는 재미로 보는 AI 관상 테스트예요 😄<br>
+    Google Teachable Machine 기반 · 이미지 서버 저장 없음 🔒<br>
+    <strong style="color:var(--purple)">부티는 마음가짐에서 나옵니다 💜</strong></p>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// =============================================
+// 🔑 TEACHABLE MACHINE MODEL URL (여기만 바꾸면 돼요!)
+// =============================================
+const MODEL_URL = 'https://teachablemachine.withgoogle.com/models/Adsz2vqeL/';
+
+// =============================================
+// 🎯 20가지 결과 매칭 로직
+// =============================================
+const RESULTS = [
+  { name: '로열 블러드',      desc: '편의점 삼각김밥도 스테이크처럼 보일 상! 전생에 최소 성주였을 확률 200%네요.' },
+  { name: '대저택의 주인',    desc: '여유로운 바이브에서 느껴지는 찐부자의 향기! 당신이 머무는 곳은 어디든 갤러리가 돼요.' },
+  { name: '아트 디렉터',      desc: '안목이 곧 돈이 되는 심미안 만렙 자산가! 당신이 고르면 그게 곧 정답이자 트렌드!' },
+  { name: '클래식 아이콘',    desc: '유행은 변해도 당신의 기품은 영원하니까! 시간이 갈수록 가치가 폭등할 빈티지 와인상.' },
+  { name: '트렌드 세터',      desc: '돈을 부르는 화제성, 폼 미쳐버린 주인공 관상! 당신이 쓴 안경 하나로 주가 상한가 칠 기세!' },
+  { name: '유니콘 창업주',    desc: '뇌가 섹시해서 통장 잔고가 가만있질 못할 상! 이미 나스닥 상장까지 끝내셨네요?' },
+  { name: '힙한 콜렉터',      desc: '취향으로 세상을 압도하는 플렉스 왕! 독보적 매력은 언제나 가장 높은 곳에서 빛나요.' },
+  { name: '프라이빗 VIP',     desc: '어디서나 프리패스 가능한 귀한 집 막내 포스! 주변 사람들이 알아서 성공으로 이끌어 줄 상.' },
+  { name: '엔젤 투자자',      desc: '돈과 인복이 쌍으로 터진 상! 당신 곁에 있으면 다 같이 부자 될 것 같은 든든함!' },
+  { name: '선한 영향력 리더', desc: '마음까지 부유한 자산가! 존경과 부를 동시에 거머쥘 완벽한 육각형 관상!' },
+  { name: '취미 부자 갓생러', desc: '돈에 쫓기지 않고 부를 다스리는 고수! 인생 매일매일이 축제일 거예요.' },
+  { name: '숨은 자산가',      desc: '조용히 세상을 움직이는 스텔스 럭셔리! 입을 여는 순간 시장의 판도가 바뀝니다.' },
+  { name: '브레인 리더',      desc: '지적 섹시함의 정점! 그 명석한 두뇌로 자수성가의 역사를 새로 쓰겠군요.' },
+  { name: '마이다스의 손',    desc: '만지는 것마다 황금으로 변하는 사기캐 관상! 비즈니스 감각이 거의 신계급이네요.' },
+  { name: '전략적 승부사',    desc: '실패를 모르는 확신의 승리자 관상! 자산 그래프는 우상향만 고집할 거예요.' },
+  { name: '미래 선구자',      desc: '시대를 앞서가는 혜안! 미래의 자산가 랭킹 상단에 당신의 이름이 보여요.' },
+  { name: '독보적 취향가',    desc: '뻔한 건 거부하는 예술적 럭셔리! 독창성이 당신을 거대한 부자로 만들 핵심 키!' },
+  { name: '디지털 노마드',    desc: '지구 반대편에서도 달러 찍어낼 프로 일탈러! 당신의 여권은 이미 자산 증명서입니다.' },
+  { name: '아틀리에 오너',    desc: '창조적 에너지가 갓벽한 예술적 부티! 손길이 닿는 모든 것이 콘텐츠가 되고 돈이 돼요.' },
+  { name: '소신 럭셔리',      desc: '중심이 확고한 나만의 제국 건설자! 단단한 자존감이 성공의 주춧돌이 될 거예요.' },
+];
+
+// 매칭 로직: 상위 카테고리 조합으로 20개 결과 매핑
+function matchResult(sorted) {
+  const [top1, top2] = sorted; // {className, probability}
+  const t1 = top1.className;
+  const t2 = top2.className;
+  const p1 = top1.probability;
+
+  // 압도적 1위 (70% 이상)
+  if (p1 >= 0.70) {
+    if (t1 === '귀티')  return RESULTS[0];  // 로열 블러드
+    if (t1 === '우아함') return RESULTS[3]; // 클래식 아이콘
+    if (t1 === '지적')  return RESULTS[12]; // 브레인 리더
+    if (t1 === '친근함') return RESULTS[9]; // 선한 영향력 리더
+    if (t1 === '힙함')  return RESULTS[4];  // 트렌드 세터
+  }
+
+  // 1위+2위 조합 매핑
+  const combo = t1 + '+' + t2;
+  const comboMap = {
+    '귀티+우아함':    RESULTS[1],  // 대저택의 주인
+    '귀티+지적':      RESULTS[7],  // 프라이빗 VIP
+    '귀티+힙함':      RESULTS[2],  // 아트 디렉터
+    '귀티+친근함':    RESULTS[8],  // 엔젤 투자자
+    '우아함+귀티':    RESULTS[1],  // 대저택의 주인
+    '우아함+지적':    RESULTS[11], // 숨은 자산가
+    '우아함+친근함':  RESULTS[3],  // 클래식 아이콘
+    '우아함+힙함':    RESULTS[16], // 독보적 취향가
+    '지적+귀티':      RESULTS[5],  // 유니콘 창업주
+    '지적+힙함':      RESULTS[15], // 미래 선구자
+    '지적+친근함':    RESULTS[13], // 마이다스의 손
+    '지적+우아함':    RESULTS[14], // 전략적 승부사
+    '친근함+귀티':    RESULTS[8],  // 엔젤 투자자
+    '친근함+지적':    RESULTS[10], // 취미 부자 갓생러
+    '친근함+힙함':    RESULTS[17], // 디지털 노마드
+    '친근함+우아함':  RESULTS[9],  // 선한 영향력 리더
+    '힙함+귀티':      RESULTS[6],  // 힙한 콜렉터
+    '힙함+지적':      RESULTS[18], // 아틀리에 오너
+    '힙함+친근함':    RESULTS[19], // 소신 럭셔리
+    '힙함+우아함':    RESULTS[6],  // 힙한 콜렉터
+  };
+  return comboMap[combo] || RESULTS[Math.floor(Math.random() * RESULTS.length)];
+}
+
+// =============================================
+// 🎰 Fun Data 랜덤 생성
+// =============================================
+const VALUE_LIST = [
+  { v: '약 120억 원', hint: '한남 펜트하우스 + 포르쉐 3대' },
+  { v: '약 340억 원', hint: '강남 빌딩 반 층 + 치킨 1,000만 마리' },
+  { v: '약 720억 원', hint: '강남 빌딩 한 채 + 스타벅스 매장 200개' },
+  { v: '약 550억 원', hint: '한강뷰 아파트 50채 + 해외여행 평생 무료' },
+  { v: '약 980억 원', hint: '코스피 시총 상위 입성 + 개인 제트기 3대' },
+  { v: '약 450억 원', hint: '3성급 호텔 통째로 + 에르메스 전 라인업' },
+];
+
+const RARITY_LIST = [
+  '상위 0.1% 레어리티 ✨',
+  '전설의 황금 관상 👑',
+  '상위 0.05% 사기캐 관상 🔥',
+  '신화 등급 자산가 DNA 💎',
+  '전설급 부티 소유자 🌟',
+  '초월급 재물운 보유자 ⚡',
+];
+
+const LUCKY_ITEMS = [
+  '아아 샷 추가 ☕', '실크 넥타이 👔', '어깨 펴고 걷기 🚶',
+  '골드 카드 지갑 💳', '향수 한 스프레이 ✨', '좋아하는 플레이리스트 🎵',
+  '프리미엄 노트 📒', '11시 11분 소원 빌기 🕯️', '스스로에게 칭찬 한 마디 💌',
+  '선글라스 하나 더 🕶️', '손 보습 크림 🧴', '좋은 자세 유지하기 💪',
+];
+
+const WEATHER_LIST = [
+  '💥 폭발 직전', '☀️ 맑음 뒤 입금', '🌤️ 흐림 뒤 횡재',
+  '⚡ 번개같은 기회 도래', '🌈 무지개 뜨면 대박', '🔮 부자 기운 폭발 중',
+  '🌊 돈벼락 파도 접근',  '✨ 별빛 재물운 MAX',
+];
+
+function getRandom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+function generateFunStats() {
+  const val = getRandom(VALUE_LIST);
+  return [
+    { icon: '💰', label: '관상 가치', value: val.v },
+    { icon: '📊', label: '희귀도', value: getRandom(RARITY_LIST) },
+    { icon: '🍀', label: '오늘의 행운템', value: getRandom(LUCKY_ITEMS) },
+    { icon: '🌤️', label: '재물운 날씨', value: getRandom(WEATHER_LIST) },
+  ];
+}
+
+// =============================================
+// 🛍️ 파트너스 아이템 (타입별)
+// =============================================
+const AD_ITEMS_DEFAULT = [
+  { icon: '👔', name: '하이엔드 실크 셔츠', price: '₩89,000', url: 'https://link.coupang.com' },
+  { icon: '💍', name: '골드 미니멀 주얼리', price: '₩54,000', url: 'https://link.coupang.com' },
+  { icon: '🕶️', name: '프리미엄 선글라스', price: '₩129,000', url: 'https://link.coupang.com' },
+];
+
+// =============================================
+// 🏗️ APP STATE & LOGIC
+// =============================================
+let model = null;
+let imageFile = null;
+let imageBlobUrl = null;
+
+const loadingMessages = [
+  '관상 데이터베이스와 대조 중 🔍',
+  '부티 지수 계산 중 💎',
+  '숨겨진 자산가 DNA 추출 중 🧬',
+  '전생 성주 기록 열람 중 📜',
+  '아우라 스캐너 가동 중 ✨',
+];
+
+// 모델 로드
+async function loadModel() {
+  try {
+    model = await tmImage.load(MODEL_URL + 'model.json', MODEL_URL + 'metadata.json');
+    console.log('✅ 모델 로드 완료! 이제 부티를 분석할 준비가 됐어요 🎉');
+  } catch(e) {
+    console.error('모델 로드 실패:', e);
+    // 모델 로드 실패해도 앱은 계속 동작 (에러는 분석 시점에 표시)
+  }
+}
+loadModel();
+
+// 이미지를 canvas로 변환 (CORS 우회 + Teachable Machine 호환)
+function imageToCanvas(imgEl) {
+  const canvas = document.createElement('canvas');
+  const size = 224; // Teachable Machine 기본 입력 크기
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(imgEl, 0, 0, size, size);
+  return canvas;
+}
+
+// File → Blob URL로 변환 (tainted canvas 방지)
+
+function handleFile(file) {
+  if (!file.type.startsWith('image/')) { showToast('❌ 이미지 파일만 가능해요!'); return; }
+  imageFile = file;
+
+  // 기존 Blob URL 해제
+  if (imageBlobUrl) URL.revokeObjectURL(imageBlobUrl);
+  imageBlobUrl = URL.createObjectURL(file);
+
+  previewImg.onload = () => {
+    previewSection.style.display = 'block';
+    document.getElementById('preview-bottom').style.display = 'block';
+    uploadZone.style.display = 'none'; // 업로드 존 숨기고 사진으로 대체
+    analyzeBtn.style.display = 'block';
+    resultSection.style.display = 'none';
+    setTimeout(() => analyzeBtn.scrollIntoView({ behavior:'smooth', block:'center' }), 200);
+  };
+  previewImg.src = imageBlobUrl;
+}
+
+// 로딩 메시지 사이클
+function cycleLoadingMsg() {
+  let i = 0;
+  return setInterval(() => {
+    document.getElementById('loadingMsg').textContent = loadingMessages[i % loadingMessages.length];
+    i++;
+  }, 1200);
+}
+
+// DOM refs
+const uploadZone     = document.getElementById('uploadZone');
+const fileInput      = document.getElementById('fileInput');
+const previewSection = document.getElementById('preview-section');
+const previewImg     = document.getElementById('preview-img');
+const analyzeBtn     = document.getElementById('analyze-btn');
+const loadingSection = document.getElementById('loading-section');
+const resultOverlay  = document.getElementById('result-overlay');
+const saveBtn        = document.getElementById('saveBtn');
+const retryBtn       = document.getElementById('retryBtn');
+
+// 업로드 존 클릭 → 파일 선택
+uploadZone.addEventListener('click', () => fileInput.click());
+// 사진 위 오버레이 클릭 → 파일 교체
+document.getElementById('uploadZoneOverlay').addEventListener('click', () => fileInput.click());
+
+fileInput.addEventListener('change', e => { if(e.target.files[0]) handleFile(e.target.files[0]); });
+
+uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('drag-over'); });
+uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag-over'));
+uploadZone.addEventListener('drop', e => {
+  e.preventDefault();
+  uploadZone.classList.remove('drag-over');
+  if (e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
+});
+
+// Analyze
+analyzeBtn.addEventListener('click', async () => {
+  if (!model) {
+    showToast('⏳ 모델 로드 중! 잠시 후 다시 눌러주세요~');
+    loadModel(); // 재시도
+    return;
+  }
+
+  analyzeBtn.disabled = true;
+  analyzeBtn.textContent = '✨ 분석 중...';
+  loadingSection.style.display = 'block';
+
+  const msgInterval = cycleLoadingMsg();
+  await new Promise(r => setTimeout(r, 1200));
+
+  try {
+    const canvas = imageToCanvas(previewImg);
+    const predictions = await model.predict(canvas);
+
+    // =============================================
+    // 🌡️ Temperature Scaling + 최소 보장값
+    // T값이 클수록 분포가 균등해짐 (1=원본, 3=부드럽게, 5=매우 균등)
+    // =============================================
+    const TEMPERATURE = 3.5;
+    const MIN_SHARE = 0.05; // 각 항목 최소 5% 보장
+
+    // 1단계: logit 추정 (softmax 역산)
+    const probs = predictions.map(p => Math.max(p.probability, 1e-7));
+    const logits = probs.map(p => Math.log(p));
+
+    // 2단계: Temperature로 나눠서 재계산
+    const scaledLogits = logits.map(l => l / TEMPERATURE);
+    const maxLogit = Math.max(...scaledLogits);
+    const expScaled = scaledLogits.map(l => Math.exp(l - maxLogit)); // 수치 안정성
+    const expSum = expScaled.reduce((a, b) => a + b, 0);
+    let scaledProbs = expScaled.map(e => e / expSum);
+
+    // 3단계: 최소값 보장 (MIN_SHARE 이하면 끌어올리고 나머지에서 차감)
+    const n = scaledProbs.length;
+    let adjusted = [...scaledProbs];
+    let deficit = 0;
+    adjusted = adjusted.map(p => {
+      if (p < MIN_SHARE) { deficit += MIN_SHARE - p; return MIN_SHARE; }
+      return p;
+    });
+    // 최소값보다 큰 항목들에서 deficit 비례 차감
+    const totalAbove = adjusted.reduce((s, p) => s + (p > MIN_SHARE ? p : 0), 0);
+    adjusted = adjusted.map(p => p > MIN_SHARE ? p - (p / totalAbove) * deficit : p);
+
+    // 4단계: 합이 1이 되도록 재정규화
+    const finalSum = adjusted.reduce((a, b) => a + b, 0);
+    adjusted = adjusted.map(p => p / finalSum);
+
+    // 5단계: 원본 predictions에 새 확률 적용
+    const smoothed = predictions.map((p, i) => ({
+      className: p.className,
+      probability: adjusted[i],
+    }));
+
+    const sorted = [...smoothed].sort((a,b) => b.probability - a.probability);
+    const matched = matchResult(sorted);
+    const funStats = generateFunStats();
+
+    clearInterval(msgInterval);
+    loadingSection.style.display = 'none';
+    renderResult(sorted, matched, funStats);
+
+  } catch(err) {
+    clearInterval(msgInterval);
+    loadingSection.style.display = 'none';
+    console.error(err);
+    showToast('😅 분석 중 오류가 발생했어요. 다시 시도해주세요!');
+    analyzeBtn.disabled = false;
+    analyzeBtn.textContent = '💎 내 부티 분석하기';
+  }
+});
+
+function renderResult(sorted, matched, stats) {
+  // Name & desc
+  document.getElementById('result-name').textContent = matched.name;
+  document.getElementById('result-desc').textContent = matched.desc;
+
+  // Stats
+  const statsGrid = document.getElementById('stats-grid');
+  statsGrid.innerHTML = '';
+  stats.forEach(s => {
+    statsGrid.innerHTML += `
+      <div class="stat-item">
+        <div class="stat-icon">${s.icon}</div>
+        <div class="stat-label">${s.label}</div>
+        <div class="stat-value">${s.value}</div>
+      </div>`;
+  });
+
+  // Bars
+  const barsContainer = document.getElementById('bars-container');
+  barsContainer.innerHTML = '';
+  sorted.forEach((p, i) => {
+    const pct = (p.probability * 100).toFixed(1);
+    barsContainer.innerHTML += `
+      <div class="bar-row">
+        <span class="bar-label">${p.className}</span>
+        <div class="bar-track">
+          <div class="bar-fill bar-fill-${i}" data-pct="${pct}"></div>
+        </div>
+        <span class="bar-pct bar-pct-${i}">${pct}%</span>
+      </div>`;
+  });
+
+  // Ad items
+  const adItems = document.getElementById('ad-items');
+  adItems.innerHTML = '';
+  AD_ITEMS_DEFAULT.forEach(item => {
+    adItems.innerHTML += `
+      <a href="${item.url}" target="_blank" rel="noopener" class="ad-item">
+        <div class="ad-item-icon">${item.icon}</div>
+        <div class="ad-item-name">${item.name}</div>
+        <div class="ad-item-price">${item.price}</div>
+      </a>`;
+  });
+
+  // Show overlay
+  resultOverlay.style.display = 'block';
+  document.body.style.overflow = 'hidden'; // 뒷 배경 스크롤 막기
+  analyzeBtn.disabled = false;
+  analyzeBtn.textContent = '💎 내 부티 분석하기';
+
+  // Animate bars
+  setTimeout(() => {
+    document.querySelectorAll('.bar-fill').forEach(bar => {
+      bar.style.width = bar.dataset.pct + '%';
+    });
+  }, 200);
+
+  // 오버레이 상단으로 스크롤
+  document.querySelector('.overlay-body').scrollTop = 0;
+}
+
+// 뒤로가기
+document.getElementById('backBtn').addEventListener('click', closeOverlay);
+
+function closeOverlay() {
+  resultOverlay.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Save as Image (Instagram 9:16)
+saveBtn.addEventListener('click', async () => {
+  showToast('📸 이미지 저장 중...');
+  const card = document.getElementById('result-card');
+  try {
+    const canvas = await html2canvas(card, {
+      backgroundColor: null,
+      scale: 2,
+      useCORS: true,
+      logging: false,
+    });
+
+    // 9:16 canvas
+    const W = canvas.width;
+    const H = Math.round(W * (16/9));
+    const finalCanvas = document.createElement('canvas');
+    finalCanvas.width = W;
+    finalCanvas.height = H;
+    const ctx = finalCanvas.getContext('2d');
+
+    // Gradient BG
+    const grad = ctx.createLinearGradient(0, 0, W, H);
+    grad.addColorStop(0, '#ffd6e7');
+    grad.addColorStop(0.4, '#e8d5ff');
+    grad.addColorStop(0.8, '#c8e6ff');
+    grad.addColorStop(1, '#d4f1d4');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, W, H);
+
+    // Center card
+    const yOffset = Math.round((H - canvas.height) / 2);
+    ctx.drawImage(canvas, 0, yOffset);
+
+    // Watermark
+    ctx.fillStyle = 'rgba(90,74,122,0.5)';
+    ctx.font = `${Math.round(W * 0.035)}px Gowun Dodum`;
+    ctx.textAlign = 'center';
+    ctx.fillText('💎 부티 테스트 · noble-test.shop', W/2, H - Math.round(W * 0.04));
+
+    const link = document.createElement('a');
+    link.download = `부티테스트_${document.getElementById('result-name').textContent}.png`;
+    link.href = finalCanvas.toDataURL('image/png');
+    link.click();
+    showToast('✅ 저장 완료! 인스타에 올려보세요 🌟');
+  } catch(e) {
+    console.error(e);
+    showToast('😅 저장 실패. 스크린샷을 이용해주세요!');
+  }
+});
+
+// Retry
+retryBtn.addEventListener('click', () => {
+  closeOverlay();
+  previewSection.style.display = 'none';
+  document.getElementById('preview-bottom').style.display = 'none';
+  uploadZone.style.display = 'block';
+  analyzeBtn.style.display = 'none';
+  fileInput.value = '';
+  previewImg.src = '';
+  imageBlobUrl = null;
+  showToast('🔄 새로운 부티를 찾아볼까요? 💜');
+});
+
+// Toast
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2800);
+}
+</script>
+
+
+</body></html>
