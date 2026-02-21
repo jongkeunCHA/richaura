@@ -419,7 +419,7 @@ function renderResult(sorted, matched, stats, confidence) {
 // 바이럴 공유 기능 v2 (신규)
 // ══════════════════════════════════════
 
-const SITE_URL  = 'https://rich-aura-test.com';
+const SITE_URL  = 'https://richaura.store';
 const SITE_NAME = '부티 테스트';
 
 /** 공유 텍스트 생성 */
@@ -435,17 +435,13 @@ function buildShareText(matched) {
 async function copyLink() {
   const matched = lastMatched;
   if (!matched) return;
-  const name = lang === 'kr' ? matched.name : matched.nameEn;
-  const text = lang === 'kr'
-    ? `${SITE_URL}?type=${encodeURIComponent(matched.emoji + name)}`
-    : `${SITE_URL}?type=${encodeURIComponent(matched.emoji + name)}`;
+  const text = SITE_URL;
   try {
     await navigator.clipboard.writeText(text);
     showToast(lang === 'kr' ? '🔗 링크 복사 완료! 친구에게 공유해보세요' : '🔗 Link copied! Share with friends');
     document.getElementById('share-copy-msg').classList.add('show');
     setTimeout(() => document.getElementById('share-copy-msg')?.classList.remove('show'), 3000);
   } catch(e) {
-    // 클립보드 API 미지원 fallback
     const ta = document.createElement('textarea');
     ta.value = text; document.body.appendChild(ta); ta.select();
     document.execCommand('copy'); document.body.removeChild(ta);
