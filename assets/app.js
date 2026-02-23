@@ -419,7 +419,7 @@ function renderResult(sorted, matched, stats, confidence) {
 // 바이럴 공유 기능 v2 (신규)
 // ══════════════════════════════════════
 
-const SITE_URL  = 'https://richaura.store';
+const SITE_URL  = 'https://www.richaura.store';
 const SITE_NAME = '부티 테스트';
 
 /** 공유 텍스트 생성 */
@@ -464,7 +464,9 @@ function shareKakao() {
   if (!lastMatched) return;
   const matched = lastMatched;
   const name = lang === 'kr' ? matched.name : matched.nameEn;
-  const desc = lang === 'kr' ? matched.desc : matched.descEn;
+  const desc = lang === 'kr'
+    ? `${matched.desc}\n당신의 부티 결과가 궁금하신가요?`
+    : `${matched.descEn}\nCurious about your own aura type?`;
 
   // 카카오 SDK 사용 (스크립트 로드 전 폴백)
   if (typeof Kakao !== 'undefined' && Kakao.isInitialized()) {
