@@ -277,9 +277,9 @@ function genStats(langCode) {
 
 // ── 광고 아이템 ──────────────────────
 const ADS = [
-  { icon:'👔', nameKr:'실크 셔츠',   nameEn:'Silk Shirt',   price:'₩89,000', url:'#' },
-  { icon:'💍', nameKr:'골드 주얼리', nameEn:'Gold Jewelry', price:'₩54,000', url:'#' },
-  { icon:'🕶️', nameKr:'선글라스',   nameEn:'Sunglasses',   price:'₩129,000', url:'#' },
+  { icon:'🌸', nameKr:'향수',      nameEn:'Perfume',      url:'https://link.coupang.com/a/dRe8xT' },
+  { icon:'🤲', nameKr:'핸드크림',  nameEn:'Hand Cream',   url:'https://link.coupang.com/a/dRfbi9' },
+  { icon:'🧴', nameKr:'바디클렌저', nameEn:'Body Cleanser', url:'https://link.coupang.com/a/dRfbi9' },
 ];
 
 // ── 블로그 포스트 ────────────────────
