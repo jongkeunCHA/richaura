@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="부티 테스트 개인정보처리방침 — AI 관상 분석 서비스의 개인정보 수집 및 이용에 관한 안내">
+<meta property="og:title" content="개인정보처리방침 — 부티 테스트">
+<meta property="og:url" content="https://richaura.store/privacy.html">
+<title>개인정보처리방침 — 부티 테스트</title>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2421321072929849" crossorigin="anonymous"></script>
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MPENLZ8FCZ"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-MPENLZ8FCZ');
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<!-- HEADER -->
+<header class="site-header">
+  <div><a href="./index.html" style="text-decoration:none"><div class="logo">부티 테스트</div></a></div>
+  <div class="header-right">
+    <nav class="nav-links">
+      <a href="./index.html" class="nav-btn">홈</a>
+      <a href="./blog.html" class="nav-btn">블로그</a>
+      <a href="./privacy.html" class="nav-btn active">개인정보</a>
+    </nav>
+    <div class="lang-sw">
+      <button class="lbtn on" id="lkr">KR</button>
+      <button class="lbtn" id="len">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="priv-wrap" id="privContent"></div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="wrap" style="padding-bottom:0">
+<footer class="site-footer">
+  <div class="footer-top">
+    <div>
+      <div class="logo">부티 테스트</div>
+      <div class="logo-sub" style="margin-top:.25rem">AI Aura Analysis</div>
+    </div>
+    <div class="footer-links">
+      <a href="./index.html" class="footer-link">홈</a>
+      <a href="./blog.html" class="footer-link">블로그</a>
+      <a href="./privacy.html" class="footer-link">개인정보처리방침</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 Carvis. All rights reserved.</div>
+</footer>
+</div>
+
+<script>
+let lang = 'kr';
+document.getElementById('lkr').addEventListener('click', () => { lang='kr'; render(); setLangBtn(); });
+document.getElementById('len').addEventListener('click', () => { lang='en'; render(); setLangBtn(); });
+
+function setLangBtn() {
+  document.getElementById('lkr').classList.toggle('on', lang==='kr');
+  document.getElementById('len').classList.toggle('on', lang==='en');
+}
+
+function render() {
+  document.getElementById('privContent').innerHTML = lang === 'kr' ? `
+    <h1 class="priv-h1">개인정보처리방침</h1>
+    <p class="priv-date">시행일: 2026년 1월 1일 | 최종 수정: 2026년 1월 15일</p>
+    <div class="priv-body">
+    <h2>1. 개인정보 수집 및 이용 목적</h2>
+    <p>부티 테스트는 AI 기반 관상 및 아우라 분석 서비스를 제공합니다. 본 서비스는 사용자의 개인정보 보호를 중요하게 생각하며 관련 법령을 준수합니다.</p>
+    <h2>2. 수집하는 개인정보 항목</h2>
+    <p>분석 목적으로 업로드하는 이미지는 브라우저 내 로컬에서만 처리되며 서버에 저장되지 않습니다.</p>
+    <h2>3. 제3자 서비스</h2>
+    <ul><li>Google Analytics 4 (GA4): 서비스 이용 통계 분석 목적</li>
+    <li>Google Teachable Machine: AI 이미지 분석 (이미지는 서버로 전송되지 않음)</li>
+    <li>Google AdSense: 광고 제공 목적</li></ul>
+    <h2>4. 쿠키 사용</h2>
+    <p>서비스 개선 및 광고 목적으로 쿠키를 사용할 수 있습니다.</p>
+    <h2>5. 이용자 권리</h2>
+    <p>이용자는 언제든지 개인정보 처리에 대한 동의를 철회하거나 열람을 요청할 수 있습니다. 문의: jongkeuncom@gmail.com</p>
+    <h2>6. 면책 조항</h2>
+    <p>AI 분석 결과는 오락 목적으로만 제공됩니다.</p>
+    <h2>7. 개인정보 보호책임자</h2>
+    <p>책임자: Carvis | jongkeuncom@gmail.com</p>
+    </div>` : `
+    <h1 class="priv-h1">Privacy Policy</h1>
+    <p class="priv-date">Effective: January 1, 2026 | Last Updated: January 15, 2026</p>
+    <div class="priv-body">
+    <h2>1. Purpose</h2>
+    <p>Rich Aura Test provides AI-based physiognomy and aura analysis. We comply with applicable privacy laws.</p>
+    <h2>2. Information We Collect</h2>
+    <p>Images uploaded for analysis are processed locally within your browser only and are never stored on our servers.</p>
+    <h2>3. Third-Party Services</h2>
+    <ul><li>Google Analytics 4: For usage statistics</li>
+    <li>Google Teachable Machine: For AI image analysis — images never transmitted</li>
+    <li>Google AdSense: For advertising</li></ul>
+    <h2>4. Cookies</h2>
+    <p>This service may use cookies for improvement and advertising purposes.</p>
+    <h2>5. User Rights</h2>
+    <p>You may withdraw consent or request access at any time. Contact: jongkeuncom@gmail.com</p>
+    <h2>6. Disclaimer</h2>
+    <p>AI analysis results are for entertainment purposes only.</p>
+    <h2>7. Privacy Officer</h2>
+    <p>Privacy Officer: Carvis | jongkeuncom@gmail.com</p>
+    </div>`;
+}
+render();
+</script>
+</body>
+</html>
