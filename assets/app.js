@@ -292,7 +292,7 @@ function applyResultText(matched, stats, sorted) {
     `<div class="stat-item"><div class="stat-icon">${s.icon}</div><div class="stat-label">${s.label}</div><div class="stat-value">${s.value}</div></div>`
   ).join('');
   document.getElementById('r-ads').innerHTML = ADS.map(a =>
-    `<a href="${a.url}" target="_blank" rel="noopener" class="ad-item"><div class="ad-item-icon">${a.icon}</div><div class="ad-item-name">${kr ? a.nameKr : a.nameEn}</div><div class="ad-item-price">${a.price}</div></a>`
+    `<a href="${a.url}" target="_blank" rel="noopener" class="ad-item"><div class="ad-item-icon">${a.icon}</div><div class="ad-item-name">${kr ? a.nameKr : a.nameEn}</div></a>`
   ).join('');
   // 저장 카드
   document.getElementById('sc-emoji').textContent = matched.emoji;
