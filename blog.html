@@ -65,12 +65,12 @@ gtag('config','G-MPENLZ8FCZ');
       <a href="./privacy.html" class="footer-link" style="text-decoration:underline">개인정보처리방침</a>
     </div>
   </div>
-  <div class="footer-biz">상호: Carvis Company | E-mail: jongkeuncom@gmail.com</div>
+  <div class="footer-biz">상호: Carvis Company | E-mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="214b4e4f464a44544f424e4c61464c40484d0f424e4c">[email&#160;protected]</a></div>
   <div class="footer-copy">&#169; 2026 Carvis. All rights reserved. 본 서비스는 오락 목적입니다.</div>
 </footer>
 </div>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2421321072929849" crossorigin="anonymous"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2421321072929849" crossorigin="anonymous"></script>
 <script src="./assets/data.js"></script>
 <script>
 var lang = localStorage.getItem('lang') || 'kr';
@@ -130,8 +130,8 @@ function openArticle(id) {
       '<div><div class="author-name">Rich Aura Analytics</div>' +
       '<div class="author-role">' + (lang==='kr'?'AI 관상 & 아우라 분석가':'AI Physiognomy & Aura Analyst') + ' · richaura.store</div></div>' +
     '</div>' +
-    '<div class="art-back-bottom">' +
-      '<button class="art-back-btn" onclick="goBackToList()">' +
+    '<div style="margin:2rem 0">' +
+      '<button onclick="goBackToList()" style="display:block;width:100%;padding:1rem;text-align:center;background:#000;color:#fff;font-size:.82rem;font-weight:500;letter-spacing:.1em;border:none;border-radius:2px;cursor:pointer;">' +
         (lang==='kr'?'&#8592; 목록보기':'&#8592; Back to List') +
       '</button>' +
     '</div>';
@@ -159,14 +159,4 @@ setLang();
 
 // Hash routing: blog.html#post-N 직접 진입 처리
 (function() {
-  var hash = window.location.hash;
-  if (hash && hash.indexOf('#post-') === 0) {
-    var id = parseInt(hash.replace('#post-', ''), 10);
-    if (!isNaN(id)) {
-      setTimeout(function() { openArticle(id); }, 50);
-    }
-  }
-})();
-</script>
-</body>
-</html>
+  var hash = window.loc
