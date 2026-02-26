@@ -581,6 +581,22 @@ function renderBlog() {
     card.addEventListener('click', () => openArticle(p.id));
     list.appendChild(card);
   });
+  renderBlogPreview();
+}
+
+function renderBlogPreview() {
+  const p = POSTS[0]; if (!p) return;
+  const tag   = lang === 'kr' ? p.tagKr   : p.tagEn;
+  const title = lang === 'kr' ? p.titleKr : p.titleEn;
+  const desc  = lang === 'kr' ? p.descKr  : p.descEn;
+  const btn   = lang === 'kr' ? '블로그에서 더 보기 →' : 'Read more on Blog →';
+  const label = lang === 'kr' ? '최신 아티클' : 'Latest Article';
+  const el = document.querySelector('.blog-preview-label');
+  if (el) el.textContent = label;
+  const t  = document.getElementById('bpTag');   if (t)  t.textContent  = tag;
+  const ti = document.getElementById('bpTitle'); if (ti) ti.textContent = title;
+  const d  = document.getElementById('bpDesc');  if (d)  d.textContent  = desc;
+  const b  = document.getElementById('bpBtn');   if (b)  b.textContent  = btn;
 }
 
 function openArticle(id) {
