@@ -585,18 +585,28 @@ function renderBlog() {
 }
 
 function renderBlogPreview() {
-  const p = POSTS[0]; if (!p) return;
-  const tag   = lang === 'kr' ? p.tagKr   : p.tagEn;
-  const title = lang === 'kr' ? p.titleKr : p.titleEn;
-  const desc  = lang === 'kr' ? p.descKr  : p.descEn;
+  const label = lang === 'kr' ? '최신 아티클' : 'Latest Articles';
   const btn   = lang === 'kr' ? '블로그에서 더 보기 →' : 'Read more on Blog →';
-  const label = lang === 'kr' ? '최신 아티클' : 'Latest Article';
   const el = document.querySelector('.blog-preview-label');
   if (el) el.textContent = label;
-  const t  = document.getElementById('bpTag');   if (t)  t.textContent  = tag;
-  const ti = document.getElementById('bpTitle'); if (ti) ti.textContent = title;
-  const d  = document.getElementById('bpDesc');  if (d)  d.textContent  = desc;
-  const b  = document.getElementById('bpBtn');   if (b)  b.textContent  = btn;
+  const b = document.getElementById('bpBtn'); if (b) b.textContent = btn;
+
+  const container = document.getElementById('bpCards');
+  if (!container) return;
+
+  container.innerHTML = POSTS.slice(0, 5).map(p => {
+    const tag   = lang === 'kr' ? p.tagKr   : p.tagEn;
+    const title = lang === 'kr' ? p.titleKr : p.titleEn;
+    const desc  = lang === 'kr' ? p.descKr  : p.descEn;
+    // desc 3배 미리보기 — 최대 180자 (기존 ~60자의 3배)
+    const preview = desc.length > 180 ? desc.slice(0, 180) + '...' : desc;
+    return `
+    <div class="bp-card">
+      <div class="bp-card-tag">${tag}</div>
+      <div class="bp-card-title">${title}</div>
+      <div class="bp-card-desc">${preview}</div>
+    </div>`;
+  }).join('<div class="bp-divider"></div>');
 }
 
 function openArticle(id) {
