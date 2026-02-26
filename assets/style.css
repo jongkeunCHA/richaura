@@ -397,10 +397,11 @@ body{
 ══════════════════════════════════════ */
 .blog-preview-section{padding:2rem 1.4rem 0;border-top:1px solid var(--g200)}
 .blog-preview-label{font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--g400);margin-bottom:1.2rem}
-.bp-card{padding:1.2rem 0;display:flex;flex-direction:column;gap:.5rem}
+.bp-card{padding:1.2rem 0;display:flex;flex-direction:column;gap:.5rem;cursor:pointer;transition:opacity .15s}
+.bp-card:hover{opacity:.65}
 .bp-card-tag{font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--g400)}
 .bp-card-title{font-size:.95rem;font-weight:600;color:var(--black);line-height:1.45}
-.bp-card-desc{font-size:.8rem;font-weight:300;color:var(--g600);line-height:1.75}
+.bp-card-desc{font-size:.8rem;font-weight:300;color:var(--g600);line-height:1.75;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .bp-divider{height:1px;background:var(--g200)}
 /* 더 보기 버튼 — 눈에 잘 띄게 */
 .blog-preview-btn{
