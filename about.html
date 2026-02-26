@@ -13,6 +13,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./assets/style.css">
+<script>
+(function() {
+  var lang = localStorage.getItem('lang') || 'kr';
+
+  window.setLang = function(l) {
+    lang = l;
+    localStorage.setItem('lang', l);
+    var kr = document.getElementById('content-kr');
+    var en = document.getElementById('content-en');
+    if (kr) kr.style.display = l === 'kr' ? 'block' : 'none';
+    if (en) en.style.display = l === 'en' ? 'block' : 'none';
+    var lkr = document.getElementById('lkr');
+    var len = document.getElementById('len');
+    if (lkr) lkr.classList.toggle('on', l === 'kr');
+    if (len) len.classList.toggle('on', l !== 'kr');
+    document.documentElement.lang = l === 'kr' ? 'ko' : 'en';
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    window.setLang(lang);
+  });
+})();
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -54,7 +77,7 @@
   <p>저희는 AI를 자기 이해의 도구로 바라봅니다. 분석 결과는 오락 목적으로 제공되며, 과학적 진단이 아닙니다. 결과를 통해 자신의 강점을 발견하고 긍정적인 자아 인식을 키우는 계기가 되길 바랍니다.</p>
 
   <h2>회사 정보</h2>
-  <p>운영사: Carvis Company | 서비스: richaura.store | 이메일: jongkeuncom@gmail.com | 출시: 2026년 1월</p>
+  <p>운영사: Carvis Company | 서비스: richaura.store | 이메일: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e68c8988818d83938885898ba6818b878f8ac885898b">[email&#160;protected]</a> | 출시: 2026년 1월</p>
 
   <h2>면책 조항</h2>
   <p>본 서비스의 모든 분석 결과는 오락 목적으로만 제공됩니다. AI 관상 분석은 과학적으로 검증된 방법이 아니며, 실제 운명·성격·미래를 예측하지 않습니다. 결과를 중요한 의사결정에 활용하지 마세요.</p>
@@ -82,7 +105,7 @@
   <p>We view AI as a tool for self-understanding. Analysis results are provided for entertainment purposes and do not constitute scientific diagnosis. We hope results serve as an opportunity to discover your strengths and cultivate positive self-awareness.</p>
 
   <h2>Company Information</h2>
-  <p>Operator: Carvis Company | Service: richaura.store | Email: jongkeuncom@gmail.com | Launch: January 2026</p>
+  <p>Operator: Carvis Company | Service: richaura.store | Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3a5055545d515f4f545955577a5d575b535614595557">[email&#160;protected]</a> | Launch: January 2026</p>
 
   <h2>Disclaimer</h2>
   <p>All analysis results are provided for entertainment purposes only. AI physiognomy analysis is not scientifically validated and does not predict actual destiny, personality, or future. Do not use results for important decision-making.</p>
@@ -98,7 +121,4 @@
     <div><div class="logo">💎 부티 테스트</div></div>
     <div class="footer-links">
       <a href="./index.html" class="footer-link">홈</a>
-      <a href="./blog.html" class="footer-link">블로그</a>
-      <a href="./about.html" class="footer-link">소개</a>
-      <a href="./terms.html" class="footer-link">이용약관</a>
-      <a href="./privacy.html" class="footer-link">개인정보처리방침</a>
+      <a href="./blog.h
