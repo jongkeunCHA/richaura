@@ -598,10 +598,9 @@ function renderBlogPreview() {
     const tag   = lang === 'kr' ? p.tagKr   : p.tagEn;
     const title = lang === 'kr' ? p.titleKr : p.titleEn;
     const desc  = lang === 'kr' ? p.descKr  : p.descEn;
-    // desc 3배 미리보기 — 최대 180자 (기존 ~60자의 3배)
-    const preview = desc.length > 180 ? desc.slice(0, 180) + '...' : desc;
+    const preview = desc.length > 160 ? desc.slice(0, 160) + '...' : desc;
     return `
-    <div class="bp-card">
+    <div class="bp-card" onclick="location.href='./blog.html#post-${p.id}'" style="cursor:pointer">
       <div class="bp-card-tag">${tag}</div>
       <div class="bp-card-title">${title}</div>
       <div class="bp-card-desc">${preview}</div>
