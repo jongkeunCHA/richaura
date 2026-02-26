@@ -300,7 +300,10 @@ body{
   display:flex;align-items:center;gap:.5rem;padding:1rem 1.4rem;
   border-bottom:1px solid var(--g200);background:none;border-left:none;border-right:none;border-top:none;
   font-family:'Inter',sans-serif;font-size:.72rem;font-weight:500;
-  letter-spacing:.18em;text-transform:uppercase;color:var(--g600);
+  letter-spacing:.18em;text-transform:uppercase;col
+.art-back-bottom{margin:2.5rem 0 1rem;text-align:center;}
+.art-back-btn{display:inline-block;padding:.75rem 2rem;border:1.5px solid var(--black);background:none;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;transition:background .18s,color .18s;color:var(--black);}
+.art-back-btn:hover{background:var(--black);color:#fff;}or:var(--g600);
   cursor:pointer;width:100%;text-align:left;transition:background .15s;
 }
 .art-back:hover{background:var(--g100)}
