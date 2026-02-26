@@ -286,7 +286,7 @@ const ADS = [
 const POSTS = [
   { id:1, tagKr:'관상학', tagEn:'Physiognomy',
     titleKr:'부자 관상의 특징 — 성공한 사람들의 얼굴에는 무엇이 있나?',
-    titleEn:'Characteristics of a Wealthy Face — What Successful People's Faces Reveal',
+    titleEn:'Characteristics of a Wealthy Face — What Successful People\'s Faces Reveal',
     descKr:'눈빛의 깊이, 이마의 형태, 코의 기운까지. 동서양 관상학이 공통으로 지목하는 부자 관상의 핵심 특징을 심층 분석합니다.',
     descEn:'From the depth of the gaze to forehead shape and nose energy — key wealthy-face features identified by Eastern and Western physiognomy.',
     bodyKr:`
@@ -681,4 +681,3 @@ const POSTS = [
 <p>Our daily living spaces are not merely physical environments — their energy influences our mood, thinking, decisions, and ultimately our outcomes. Applying Feng Shui principles is a practical path to creating spaces that support better aura, better decisions, and better fortune.</p>
     ` },
 ];
-
