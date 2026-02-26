@@ -65,12 +65,12 @@ gtag('config','G-MPENLZ8FCZ');
       <a href="./privacy.html" class="footer-link" style="text-decoration:underline">개인정보처리방침</a>
     </div>
   </div>
-  <div class="footer-biz">상호: Carvis Company | E-mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="214b4e4f464a44544f424e4c61464c40484d0f424e4c">[email&#160;protected]</a></div>
+  <div class="footer-biz">상호: Carvis Company | E-mail: jongkeuncom@gmail.com</div>
   <div class="footer-copy">&#169; 2026 Carvis. All rights reserved. 본 서비스는 오락 목적입니다.</div>
 </footer>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2421321072929849" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2421321072929849" crossorigin="anonymous"></script>
 <script src="./assets/data.js"></script>
 <script>
 var lang = localStorage.getItem('lang') || 'kr';
@@ -109,40 +109,52 @@ function renderBlog() {
   });
 }
 
-function openArticle(id) {
-  var p = null;
-  for (var i=0; i<POSTS.length; i++) { if (POSTS[i].id === id) { p = POSTS[i]; break; } }
-  if (!p) return;
-  document.getElementById('blogList').style.display = 'none';
-  document.getElementById('art-view').style.display = 'block';
-  var title = lang === 'kr' ? p.titleKr : p.titleEn;
-  var body  = lang === 'kr' ? p.bodyKr  : p.bodyEn;
-  var tag   = lang === 'kr' ? p.tagKr   : p.tagEn;
-  document.getElementById('backLabel').textContent = lang === 'kr' ? '목록으로' : 'Back to List';
-  document.getElementById('artContent').innerHTML =
-    '<span class="art-eyebrow">' + tag + ' · Rich Aura Analytics</span>' +
-    '<h1 class="art-h1">' + title + '</h1>' +
-    '<div class="art-meta"><span>' + (lang==='kr'?'작성자':'Author') + ': Rich Aura Analytics</span><span>2026.01</span></div>' +
-    '<div class="art-content">' + body + '</div>' +
-    '<div id="article-ad-slot"></div>' +
-    '<div class="author-box">' +
-      '<div class="author-av">&#x1F52E;</div>' +
-      '<div><div class="author-name">Rich Aura Analytics</div>' +
-      '<div class="author-role">' + (lang==='kr'?'AI 관상 & 아우라 분석가':'AI Physiognomy & Aura Analyst') + ' · richaura.store</div></div>' +
-    '</div>' +
-    '<div style="margin:2rem 0">' +
-      '<button onclick="goBackToList()" style="display:block;width:100%;padding:1rem;text-align:center;background:#000;color:#fff;font-size:.82rem;font-weight:500;letter-spacing:.1em;border:none;border-radius:2px;cursor:pointer;">' +
-        (lang==='kr'?'&#8592; 목록보기':'&#8592; Back to List') +
-      '</button>' +
-    '</div>';
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  renderArticleAd();
-}
-
 function goBackToList() {
   document.getElementById('art-view').style.display  = 'none';
   document.getElementById('blogList').style.display  = 'block';
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function openArticle(id) {
+  var p = null;
+  for (var i = 0; i < POSTS.length; i++) {
+    if (POSTS[i].id === id) { p = POSTS[i]; break; }
+  }
+  if (!p) return;
+
+  document.getElementById('blogList').style.display = 'none';
+  document.getElementById('art-view').style.display = 'block';
+
+  var title  = lang === 'kr' ? p.titleKr : p.titleEn;
+  var body   = lang === 'kr' ? p.bodyKr  : p.bodyEn;
+  var tag    = lang === 'kr' ? p.tagKr   : p.tagEn;
+  var author = lang === 'kr' ? '작성자'  : 'Author';
+  var role   = lang === 'kr' ? 'AI 관상 & 아우라 분석가' : 'AI Physiognomy & Aura Analyst';
+  var btnTxt = lang === 'kr' ? '&#8592; 목록보기' : '&#8592; Back to List';
+  var backTxt = lang === 'kr' ? '목록으로' : 'Back to List';
+
+  document.getElementById('backLabel').textContent = backTxt;
+
+  var html = '';
+  html += '<span class="art-eyebrow">' + tag + ' · Rich Aura Analytics</span>';
+  html += '<h1 class="art-h1">' + title + '</h1>';
+  html += '<div class="art-meta"><span>' + author + ': Rich Aura Analytics</span><span>2026.01</span></div>';
+  html += '<div class="art-content">' + body + '</div>';
+  html += '<div id="article-ad-slot"></div>';
+  html += '<div class="author-box">';
+  html +=   '<div class="author-av">&#x1F52E;</div>';
+  html +=   '<div><div class="author-name">Rich Aura Analytics</div>';
+  html +=   '<div class="author-role">' + role + ' · richaura.store</div></div>';
+  html += '</div>';
+  html += '<div style="margin:2rem 0">';
+  html +=   '<button onclick="goBackToList()" style="display:block;width:100%;padding:1rem;text-align:center;background:#000;color:#fff;font-size:.82rem;font-weight:500;letter-spacing:.1em;border:none;border-radius:2px;cursor:pointer;">';
+  html +=     btnTxt;
+  html +=   '</button>';
+  html += '</div>';
+
+  document.getElementById('artContent').innerHTML = html;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  renderArticleAd();
 }
 
 function renderArticleAd() {
@@ -159,4 +171,14 @@ setLang();
 
 // Hash routing: blog.html#post-N 직접 진입 처리
 (function() {
-  var hash = window.loc
+  var hash = window.location.hash;
+  if (hash && hash.indexOf('#post-') === 0) {
+    var id = parseInt(hash.replace('#post-', ''), 10);
+    if (!isNaN(id)) {
+      setTimeout(function() { openArticle(id); }, 50);
+    }
+  }
+})();
+</script>
+</body>
+</html>
