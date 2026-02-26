@@ -391,3 +391,15 @@ body{
 .ad-item-icon{font-size:1.3rem;margin-bottom:.45rem}
 .ad-item-name{font-size:.75rem;font-weight:400;color:var(--g800);line-height:1.4;margin-bottom:.25rem}
 .ad-item-price{font-size:.71rem;color:var(--g400);font-weight:300}
+
+/* ══════════════════════════════════════
+   블로그 미리보기 (메인 하단)
+══════════════════════════════════════ */
+.blog-preview-section{padding:2rem 1.4rem;border-top:1px solid var(--g200)}
+.blog-preview-label{font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--g400);margin-bottom:1rem}
+.blog-preview-card{background:var(--g100);border-radius:4px;padding:1.4rem;display:flex;flex-direction:column;gap:.6rem}
+.blog-preview-tag{font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--g400)}
+.blog-preview-title{font-size:1rem;font-weight:600;color:var(--black);line-height:1.4}
+.blog-preview-desc{font-size:.8rem;font-weight:300;color:var(--g600);line-height:1.7}
+.blog-preview-btn{display:inline-block;margin-top:.4rem;font-size:.75rem;font-weight:500;letter-spacing:.08em;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:1px;align-self:flex-start}
+.blog-preview-btn:hover{opacity:.6}
