@@ -71,12 +71,12 @@ gtag('config','G-MPENLZ8FCZ');
       <a href="./privacy.html" class="footer-link" style="text-decoration:underline">개인정보처리방침</a>
     </div>
   </div>
-  <div class="footer-biz">상호: Carvis Company | E-mail: jongkeuncom@gmail.com</div>
+  <div class="footer-biz">상호: Carvis Company | E-mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f69c9998919d93839895999bb6919b979f9ad895999b">[email&#160;protected]</a></div>
   <div class="footer-copy">© 2026 Carvis. All rights reserved. 본 서비스는 오락 목적입니다.</div>
 </footer>
 </div>
 
-<script src="./assets/data.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./assets/data.js"></script>
 <script>
 let lang = 'kr';
 
@@ -129,6 +129,11 @@ function openArticle(id) {
       <div class="author-av">🔮</div>
       <div><div class="author-name">Rich Aura Analytics</div>
       <div class="author-role">${lang==='kr'?'AI 관상 & 아우라 분석가':'AI Physiognomy & Aura Analyst'} · richaura.store</div></div>
+    </div>
+    <div class="art-back-bottom">
+      <button class="art-back-btn" onclick="document.getElementById('artBack').click()">
+        ${lang==='kr'?'← 목록보기':'← Back to List'}
+      </button>
     </div>`;
   window.scrollTo({ top:0, behavior:'smooth' });
   renderArticleAd();
@@ -150,12 +155,4 @@ document.getElementById('artBack').addEventListener('click', () => {
 
 renderBlog();
 
-// 해시로 직접 진입 시 해당 글 자동 오픈 (#post-1, #post-2 ...)
-const hash = window.location.hash;
-if (hash && hash.startsWith('#post-')) {
-  const id = parseInt(hash.replace('#post-', ''), 10);
-  if (!isNaN(id)) setTimeout(() => openArticle(id), 50);
-}
-</script>
-</body>
-</html>
+// 해시로 직접 진입 시 해당 글 자동 오픈 (#post
