@@ -150,6 +150,13 @@ document.getElementById('artBack').addEventListener('click', () => {
 });
 
 renderBlog();
+
+// 해시로 직접 진입 시 해당 글 자동 오픈 (#post-1, #post-2 ...)
+const hash = window.location.hash;
+if (hash && hash.startsWith('#post-')) {
+  const id = parseInt(hash.replace('#post-', ''), 10);
+  if (!isNaN(id)) setTimeout(() => openArticle(id), 50);
+}
 </script>
 </body>
 </html>
