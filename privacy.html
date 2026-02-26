@@ -13,6 +13,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./assets/style.css">
+<script>
+(function() {
+  var lang = localStorage.getItem('lang') || 'kr';
+
+  window.setLang = function(l) {
+    lang = l;
+    localStorage.setItem('lang', l);
+    var kr = document.getElementById('content-kr');
+    var en = document.getElementById('content-en');
+    if (kr) kr.style.display = l === 'kr' ? 'block' : 'none';
+    if (en) en.style.display = l === 'en' ? 'block' : 'none';
+    var lkr = document.getElementById('lkr');
+    var len = document.getElementById('len');
+    if (lkr) lkr.classList.toggle('on', l === 'kr');
+    if (len) len.classList.toggle('on', l !== 'kr');
+    document.documentElement.lang = l === 'kr' ? 'ko' : 'en';
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    window.setLang(lang);
+  });
+})();
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -56,7 +79,7 @@
   <h2>9. 안전성 확보 조치</h2>
   <p>서버 이미지 저장 금지 / HTTPS 암호화 / 최소 데이터 공유</p>
   <h2>10. 개인정보 보호책임자</h2>
-  <p>Carvis Company 운영팀 | jongkeuncom@gmail.com | 영업일 3일 이내 답변</p>
+  <p>Carvis Company 운영팀 | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="345e5b5a535f51415a575b59745359555d581a575b59">[email&#160;protected]</a> | 영업일 3일 이내 답변</p>
   <h2>11. 방침 변경</h2>
   <p>변경 시 웹사이트 공지. 공지 후 7일부터 효력 발생.</p>
   </div>
@@ -85,7 +108,7 @@
   <h2>9. Security Measures</h2>
   <p>No server image storage / HTTPS encryption / Minimum data sharing</p>
   <h2>10. Privacy Officer</h2>
-  <p>Carvis Company | jongkeuncom@gmail.com | Response within 3 business days</p>
+  <p>Carvis Company | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="90fafffef7fbf5e5fef3fffdd0f7fdf1f9fcbef3fffd">[email&#160;protected]</a> | Response within 3 business days</p>
   <h2>11. Policy Updates</h2>
   <p>Changes notified via website. Effective 7 days after notice.</p>
   </div>
@@ -102,8 +125,4 @@
       <a href="./index.html" class="footer-link">홈</a>
       <a href="./blog.html" class="footer-link">블로그</a>
       <a href="./about.html" class="footer-link">소개</a>
-      <a href="./terms.html" class="footer-link">이용약관</a>
-      <a href="./privacy.html" class="footer-link">개인정보처리방침</a>
-    </div>
-  </div>
-  <div class="footer-biz">상호: Carvis Company | E-mail: <a href="/cdn-cgi/l/email-protection" class="__c
+      <a href="./terms.ht
