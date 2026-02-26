@@ -598,7 +598,7 @@ function renderBlogPreview() {
     const tag   = lang === 'kr' ? p.tagKr   : p.tagEn;
     const title = lang === 'kr' ? p.titleKr : p.titleEn;
     const desc  = lang === 'kr' ? p.descKr  : p.descEn;
-    const preview = desc.length > 160 ? desc.slice(0, 160) + '...' : desc;
+    const preview = desc.length > 320 ? desc.slice(0, 320) + '...' : desc;
     return `
     <div class="bp-card" onclick="location.href='./blog.html#post-${p.id}'" style="cursor:pointer">
       <div class="bp-card-tag">${tag}</div>
