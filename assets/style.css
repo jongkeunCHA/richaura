@@ -395,11 +395,20 @@ body{
 /* ══════════════════════════════════════
    블로그 미리보기 (메인 하단)
 ══════════════════════════════════════ */
-.blog-preview-section{padding:2rem 1.4rem;border-top:1px solid var(--g200)}
-.blog-preview-label{font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--g400);margin-bottom:1rem}
-.blog-preview-card{background:var(--g100);border-radius:4px;padding:1.4rem;display:flex;flex-direction:column;gap:.6rem}
-.blog-preview-tag{font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--g400)}
-.blog-preview-title{font-size:1rem;font-weight:600;color:var(--black);line-height:1.4}
-.blog-preview-desc{font-size:.8rem;font-weight:300;color:var(--g600);line-height:1.7}
-.blog-preview-btn{display:inline-block;margin-top:.4rem;font-size:.75rem;font-weight:500;letter-spacing:.08em;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:1px;align-self:flex-start}
-.blog-preview-btn:hover{opacity:.6}
+.blog-preview-section{padding:2rem 1.4rem 0;border-top:1px solid var(--g200)}
+.blog-preview-label{font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--g400);margin-bottom:1.2rem}
+.bp-card{padding:1.2rem 0;display:flex;flex-direction:column;gap:.5rem}
+.bp-card-tag{font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--g400)}
+.bp-card-title{font-size:.95rem;font-weight:600;color:var(--black);line-height:1.45}
+.bp-card-desc{font-size:.8rem;font-weight:300;color:var(--g600);line-height:1.75}
+.bp-divider{height:1px;background:var(--g200)}
+/* 더 보기 버튼 — 눈에 잘 띄게 */
+.blog-preview-btn{
+  display:block;width:100%;margin-top:1.6rem;margin-bottom:2rem;
+  padding:1rem;text-align:center;
+  background:var(--black);color:var(--white);
+  font-size:.82rem;font-weight:500;letter-spacing:.1em;
+  text-decoration:none;border-radius:2px;
+  transition:opacity .2s;
+}
+.blog-preview-btn:hover{opacity:.75}
