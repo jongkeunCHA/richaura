@@ -92,6 +92,19 @@ function setLang() {
   renderBlog();
 }
 
+// ── Hash routing: index.html 카드 클릭 → blog.html#post-N ──
+(function() {
+  const hash = window.location.hash;
+  if (hash && hash.startsWith('#post-')) {
+    const id = parseInt(hash.replace('#post-', ''), 10);
+    if (!isNaN(id)) {
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() { openArticle(id); }, 80);
+      });
+    }
+  }
+})();
+
 function renderBlog() {
   const list = document.getElementById('blogList');
   const art  = document.getElementById('art-view');
