@@ -13,6 +13,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./assets/style.css">
+<script>
+(function() {
+  var lang = localStorage.getItem('lang') || 'kr';
+
+  window.setLang = function(l) {
+    lang = l;
+    localStorage.setItem('lang', l);
+    var kr = document.getElementById('content-kr');
+    var en = document.getElementById('content-en');
+    if (kr) kr.style.display = l === 'kr' ? 'block' : 'none';
+    if (en) en.style.display = l === 'en' ? 'block' : 'none';
+    var lkr = document.getElementById('lkr');
+    var len = document.getElementById('len');
+    if (lkr) lkr.classList.toggle('on', l === 'kr');
+    if (len) len.classList.toggle('on', l !== 'kr');
+    document.documentElement.lang = l === 'kr' ? 'ko' : 'en';
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    window.setLang(lang);
+  });
+})();
+</script>
 </head>
 <body>
 <div class="wrap">
