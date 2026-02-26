@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<meta name="description" content="부자 관상, AI 아우라 분석, 관상 과학에 관한 전문 아티클 10선 — 부티 테스트 블로그">
+<meta name="description" content="부자 관상, AI 아우라 분석, 관상 과학에 관한 전문 아티클 — 부티 테스트 블로그">
 <meta name="keywords" content="관상 블로그, 부자 관상, AI 아우라, 관상 과학, 부티 테스트">
 <meta property="og:title" content="관상 & 아우라 인사이트 — 부티 테스트 블로그">
-<meta property="og:description" content="부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클 10선">
+<meta property="og:description" content="부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://richaura.store/blog.html">
 <title>블로그 — 부티 테스트</title>
-
-<!-- GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPENLZ8FCZ"></script>
 <script>
 window.dataLayer=window.dataLayer||[];
@@ -19,8 +17,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());
 gtag('config','G-MPENLZ8FCZ');
 </script>
-
-<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./assets/style.css">
@@ -28,9 +24,8 @@ gtag('config','G-MPENLZ8FCZ');
 <body>
 <div class="wrap">
 
-<!-- HEADER -->
 <header class="site-header">
-  <div><a href="./index.html" style="text-decoration:none"><div class="logo">💎 부티 테스트</div></a></div>
+  <div><a href="./index.html" style="text-decoration:none"><div class="logo">&#x1F48E; 부티 테스트</div></a></div>
   <div class="header-right">
     <nav class="nav-links">
       <a href="./index.html" class="nav-btn">홈</a>
@@ -44,25 +39,24 @@ gtag('config','G-MPENLZ8FCZ');
 </header>
 
 <div class="blog-hero">
-  <p class="hero-eyebrow" id="eyebrow">전문 콘텐츠</p>
+  <p class="blog-hero-eyebrow" id="eyebrow">전문 콘텐츠</p>
   <h1 class="blog-hero-title" id="blog-title">관상 &amp; 아우라 인사이트</h1>
-  <p class="blog-hero-sub" id="blog-sub">부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클 10선</p>
+  <p class="blog-hero-sub" id="blog-sub">부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클</p>
 </div>
 
 <div class="blog-list" id="blogList"></div>
 
 <div id="art-view" style="display:none">
-  <button class="art-back" id="artBack">← <span id="backLabel">목록으로</span></button>
+  <button class="art-back" id="artBack">&#8592; <span id="backLabel">목록으로</span></button>
   <div class="art-body-wrap" id="artContent"></div>
 </div>
 
 </div>
 
-<!-- FOOTER -->
 <div class="wrap" style="padding-bottom:0">
 <footer class="site-footer">
   <div class="footer-top">
-    <div><div class="logo">💎 부티 테스트</div></div>
+    <div><div class="logo">&#x1F48E; 부티 테스트</div></div>
     <div class="footer-links">
       <a href="./index.html" class="footer-link">홈</a>
       <a href="./blog.html" class="footer-link">블로그</a>
@@ -71,102 +65,108 @@ gtag('config','G-MPENLZ8FCZ');
       <a href="./privacy.html" class="footer-link" style="text-decoration:underline">개인정보처리방침</a>
     </div>
   </div>
-  <div class="footer-biz">상호: Carvis Company | E-mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f69c9998919d93839895999bb6919b979f9ad895999b">[email&#160;protected]</a></div>
-  <div class="footer-copy">© 2026 Carvis. All rights reserved. 본 서비스는 오락 목적입니다.</div>
+  <div class="footer-biz">상호: Carvis Company | E-mail: jongkeuncom@gmail.com</div>
+  <div class="footer-copy">&#169; 2026 Carvis. All rights reserved. 본 서비스는 오락 목적입니다.</div>
 </footer>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./assets/data.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2421321072929849" crossorigin="anonymous"></script>
+<script src="./assets/data.js"></script>
 <script>
-let lang = 'kr';
+var lang = localStorage.getItem('lang') || 'kr';
 
-document.getElementById('lkr').addEventListener('click', () => { lang='kr'; setLang(); });
-document.getElementById('len').addEventListener('click', () => { lang='en'; setLang(); });
-
-function setLang() {
-  document.getElementById('lkr').classList.toggle('on', lang==='kr');
-  document.getElementById('len').classList.toggle('on', lang==='en');
-  document.getElementById('eyebrow').textContent   = lang==='kr' ? '전문 콘텐츠' : 'Expert Content';
-  document.getElementById('blog-title').textContent= lang==='kr' ? '관상 & 아우라 인사이트' : 'Physiognomy & Aura Insights';
-  document.getElementById('blog-sub').textContent  = lang==='kr' ? '부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클 10선' : '10 expert articles on wealthy faces, AI analysis & aura science';
+function setLang(l) {
+  if (l) lang = l;
+  localStorage.setItem('lang', lang);
+  document.getElementById('lkr').classList.toggle('on', lang === 'kr');
+  document.getElementById('len').classList.toggle('on', lang === 'en');
+  document.getElementById('eyebrow').textContent    = lang === 'kr' ? '전문 콘텐츠' : 'Expert Content';
+  document.getElementById('blog-title').textContent = lang === 'kr' ? '관상 & 아우라 인사이트' : 'Physiognomy & Aura Insights';
+  document.getElementById('blog-sub').textContent   = lang === 'kr' ? '부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클' : 'Expert articles on physiognomy, AI analysis & aura science';
   renderBlog();
 }
 
-// ── 초기 렌더링 ──
-setLang();
-
-// ── Hash routing: index.html 카드 클릭 → blog.html#post-N ──
-(function() {
-  const hash = window.location.hash;
-  if (hash && hash.startsWith('#post-')) {
-    const id = parseInt(hash.replace('#post-', ''), 10);
-    if (!isNaN(id)) {
-      setTimeout(function() { openArticle(id); }, 50);
-    }
-  }
-})();
-
 function renderBlog() {
-  const list = document.getElementById('blogList');
-  const art  = document.getElementById('art-view');
-  list.innerHTML = ''; list.style.display = 'block'; art.style.display = 'none';
-  POSTS.forEach(p => {
-    const card = document.createElement('div');
+  var list = document.getElementById('blogList');
+  var art  = document.getElementById('art-view');
+  list.innerHTML = '';
+  list.style.display = 'block';
+  art.style.display  = 'none';
+  POSTS.forEach(function(p) {
+    var card  = document.createElement('div');
     card.className = 'blog-card';
-    const tag   = lang==='kr' ? p.tagKr   : p.tagEn;
-    const title = lang==='kr' ? p.titleKr : p.titleEn;
-    const desc  = lang==='kr' ? p.descKr  : p.descEn;
-    card.innerHTML = `<div class="blog-num">${String(p.id).padStart(2,'0')}</div>
-      <h2 class="blog-card-title">${title}</h2>
-      <p class="blog-card-desc">${desc}</p>
-      <div class="blog-card-meta"><span class="blog-tag">${tag}</span><span>Rich Aura Analytics</span><span>2026.01</span></div>`;
-    card.addEventListener('click', () => openArticle(p.id));
+    var tag   = lang === 'kr' ? p.tagKr   : p.tagEn;
+    var title = lang === 'kr' ? p.titleKr : p.titleEn;
+    var desc  = lang === 'kr' ? p.descKr  : p.descEn;
+    card.innerHTML =
+      '<div class="blog-num">' + String(p.id).padStart(2,'0') + '</div>' +
+      '<h2 class="blog-card-title">' + title + '</h2>' +
+      '<p class="blog-card-desc">' + desc + '</p>' +
+      '<div class="blog-card-meta"><span class="blog-tag">' + tag + '</span>' +
+      '<span>Rich Aura Analytics</span><span>2026.01</span></div>';
+    card.addEventListener('click', (function(pid){ return function(){ openArticle(pid); }; })(p.id));
     list.appendChild(card);
   });
 }
 
 function openArticle(id) {
-  const p = POSTS.find(x => x.id===id); if (!p) return;
+  var p = null;
+  for (var i=0; i<POSTS.length; i++) { if (POSTS[i].id === id) { p = POSTS[i]; break; } }
+  if (!p) return;
   document.getElementById('blogList').style.display = 'none';
   document.getElementById('art-view').style.display = 'block';
-  const title = lang==='kr' ? p.titleKr : p.titleEn;
-  const body  = lang==='kr' ? p.bodyKr  : p.bodyEn;
-  const tag   = lang==='kr' ? p.tagKr   : p.tagEn;
-  document.getElementById('backLabel').textContent = lang==='kr' ? '목록으로' : 'Back to List';
-  document.getElementById('artContent').innerHTML = `
-    <span class="art-eyebrow">${tag} · Rich Aura Analytics</span>
-    <h1 class="art-h1">${title}</h1>
-    <div class="art-meta"><span>${lang==='kr'?'작성자':'Author'}: Rich Aura Analytics</span><span>2026.01.15</span></div>
-    <div class="art-content">${body}</div>
-    <div id="article-ad-slot"></div>
-    <div class="author-box">
-      <div class="author-av">🔮</div>
-      <div><div class="author-name">Rich Aura Analytics</div>
-      <div class="author-role">${lang==='kr'?'AI 관상 & 아우라 분석가':'AI Physiognomy & Aura Analyst'} · richaura.store</div></div>
-    </div>
-    <div class="art-back-bottom">
-      <button class="art-back-btn" onclick="document.getElementById('artBack').click()">
-        ${lang==='kr'?'← 목록보기':'← Back to List'}
-      </button>
-    </div>`;
-  window.scrollTo({ top:0, behavior:'smooth' });
+  var title = lang === 'kr' ? p.titleKr : p.titleEn;
+  var body  = lang === 'kr' ? p.bodyKr  : p.bodyEn;
+  var tag   = lang === 'kr' ? p.tagKr   : p.tagEn;
+  document.getElementById('backLabel').textContent = lang === 'kr' ? '목록으로' : 'Back to List';
+  document.getElementById('artContent').innerHTML =
+    '<span class="art-eyebrow">' + tag + ' · Rich Aura Analytics</span>' +
+    '<h1 class="art-h1">' + title + '</h1>' +
+    '<div class="art-meta"><span>' + (lang==='kr'?'작성자':'Author') + ': Rich Aura Analytics</span><span>2026.01</span></div>' +
+    '<div class="art-content">' + body + '</div>' +
+    '<div id="article-ad-slot"></div>' +
+    '<div class="author-box">' +
+      '<div class="author-av">&#x1F52E;</div>' +
+      '<div><div class="author-name">Rich Aura Analytics</div>' +
+      '<div class="author-role">' + (lang==='kr'?'AI 관상 & 아우라 분석가':'AI Physiognomy & Aura Analyst') + ' · richaura.store</div></div>' +
+    '</div>' +
+    '<div class="art-back-bottom">' +
+      '<button class="art-back-btn" onclick="goBackToList()">' +
+        (lang==='kr'?'&#8592; 목록보기':'&#8592; Back to List') +
+      '</button>' +
+    '</div>';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   renderArticleAd();
 }
 
-// 아티클 열릴 때 광고 렌더링
+function goBackToList() {
+  document.getElementById('art-view').style.display  = 'none';
+  document.getElementById('blogList').style.display  = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function renderArticleAd() {
-  const slot = document.getElementById('article-ad-slot');
+  var slot = document.getElementById('article-ad-slot');
   if (!slot) return;
   slot.innerHTML = '<ins class="adsbygoogle" style="display:block;margin:2rem 0" data-ad-client="ca-pub-2421321072929849" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>';
   try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
 }
 
-document.getElementById('artBack').addEventListener('click', () => {
-  document.getElementById('art-view').style.display = 'none';
-  document.getElementById('blogList').style.display = 'block';
-  window.scrollTo({ top:0, behavior:'smooth' });
-});
+document.getElementById('artBack').addEventListener('click', goBackToList);
 
-renderBlog();
+// 초기 렌더링
+setLang();
 
-// 해시로 직접 진입 시 해당 글 자동 오픈 (#post
+// Hash routing: blog.html#post-N 직접 진입 처리
+(function() {
+  var hash = window.location.hash;
+  if (hash && hash.indexOf('#post-') === 0) {
+    var id = parseInt(hash.replace('#post-', ''), 10);
+    if (!isNaN(id)) {
+      setTimeout(function() { openArticle(id); }, 50);
+    }
+  }
+})();
+</script>
+</body>
+</html>
