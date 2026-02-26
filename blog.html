@@ -4,18 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="description" content="부자 관상, AI 아우라 분석, 관상 과학에 관한 전문 아티클 — 부티 테스트 블로그">
-<meta name="keywords" content="관상 블로그, 부자 관상, AI 아우라, 관상 과학, 부티 테스트">
-<meta property="og:title" content="관상 & 아우라 인사이트 — 부티 테스트 블로그">
-<meta property="og:description" content="부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://richaura.store/blog.html">
 <title>블로그 — 부티 테스트</title>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPENLZ8FCZ"></script>
 <script>
 window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-gtag('config','G-MPENLZ8FCZ');
+gtag('js',new Date());gtag('config','G-MPENLZ8FCZ');
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
@@ -23,7 +17,6 @@ gtag('config','G-MPENLZ8FCZ');
 </head>
 <body>
 <div class="wrap">
-
 <header class="site-header">
   <div><a href="./index.html" style="text-decoration:none"><div class="logo">&#x1F48E; 부티 테스트</div></a></div>
   <div class="header-right">
@@ -32,27 +25,22 @@ gtag('config','G-MPENLZ8FCZ');
       <a href="./blog.html" class="nav-btn active">블로그</a>
     </nav>
     <div class="lang-sw">
-      <button class="lbtn on" id="lkr" onclick="setLang('kr')">KR</button>
-      <button class="lbtn" id="len" onclick="setLang('en')">EN</button>
+      <button class="lbtn on" id="lkr" onclick="changeLang('kr')">KR</button>
+      <button class="lbtn" id="len" onclick="changeLang('en')">EN</button>
     </div>
   </div>
 </header>
-
 <div class="blog-hero">
   <p class="blog-hero-eyebrow" id="eyebrow">전문 콘텐츠</p>
   <h1 class="blog-hero-title" id="blog-title">관상 &amp; 아우라 인사이트</h1>
   <p class="blog-hero-sub" id="blog-sub">부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클</p>
 </div>
-
 <div class="blog-list" id="blogList"></div>
-
 <div id="art-view" style="display:none">
-  <button class="art-back" id="artBack">&#8592; <span id="backLabel">목록으로</span></button>
+  <button class="art-back" id="artBack" onclick="goBackToList()">&#8592; <span id="backLabel">목록으로</span></button>
   <div class="art-body-wrap" id="artContent"></div>
 </div>
-
 </div>
-
 <div class="wrap" style="padding-bottom:0">
 <footer class="site-footer">
   <div class="footer-top">
@@ -69,44 +57,53 @@ gtag('config','G-MPENLZ8FCZ');
   <div class="footer-copy">&#169; 2026 Carvis. All rights reserved. 본 서비스는 오락 목적입니다.</div>
 </footer>
 </div>
-
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2421321072929849" crossorigin="anonymous"></script>
 <script src="./assets/data.js"></script>
 <script>
-var lang = localStorage.getItem('lang') || 'kr';
+window.BLOG_LANG = localStorage.getItem('lang') || 'kr';
 
-function setLang(l) {
-  if (l) lang = l;
-  localStorage.setItem('lang', lang);
-  document.getElementById('lkr').classList.toggle('on', lang === 'kr');
-  document.getElementById('len').classList.toggle('on', lang === 'en');
-  document.getElementById('eyebrow').textContent    = lang === 'kr' ? '전문 콘텐츠' : 'Expert Content';
-  document.getElementById('blog-title').textContent = lang === 'kr' ? '관상 & 아우라 인사이트' : 'Physiognomy & Aura Insights';
-  document.getElementById('blog-sub').textContent   = lang === 'kr' ? '부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클' : 'Expert articles on physiognomy, AI analysis & aura science';
-  renderBlog();
+function changeLang(l) {
+  window.BLOG_LANG = l;
+  localStorage.setItem('lang', l);
+  renderPage();
 }
 
-function renderBlog() {
+function renderPage() {
+  var l = window.BLOG_LANG;
+  document.getElementById('lkr').classList.toggle('on', l === 'kr');
+  document.getElementById('len').classList.toggle('on', l === 'en');
+  document.getElementById('eyebrow').textContent    = l === 'kr' ? '전문 콘텐츠' : 'Expert Content';
+  document.getElementById('blog-title').textContent = l === 'kr' ? '관상 & 아우라 인사이트' : 'Physiognomy & Aura Insights';
+  document.getElementById('blog-sub').textContent   = l === 'kr' ? '부자 관상, AI 분석, 아우라 과학에 관한 전문 아티클' : 'Expert articles on physiognomy, AI analysis & aura science';
+  renderList();
+}
+
+function renderList() {
+  var l    = window.BLOG_LANG;
   var list = document.getElementById('blogList');
   var art  = document.getElementById('art-view');
   list.innerHTML = '';
   list.style.display = 'block';
   art.style.display  = 'none';
-  POSTS.forEach(function(p) {
-    var card  = document.createElement('div');
-    card.className = 'blog-card';
-    var tag   = lang === 'kr' ? p.tagKr   : p.tagEn;
-    var title = lang === 'kr' ? p.titleKr : p.titleEn;
-    var desc  = lang === 'kr' ? p.descKr  : p.descEn;
-    card.innerHTML =
-      '<div class="blog-num">' + String(p.id).padStart(2,'0') + '</div>' +
-      '<h2 class="blog-card-title">' + title + '</h2>' +
-      '<p class="blog-card-desc">' + desc + '</p>' +
-      '<div class="blog-card-meta"><span class="blog-tag">' + tag + '</span>' +
-      '<span>Rich Aura Analytics</span><span>2026.01</span></div>';
-    card.addEventListener('click', (function(pid){ return function(){ openArticle(pid); }; })(p.id));
-    list.appendChild(card);
-  });
+
+  for (var i = 0; i < POSTS.length; i++) {
+    (function(p) {
+      var card = document.createElement('div');
+      card.className = 'blog-card';
+      card.style.cursor = 'pointer';
+      var tag   = l === 'kr' ? p.tagKr   : p.tagEn;
+      var title = l === 'kr' ? p.titleKr : p.titleEn;
+      var desc  = l === 'kr' ? p.descKr  : p.descEn;
+      card.innerHTML =
+        '<div class="blog-num">' + String(p.id).padStart(2,'0') + '</div>' +
+        '<h2 class="blog-card-title">' + title + '</h2>' +
+        '<p class="blog-card-desc">' + desc + '</p>' +
+        '<div class="blog-card-meta"><span class="blog-tag">' + tag + '</span>' +
+        '<span>Rich Aura Analytics</span><span>2026.01</span></div>';
+      card.onclick = function() { openArticle(p.id); };
+      list.appendChild(card);
+    })(POSTS[i]);
+  }
 }
 
 function goBackToList() {
@@ -116,69 +113,89 @@ function goBackToList() {
 }
 
 function openArticle(id) {
+  var l = window.BLOG_LANG;
   var p = null;
   for (var i = 0; i < POSTS.length; i++) {
     if (POSTS[i].id === id) { p = POSTS[i]; break; }
   }
-  if (!p) return;
+  if (!p) { console.error('Post not found:', id); return; }
 
   document.getElementById('blogList').style.display = 'none';
   document.getElementById('art-view').style.display = 'block';
+  document.getElementById('backLabel').textContent = l === 'kr' ? '목록으로' : 'Back to List';
 
-  var title  = lang === 'kr' ? p.titleKr : p.titleEn;
-  var body   = lang === 'kr' ? p.bodyKr  : p.bodyEn;
-  var tag    = lang === 'kr' ? p.tagKr   : p.tagEn;
-  var author = lang === 'kr' ? '작성자'  : 'Author';
-  var role   = lang === 'kr' ? 'AI 관상 & 아우라 분석가' : 'AI Physiognomy & Aura Analyst';
-  var btnTxt = lang === 'kr' ? '&#8592; 목록보기' : '&#8592; Back to List';
-  var backTxt = lang === 'kr' ? '목록으로' : 'Back to List';
+  var title  = l === 'kr' ? p.titleKr : p.titleEn;
+  var body   = l === 'kr' ? p.bodyKr  : p.bodyEn;
+  var tag    = l === 'kr' ? p.tagKr   : p.tagEn;
+  var author = l === 'kr' ? '작성자' : 'Author';
+  var role   = l === 'kr' ? 'AI 관상 & 아우라 분석가' : 'AI Physiognomy & Aura Analyst';
+  var btnTxt = l === 'kr' ? '&#8592; 목록보기' : '&#8592; Back to List';
 
-  document.getElementById('backLabel').textContent = backTxt;
+  var el = document.getElementById('artContent');
+  el.innerHTML = '';
 
-  var html = '';
-  html += '<span class="art-eyebrow">' + tag + ' · Rich Aura Analytics</span>';
-  html += '<h1 class="art-h1">' + title + '</h1>';
-  html += '<div class="art-meta"><span>' + author + ': Rich Aura Analytics</span><span>2026.01</span></div>';
-  html += '<div class="art-content">' + body + '</div>';
-  html += '<div id="article-ad-slot"></div>';
-  html += '<div class="author-box">';
-  html +=   '<div class="author-av">&#x1F52E;</div>';
-  html +=   '<div><div class="author-name">Rich Aura Analytics</div>';
-  html +=   '<div class="author-role">' + role + ' · richaura.store</div></div>';
-  html += '</div>';
-  html += '<div style="margin:2rem 0">';
-  html +=   '<button onclick="goBackToList()" style="display:block;width:100%;padding:1rem;text-align:center;background:#000;color:#fff;font-size:.82rem;font-weight:500;letter-spacing:.1em;border:none;border-radius:2px;cursor:pointer;">';
-  html +=     btnTxt;
-  html +=   '</button>';
-  html += '</div>';
+  var frag = document.createDocumentFragment();
 
-  document.getElementById('artContent').innerHTML = html;
+  var eyebrow = document.createElement('span');
+  eyebrow.className = 'art-eyebrow';
+  eyebrow.textContent = tag + ' · Rich Aura Analytics';
+  frag.appendChild(eyebrow);
+
+  var h1 = document.createElement('h1');
+  h1.className = 'art-h1';
+  h1.textContent = title;
+  frag.appendChild(h1);
+
+  var meta = document.createElement('div');
+  meta.className = 'art-meta';
+  meta.innerHTML = '<span>' + author + ': Rich Aura Analytics</span><span>2026.01</span>';
+  frag.appendChild(meta);
+
+  var bodyDiv = document.createElement('div');
+  bodyDiv.className = 'art-content';
+  bodyDiv.innerHTML = body;
+  frag.appendChild(bodyDiv);
+
+  var adSlot = document.createElement('div');
+  adSlot.id = 'article-ad-slot';
+  frag.appendChild(adSlot);
+
+  var authorBox = document.createElement('div');
+  authorBox.className = 'author-box';
+  authorBox.innerHTML =
+    '<div class="author-av">&#x1F52E;</div>' +
+    '<div><div class="author-name">Rich Aura Analytics</div>' +
+    '<div class="author-role">' + role + ' · richaura.store</div></div>';
+  frag.appendChild(authorBox);
+
+  var btnWrap = document.createElement('div');
+  btnWrap.style.cssText = 'margin:2rem 0';
+  var btn = document.createElement('button');
+  btn.innerHTML = btnTxt;
+  btn.style.cssText = 'display:block;width:100%;padding:1rem;text-align:center;background:#000;color:#fff;font-size:.82rem;font-weight:500;letter-spacing:.1em;border:none;border-radius:2px;cursor:pointer;';
+  btn.onclick = goBackToList;
+  btnWrap.appendChild(btn);
+  frag.appendChild(btnWrap);
+
+  el.appendChild(frag);
   window.scrollTo({ top: 0, behavior: 'smooth' });
-  renderArticleAd();
-}
 
-function renderArticleAd() {
   var slot = document.getElementById('article-ad-slot');
-  if (!slot) return;
-  slot.innerHTML = '<ins class="adsbygoogle" style="display:block;margin:2rem 0" data-ad-client="ca-pub-2421321072929849" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>';
-  try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
+  if (slot) {
+    slot.innerHTML = '<ins class="adsbygoogle" style="display:block;margin:2rem 0" data-ad-client="ca-pub-2421321072929849" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+    try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
+  }
 }
-
-document.getElementById('artBack').addEventListener('click', goBackToList);
 
 // 초기 렌더링
-setLang();
-
-// Hash routing: blog.html#post-N 직접 진입 처리
-(function() {
+window.addEventListener('load', function() {
+  renderPage();
   var hash = window.location.hash;
   if (hash && hash.indexOf('#post-') === 0) {
     var id = parseInt(hash.replace('#post-', ''), 10);
-    if (!isNaN(id)) {
-      setTimeout(function() { openArticle(id); }, 50);
-    }
+    if (!isNaN(id)) { setTimeout(function() { openArticle(id); }, 100); }
   }
-})();
+});
 </script>
 </body>
 </html>
